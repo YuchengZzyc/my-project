@@ -200,6 +200,33 @@ pytest -q tests/test_export_training_data_llm.py
 
 Result: passed.
 
+## Update (local popup reminder watcher)
+
+Added a minimal local popup reminder runtime for existing `data/reminders.json` records.
+
+New files:
+
+- `app/reminder_notifier.py`
+- `scripts/run_reminder_notifier.py`
+- `tests/test_reminder_notifier.py`
+
+Behavior:
+
+- Polls reminders from JSON storage on an interval.
+- Triggers popup only for reminders where:
+  - `status == "active"`
+  - `scheduled_time <= now`
+  - no `notified_at` field yet
+- After popup, writes `notified_at` and updates `updated_at` to avoid repeated popups.
+- Supports one-shot mode for quick verification.
+
+Verification:
+
+```bash
+pytest -q tests/test_reminder_notifier.py
+python scripts/run_reminder_notifier.py --once
+```
+
 ## Update (tool schema source + scenario-status consistency)
 
 Applied two critical fixes in `scripts/export_training_data_llm.py`:

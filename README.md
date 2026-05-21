@@ -46,3 +46,17 @@ mcp baseline:
 python scripts/reminder_mcp_server_baseline.py --host 127.0.0.1 --port 8765
 python scripts/web_mcp_baseline.py --model-path "E:/LLM/Qwen/Qwen2.5-1.5B-Instruct" --adapter-path "outputs/qwen25_15b_dora/checkpoint-580" --mcp-base-url "http://127.0.0.1:8765" --host 127.0.0.1 --port 8018
 ```
+
+## 5) Local popup reminder watcher
+
+Run one poll:
+
+```bash
+python scripts/run_reminder_notifier.py --once
+```
+
+Run continuously (default every 5 seconds):
+
+```bash
+python scripts/run_reminder_notifier.py --poll-interval 5
+```

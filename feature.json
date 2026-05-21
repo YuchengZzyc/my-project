@@ -218,6 +218,15 @@
       "status": "not_started",
       "passes": false,
       "verification": "pytest tests/test_tool_executor.py::test_malformed_tool_call"
+    },
+    {
+      "id": "F016",
+      "name": "Add local popup reminder watcher",
+      "description": "Poll reminders JSON and trigger local popup when active reminders become due; mark reminder as notified to avoid duplicate popups.",
+      "priority": "P1",
+      "status": "done",
+      "passes": true,
+      "verification": "pytest -q tests/test_reminder_notifier.py && python scripts/run_reminder_notifier.py --once"
     }
   ],
   "milestones": [

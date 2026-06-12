@@ -19,7 +19,9 @@ Thumbs.db
 # Secrets / env
 .env
 .env.*
+*.env
 !.env.example
+!*.env.example
 
 # Model / training outputs
 outputs/
@@ -40,4 +42,3 @@ data/tmp/
 # Logs
 *.log
 logs/
-

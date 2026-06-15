@@ -257,6 +257,9 @@ def main() -> None:
             max_length=cfg.max_length,
             sample_index=debug_index,
         )
+        print("\n[debug] Sample check finished. Skip training.")
+        # return 返回 输入--debug -sample时，不进行训练
+        return
 
     train_ds = build_dataset(tokenizer, train_rows, cfg.max_length)
     eval_ds = build_dataset(tokenizer, eval_rows, cfg.max_length) if eval_rows else None

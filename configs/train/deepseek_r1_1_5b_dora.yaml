@@ -1,0 +1,48 @@
+model:
+  name_or_path: "D:/LlamaFactory/DeepSeek-R1-Distill-Qwen-1.5B"
+
+data:
+  train_file: "data/training_data_llm_onlytool.jsonl"
+  #  train_file: "data/training_data_llm.cleaned.jsonl"
+  eval_file: null
+  system_key: "messages"
+
+output:
+  dir: "outputs/deepseek_r1_1_5b_dora"
+
+train:
+  max_length: 1024
+  learning_rate: 8.0e-5
+  num_train_epochs: 3 # 训练轮数
+  per_device_train_batch_size: 1
+  per_device_eval_batch_size: 1
+  gradient_accumulation_steps: 8 # 梯度积累
+  logging_steps: 10
+  save_steps: 400
+  eval_steps: 400
+  warmup_ratio: 0.03
+  weight_decay: 0.0
+  bf16: false
+  fp16: true
+  # RTX3060等消费级显卡 最好改成bf16:false fp16:true 优化好
+  gradient_checkpointing: true
+  seed: 42
+
+peft:
+  finetune_type: "dora"
+  lora_r: 16
+  lora_alpha: 32
+  lora_dropout: 0.05
+  target_modules:
+    [
+      "q_proj",
+      "k_proj",
+      "v_proj",
+      "o_proj",
+      "gate_proj",
+      "up_proj",
+      "down_proj",
+    ]
+  #  target_modules: ["q_proj", "v_proj"]
+  use_dora: true
+  use_4bit: false

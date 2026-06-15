@@ -116,7 +116,9 @@ class HFAssistant:
         self.tokenizer = AutoTokenizer.from_pretrained(model_path, use_fast=True, trust_remote_code=True)
         if self.tokenizer.pad_token_id is None:
             self.tokenizer.pad_token = self.tokenizer.eos_token
-        self.model = AutoModelForCausalLM.from_pretrained(model_path, trust_remote_code=True, device_map="auto")
+        # self.model = AutoModelForCausalLM.from_pretrained(model_path, trust_remote_code=True, device_map="auto")
+        # device_map="auto" 会自动将模型加载到可用的设备上 反而把模型切碎了
+        self.model = AutoModelForCausalLM.from_pretrained(model_path, trust_remote_code=True, torch_dtype=torch.float16).cuda()
         self.model.generation_config.pad_token_id = self.tokenizer.pad_token_id
         if adapter_path:
             self.model = PeftModel.from_pretrained(self.model, adapter_path)
@@ -134,6 +136,8 @@ class HFAssistant:
                     add_generation_prompt=True,
                     enable_thinking=False,
                 )
+                # print(prompt)
+                # return None, ""
             except TypeError:
                 prompt = self.tokenizer.apply_chat_template(
                     messages,
@@ -191,6 +195,7 @@ def main() -> None:
     parser.add_argument("--adapter-path", default=None)
     parser.add_argument("--report", type=Path, required=True)
     parser.add_argument("--max-samples", type=int, default=0)
+    parser.add_argument("--smoke-test",action="store_true",help="Only run one inference and exit.")
     args = parser.parse_args()
 
     rows = load_jsonl(args.cases_jsonl)
@@ -198,6 +203,20 @@ def main() -> None:
         rows = rows[: args.max_samples]
 
     model = HFAssistant(model_path=args.model_path, adapter_path=args.adapter_path)
+
+    if args.smoke_test:
+        print("[Smoke Test] Model loaded successfully.")
+        tool_msg, raw = model.run_once(rows[0]["prompt"])
+        print("=" * 60)
+        print("Prompt:")
+        print(rows[0]["prompt"])
+        print("=" * 60)
+        print("Model Output:")
+        print(raw)
+        print("=" * 60)
+        print("Parsed Tool Call:")
+        print(tool_msg)
+        return
 
     total = 0
     tool_call_expected = 0

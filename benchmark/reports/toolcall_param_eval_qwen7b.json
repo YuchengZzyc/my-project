@@ -1,12 +1,12 @@
 {
   "summary": {
     "total": 342,
-    "tool_call_accuracy": 0.9122807017543859,
-    "tool_name_accuracy_overall": 0.8391812865497076,
-    "args_json_rate_overall": 0.8567251461988304,
-    "arg_match_rate": 0.7874213836477988,
-    "model_path": "E:\\LLM\\Qwen\\Qwen2.5-3B-Instruct\\",
-    "adapter_path": ".\\outputs\\qwen25_3b_lora\\checkpoint-800\\"
+    "tool_call_accuracy": 0.9532163742690059,
+    "tool_name_accuracy_overall": 0.8567251461988304,
+    "args_json_rate_overall": 0.8713450292397661,
+    "arg_match_rate": 0.8436724565756824,
+    "model_path": "E:\\LLM\\Qwen\\Qwen2.5-7B-Instruct\\",
+    "adapter_path": ".\\outputs\\qwen25_7b_lora\\checkpoint-400\\"
   },
   "details": [
     {
@@ -23,7 +23,7 @@
       "arg_notes": [
         "mismatch:task"
       ],
-      "raw_output_preview": "<tool_call>\n{\"name\": \"create_reminder\", \"arguments\": {\"time_text\": \"today at 6:30 PM\", \"task\": \"check blood sugar before supper\", \"target\": \"self\"}}\n</tool_call>"
+      "raw_output_preview": "<tool_call>\n{\"name\": \"create_reminder\", \"arguments\": {\"time_text\": \"today at 6:30 PM\", \"task\": \"check blood sugar and write the number down before supper\", \"target\": \"self\"}}\n</tool_call>"
     },
     {
       "id": "bench_prompt_00002",
@@ -34,12 +34,10 @@
       "tool_call_ok": true,
       "tool_name_ok": true,
       "args_json_ok": true,
-      "arg_match_ok": 2,
+      "arg_match_ok": 3,
       "arg_match_checked": 3,
-      "arg_notes": [
-        "mismatch:time_text"
-      ],
-      "raw_output_preview": "<tool_call>\n{\"name\": \"create_reminder\", \"arguments\": {\"time_text\": \"Tonight 8:15 PM\", \"task\": \"video call my sister\", \"target\": \"self\"}}\n</tool_call>"
+      "arg_notes": [],
+      "raw_output_preview": "<tool_call>\n{\"name\": \"create_reminder\", \"arguments\": {\"time_text\": \"tonight at 8:15 PM\", \"task\": \"video call my sister\", \"target\": \"self\"}}\n</tool_call>"
     },
     {
       "id": "bench_prompt_00003",
@@ -50,12 +48,10 @@
       "tool_call_ok": true,
       "tool_name_ok": true,
       "args_json_ok": true,
-      "arg_match_ok": 2,
+      "arg_match_ok": 3,
       "arg_match_checked": 3,
-      "arg_notes": [
-        "mismatch:time_text"
-      ],
-      "raw_output_preview": "I can help with that. What time would you like me to remind you after breakfast tomorrow morning?\n<tool_call>\n{\"name\": \"create_reminder\", \"arguments\": {\"time_text\": \"after breakfast tomorrow morning\", \"task\": \"play basketball\", \"target\": \"self\"}}\n</tool_call>"
+      "arg_notes": [],
+      "raw_output_preview": "<tool_call>\n{\"name\": \"create_reminder\", \"arguments\": {\"time_text\": \"after breakfast tomorrow\", \"task\": \"play basketball\", \"target\": \"self\"}}\n</tool_call>"
     },
     {
       "id": "bench_prompt_00004",
@@ -115,7 +111,7 @@
       "arg_notes": [
         "mismatch:task"
       ],
-      "raw_output_preview": "<tool_call>\n{\"name\": \"create_reminder\", \"arguments\": {\"time_text\": \"tomorrow morning\", \"task\": \"meet the bank clerk with the blue folder in hand\", \"target\": \"self\"}}\n</tool_call>"
+      "raw_output_preview": "<tool_call>\n{\"name\": \"create_reminder\", \"arguments\": {\"time_text\": \"tomorrow morning\", \"task\": \"meet the bank clerk, blue folder in hand\", \"target\": \"self\"}}\n</tool_call>"
     },
     {
       "id": "bench_prompt_00008",
@@ -126,12 +122,10 @@
       "tool_call_ok": true,
       "tool_name_ok": true,
       "args_json_ok": true,
-      "arg_match_ok": 2,
+      "arg_match_ok": 3,
       "arg_match_checked": 3,
-      "arg_notes": [
-        "mismatch:task"
-      ],
-      "raw_output_preview": "<tool_call>\n{\"name\": \"create_reminder\", \"arguments\": {\"time_text\": \"today at 6:30 PM\", \"task\": \"soak beans before dinner so they're ready for the soup later\", \"target\": \"self\"}}\n</tool_call>"
+      "arg_notes": [],
+      "raw_output_preview": "<tool_call>\n{\"name\": \"create_reminder\", \"arguments\": {\"time_text\": \"today at 6:30 PM\", \"task\": \"soak beans before dinner\", \"target\": \"self\"}}\n</tool_call>"
     },
     {
       "id": "bench_prompt_00009",
@@ -142,12 +136,10 @@
       "tool_call_ok": true,
       "tool_name_ok": true,
       "args_json_ok": true,
-      "arg_match_ok": 2,
+      "arg_match_ok": 3,
       "arg_match_checked": 3,
-      "arg_notes": [
-        "mismatch:task"
-      ],
-      "raw_output_preview": "<tool_call>\n{\"name\": \"create_reminder\", \"arguments\": {\"time_text\": \"today at 6:30 PM\", \"task\": \"check blood sugar before going to bed after dinner\", \"target\": \"self\"}}\n</tool_call>"
+      "arg_notes": [],
+      "raw_output_preview": "<tool_call>\n{\"name\": \"create_reminder\", \"arguments\": {\"time_text\": \"today at 6:30 PM\", \"task\": \"check blood sugar\", \"target\": \"self\"}}\n</tool_call>"
     },
     {
       "id": "bench_prompt_00010",
@@ -175,7 +167,7 @@
       "arg_match_ok": 3,
       "arg_match_checked": 3,
       "arg_notes": [],
-      "raw_output_preview": "<tool_call>\n{\"name\": \"create_reminder\", \"arguments\": {\"time_text\": \"Tomorrow afternoon at 4:00 PM\", \"task\": \"measure blood pressure\", \"target\": \"self\"}}\n</tool_call>"
+      "raw_output_preview": "<tool_call>\n{\"name\": \"create_reminder\", \"arguments\": {\"time_text\": \"tomorrow afternoon at 4:00 PM\", \"task\": \"measure blood pressure\", \"target\": \"self\"}}\n</tool_call>"
     },
     {
       "id": "bench_prompt_00012",
@@ -186,12 +178,10 @@
       "tool_call_ok": true,
       "tool_name_ok": true,
       "args_json_ok": true,
-      "arg_match_ok": 2,
+      "arg_match_ok": 3,
       "arg_match_checked": 3,
-      "arg_notes": [
-        "mismatch:task"
-      ],
-      "raw_output_preview": "<tool_call>\n{\"name\": \"create_reminder\", \"arguments\": {\"time_text\": \"next Monday at 10:15 AM\", \"task\": \"ask my nephew about the clinic appointment before calling around\", \"target\": \"self\"}}\n</tool_call>"
+      "arg_notes": [],
+      "raw_output_preview": "<tool_call>\n{\"name\": \"create_reminder\", \"arguments\": {\"time_text\": \"next Monday at 10:15 AM\", \"task\": \"ask my nephew about the clinic appointment\", \"target\": \"self\"}}\n</tool_call>"
     },
     {
       "id": "bench_prompt_00013",
@@ -207,7 +197,7 @@
       "arg_notes": [
         "mismatch:task"
       ],
-      "raw_output_preview": "<tool_call>\n{\"name\": \"create_reminder\", \"arguments\": {\"time_text\": \"after breakfast tomorrow\", \"task\": \"play table tennis with Harold at the community center\", \"target\": \"self\"}}\n</tool_call>"
+      "raw_output_preview": "<tool_call>\n{\"name\": \"create_reminder\", \"arguments\": {\"time_text\": \"after breakfast tomorrow\", \"task\": \"play table tennis at the community center with Harold\", \"target\": \"self\"}}\n</tool_call>"
     },
     {
       "id": "bench_prompt_00014",
@@ -234,12 +224,10 @@
       "tool_call_ok": true,
       "tool_name_ok": true,
       "args_json_ok": true,
-      "arg_match_ok": 2,
+      "arg_match_ok": 3,
       "arg_match_checked": 3,
-      "arg_notes": [
-        "mismatch:task"
-      ],
-      "raw_output_preview": "<tool_call>\n{\"name\": \"create_reminder\", \"arguments\": {\"time_text\": \"tonight at 8:15 PM\", \"task\": \"bring in the laundry even if the cat is on the porch\", \"target\": \"self\"}}\n</tool_call>"
+      "arg_notes": [],
+      "raw_output_preview": "<tool_call>\n{\"name\": \"create_reminder\", \"arguments\": {\"time_text\": \"tonight at 8:15 PM\", \"task\": \"bring in the laundry\", \"target\": \"self\"}}\n</tool_call>"
     },
     {
       "id": "bench_prompt_00016",
@@ -250,12 +238,10 @@
       "tool_call_ok": true,
       "tool_name_ok": true,
       "args_json_ok": true,
-      "arg_match_ok": 2,
+      "arg_match_ok": 3,
       "arg_match_checked": 3,
-      "arg_notes": [
-        "mismatch:task"
-      ],
-      "raw_output_preview": "<tool_call>\n{\"name\": \"create_reminder\", \"arguments\": {\"time_text\": \"this Friday evening\", \"task\": \"renew the bus card for commuting next week\", \"target\": \"self\"}}\n</tool_call>"
+      "arg_notes": [],
+      "raw_output_preview": "<tool_call>\n{\"name\": \"create_reminder\", \"arguments\": {\"time_text\": \"this Friday evening\", \"task\": \"renew the bus card\", \"target\": \"self\"}}\n</tool_call>"
     },
     {
       "id": "bench_prompt_00017",
@@ -322,10 +308,12 @@
       "tool_call_ok": true,
       "tool_name_ok": true,
       "args_json_ok": true,
-      "arg_match_ok": 3,
+      "arg_match_ok": 2,
       "arg_match_checked": 3,
-      "arg_notes": [],
-      "raw_output_preview": "<tool_call>\n{\"name\": \"create_reminder\", \"arguments\": {\"time_text\": \"after breakfast tomorrow\", \"task\": \"measure blood pressure\", \"target\": \"self\"}}\n</tool_call>"
+      "arg_notes": [
+        "mismatch:task"
+      ],
+      "raw_output_preview": "<tool_call>\n{\"name\": \"create_reminder\", \"arguments\": {\"time_text\": \"after breakfast tomorrow\", \"task\": \"measure my blood pressure\", \"target\": \"self\"}}\n</tool_call>"
     },
     {
       "id": "bench_prompt_00022",
@@ -381,7 +369,7 @@
       "arg_match_ok": 3,
       "arg_match_checked": 3,
       "arg_notes": [],
-      "raw_output_preview": "<tool_call>\n{\"name\": \"create_reminder\", \"arguments\": {\"time_text\": \"Tomorrow at 8:00 AM\", \"task\": \"charge the phone\", \"target\": \"self\"}}\n</tool_call>"
+      "raw_output_preview": "<tool_call>\n{\"name\": \"create_reminder\", \"arguments\": {\"time_text\": \"tomorrow at 8:00 AM\", \"task\": \"charge the phone\", \"target\": \"self\"}}\n</tool_call>"
     },
     {
       "id": "bench_prompt_00026",
@@ -453,7 +441,7 @@
       "arg_notes": [
         "mismatch:task"
       ],
-      "raw_output_preview": "<tool_call>\n{\"name\": \"create_reminder\", \"arguments\": {\"time_text\": \"This Friday evening\", \"task\": \"call my son after sorting the mail\", \"target\": \"self\"}}\n</tool_call>"
+      "raw_output_preview": "<tool_call>\n{\"name\": \"create_reminder\", \"arguments\": {\"time_text\": \"this Friday evening\", \"task\": \"call my son after sorting the mail\", \"target\": \"self\"}}\n</tool_call>"
     },
     {
       "id": "bench_prompt_00031",
@@ -469,7 +457,7 @@
       "arg_notes": [
         "mismatch:task"
       ],
-      "raw_output_preview": "<tool_call>\n{\"name\": \"create_reminder\", \"arguments\": {\"time_text\": \"This Friday evening\", \"task\": \"play basketball—new socks\", \"target\": \"self\"}}\n</tool_call>"
+      "raw_output_preview": "<tool_call>\n{\"name\": \"create_reminder\", \"arguments\": {\"time_text\": \"this Friday evening\", \"task\": \"play basketball—new socks\", \"target\": \"self\"}}\n</tool_call>"
     },
     {
       "id": "bench_prompt_00032",
@@ -511,7 +499,7 @@
       "arg_match_ok": 3,
       "arg_match_checked": 3,
       "arg_notes": [],
-      "raw_output_preview": "<tool_call>\n{\"name\": \"create_reminder\", \"arguments\": {\"time_text\": \"This Friday evening\", \"task\": \"pay the water bill\", \"target\": \"self\"}}\n</tool_call>"
+      "raw_output_preview": "<tool_call>\n{\"name\": \"create_reminder\", \"arguments\": {\"time_text\": \"this Friday evening\", \"task\": \"pay the water bill\", \"target\": \"self\"}}\n</tool_call>"
     },
     {
       "id": "bench_prompt_00035",
@@ -536,12 +524,10 @@
       "tool_call_ok": true,
       "tool_name_ok": true,
       "args_json_ok": true,
-      "arg_match_ok": 2,
+      "arg_match_ok": 3,
       "arg_match_checked": 3,
-      "arg_notes": [
-        "mismatch:task"
-      ],
-      "raw_output_preview": "<tool_call>\n{\"name\": \"create_reminder\", \"arguments\": {\"time_text\": \"tomorrow morning\", \"task\": \"defrost fish for dinner so it’s ready to cook\", \"target\": \"self\"}}\n</tool_call>"
+      "arg_notes": [],
+      "raw_output_preview": "<tool_call>\n{\"name\": \"create_reminder\", \"arguments\": {\"time_text\": \"tomorrow morning\", \"task\": \"defrost fish for dinner\", \"target\": \"self\"}}\n</tool_call>"
     },
     {
       "id": "bench_prompt_00037",
@@ -566,12 +552,10 @@
       "tool_call_ok": true,
       "tool_name_ok": true,
       "args_json_ok": true,
-      "arg_match_ok": 2,
+      "arg_match_ok": 3,
       "arg_match_checked": 3,
-      "arg_notes": [
-        "mismatch:task"
-      ],
-      "raw_output_preview": "<tool_call>\n{\"name\": \"create_reminder\", \"arguments\": {\"time_text\": \"the day after tomorrow at 9:30 AM\", \"task\": \"pay the water bill so I avoid a late fee\", \"target\": \"self\"}}\n</tool_call>"
+      "arg_notes": [],
+      "raw_output_preview": "<tool_call>\n{\"name\": \"create_reminder\", \"arguments\": {\"time_text\": \"the day after tomorrow at 9:30 AM\", \"task\": \"pay the water bill\", \"target\": \"self\"}}\n</tool_call>"
     },
     {
       "id": "bench_prompt_00039",
@@ -617,7 +601,7 @@
       "arg_notes": [
         "mismatch:task"
       ],
-      "raw_output_preview": "<tool_call>\n{\"name\": \"create_reminder\", \"arguments\": {\"time_text\": \"tomorrow morning\", \"task\": \"pay the water bill before running errands\", \"target\": \"self\"}}\n</tool_call>"
+      "raw_output_preview": "<tool_call>\n{\"name\": \"create_reminder\", \"arguments\": {\"time_text\": \"tomorrow morning\", \"task\": \"pay the water bill before heading out to run errands\", \"target\": \"self\"}}\n</tool_call>"
     },
     {
       "id": "bench_prompt_00042",
@@ -628,12 +612,10 @@
       "tool_call_ok": true,
       "tool_name_ok": true,
       "args_json_ok": true,
-      "arg_match_ok": 2,
+      "arg_match_ok": 3,
       "arg_match_checked": 3,
-      "arg_notes": [
-        "mismatch:task"
-      ],
-      "raw_output_preview": "<tool_call>\n{\"name\": \"create_reminder\", \"arguments\": {\"time_text\": \"tomorrow afternoon at 4:00 PM\", \"task\": \"pick up a parcel downstairs from the delivery locker\", \"target\": \"self\"}}\n</tool_call>"
+      "arg_notes": [],
+      "raw_output_preview": "<tool_call>\n{\"name\": \"create_reminder\", \"arguments\": {\"time_text\": \"tomorrow afternoon at 4:00 PM\", \"task\": \"pick up a parcel downstairs\", \"target\": \"self\"}}\n</tool_call>"
     },
     {
       "id": "bench_prompt_00043",
@@ -649,7 +631,7 @@
       "arg_notes": [
         "mismatch:task"
       ],
-      "raw_output_preview": "<tool_call>\n{\"name\": \"create_reminder\", \"arguments\": {\"time_text\": \"before dinner tonight\", \"task\": \"pay the water bill and get the receipt for community paperwork\", \"target\": \"self\"}}\n</tool_call>"
+      "raw_output_preview": "<tool_call>\n{\"name\": \"create_reminder\", \"arguments\": {\"time_text\": \"before dinner tonight\", \"task\": \"pay the water bill and keep the receipt for community paperwork\", \"target\": \"self\"}}\n</tool_call>"
     },
     {
       "id": "bench_prompt_00044",
@@ -670,14 +652,16 @@
       "scenario": "create_success_sports_activity",
       "should_call_tool": true,
       "expected_tool": "create_reminder",
-      "tool_called": false,
-      "tool_call_ok": false,
-      "tool_name_ok": false,
-      "args_json_ok": false,
-      "arg_match_ok": 0,
-      "arg_match_checked": 0,
-      "arg_notes": [],
-      "raw_output_preview": "I can help with that. What time tonight would you like me to remind you to play basketball?\nIf you don’t have a specific time in mind, I can suggest something around 6:30 PM or 7:00 PM, which is usually when many courts open and people gather.\nPlease let me know your preferred time, and I’ll create the reminder for you."
+      "tool_called": true,
+      "tool_call_ok": true,
+      "tool_name_ok": true,
+      "args_json_ok": true,
+      "arg_match_ok": 2,
+      "arg_match_checked": 3,
+      "arg_notes": [
+        "mismatch:task"
+      ],
+      "raw_output_preview": "<tool_call>\n{\"name\": \"create_reminder\", \"arguments\": {\"time_text\": \"before dinner tonight\", \"task\": \"play basketball at the court with the guys\", \"target\": \"self\"}}\n</tool_call>"
     },
     {
       "id": "bench_prompt_00046",
@@ -688,12 +672,10 @@
       "tool_call_ok": true,
       "tool_name_ok": true,
       "args_json_ok": true,
-      "arg_match_ok": 2,
+      "arg_match_ok": 3,
       "arg_match_checked": 3,
-      "arg_notes": [
-        "mismatch:task"
-      ],
-      "raw_output_preview": "<tool_call>\n{\"name\": \"create_reminder\", \"arguments\": {\"time_text\": \"the day after tomorrow at 9:30 AM\", \"task\": \"play basketball with the guys\", \"target\": \"self\"}}\n</tool_call>"
+      "arg_notes": [],
+      "raw_output_preview": "<tool_call>\n{\"name\": \"create_reminder\", \"arguments\": {\"time_text\": \"the day after tomorrow at 9:30 AM\", \"task\": \"play basketball\", \"target\": \"self\"}}\n</tool_call>"
     },
     {
       "id": "bench_prompt_00047",
@@ -718,12 +700,10 @@
       "tool_call_ok": true,
       "tool_name_ok": true,
       "args_json_ok": true,
-      "arg_match_ok": 2,
+      "arg_match_ok": 3,
       "arg_match_checked": 3,
-      "arg_notes": [
-        "mismatch:task"
-      ],
-      "raw_output_preview": "<tool_call>\n{\"name\": \"create_reminder\", \"arguments\": {\"time_text\": \"next Monday at 10:15 AM\", \"task\": \"take an evening walk to keep up the routine\", \"target\": \"self\"}}\n</tool_call>"
+      "arg_notes": [],
+      "raw_output_preview": "<tool_call>\n{\"name\": \"create_reminder\", \"arguments\": {\"time_text\": \"next Monday at 10:15 AM\", \"task\": \"take an evening walk\", \"target\": \"self\"}}\n</tool_call>"
     },
     {
       "id": "bench_prompt_00049",
@@ -739,7 +719,7 @@
       "arg_notes": [
         "mismatch:task"
       ],
-      "raw_output_preview": "I can help with that. What time tomorrow morning would you like me to remind you to join the square dancing group?\n<tool_call>\n{\"name\": \"create_reminder\", \"arguments\": {\"time_text\": \"tomorrow morning\", \"task\": \"join the square dancing group near the community center\", \"target\": \"self\"}}\n</tool_call>"
+      "raw_output_preview": "<tool_call>\n{\"name\": \"create_reminder\", \"arguments\": {\"time_text\": \"tomorrow morning\", \"task\": \"join the square dancing group near the community center\", \"target\": \"self\"}}\n</tool_call>"
     },
     {
       "id": "bench_prompt_00050",
@@ -753,7 +733,7 @@
       "arg_match_ok": 3,
       "arg_match_checked": 3,
       "arg_notes": [],
-      "raw_output_preview": "<tool_call>\n{\"name\": \"create_reminder\", \"arguments\": {\"time_text\": \"tomorrow at 8:00 AM\", \"task\": \"go to tai chi class\", \"target\": \"self\"}}\n</tool_call>\nI’ve set that reminder for tomorrow at 8:00 AM to go to tai chi class. As for your blue water bottle, it’s easy to leave it by the door—perhaps keep a small note on it like “take to tai chi class” so you won’t have to think about it twice.\n<tool_call>\nparent\n<tool_call>\n{\"name\": \"create_reminder\", \"arguments\": {\"time_text\": \"tomorrow at 8:00 AM\""
+      "raw_output_preview": "<tool_call>\n{\"name\": \"create_reminder\", \"arguments\": {\"time_text\": \"tomorrow at 8:00 AM\", \"task\": \"go to tai chi class\", \"target\": \"self\"}}\n</tool_call>\n<tool_call>\n{\"name\": \"create_reminder\", \"arguments\": {\"time_text\": \"tomorrow at 8:00 AM\", \"task\": \"take blue water bottle by the door\", \"target\": \"self\"}}\n</tool_call>"
     },
     {
       "id": "bench_prompt_00051",
@@ -769,7 +749,7 @@
       "arg_notes": [
         "mismatch:task"
       ],
-      "raw_output_preview": "<tool_call>\n{\"name\": \"create_reminder\", \"arguments\": {\"time_text\": \"tomorrow morning\", \"task\": \"join the square dancing group at the community center\", \"target\": \"self\"}}\n</tool_call>"
+      "raw_output_preview": "<tool_call>\n{\"name\": \"create_reminder\", \"arguments\": {\"time_text\": \"tomorrow morning\", \"task\": \"join the square dancing group so I don't miss the practice\", \"target\": \"self\"}}\n</tool_call>"
     },
     {
       "id": "bench_prompt_00052",
@@ -810,10 +790,12 @@
       "tool_call_ok": true,
       "tool_name_ok": true,
       "args_json_ok": true,
-      "arg_match_ok": 3,
+      "arg_match_ok": 2,
       "arg_match_checked": 3,
-      "arg_notes": [],
-      "raw_output_preview": "<tool_call>\n{\"name\": \"create_reminder\", \"arguments\": {\"time_text\": \"next Monday at 10:15 AM\", \"task\": \"trim the potted plants\", \"target\": \"self\"}}\n</tool_call>"
+      "arg_notes": [
+        "mismatch:task"
+      ],
+      "raw_output_preview": "<tool_call>\n{\"name\": \"create_reminder\", \"arguments\": {\"time_text\": \"next Monday at 10:15 AM\", \"task\": \"trim the potted plants after finishing coffee\", \"target\": \"self\"}}\n</tool_call>"
     },
     {
       "id": "bench_prompt_00055",
@@ -824,13 +806,12 @@
       "tool_call_ok": true,
       "tool_name_ok": true,
       "args_json_ok": true,
-      "arg_match_ok": 1,
+      "arg_match_ok": 2,
       "arg_match_checked": 3,
       "arg_notes": [
-        "mismatch:time_text",
         "mismatch:task"
       ],
-      "raw_output_preview": "<tool_call>\n{\"name\": \"create_reminder\", \"arguments\": {\"time_text\": \"day after tomorrow at 9:30 AM\", \"task\": \"pharmacy medicine pickup\", \"target\": \"self\"}}\n</tool_call>"
+      "raw_output_preview": "<tool_call>\n{\"name\": \"create_reminder\", \"arguments\": {\"time_text\": \"the day after tomorrow at 9:30 AM\", \"task\": \"pharmacy medicine pickup\", \"target\": \"self\"}}\n</tool_call>"
     },
     {
       "id": "bench_prompt_00056",
@@ -894,7 +875,7 @@
       "arg_notes": [
         "mismatch:task"
       ],
-      "raw_output_preview": "<tool_call>\n{\"name\": \"create_reminder\", \"arguments\": {\"time_text\": \"before dinner tonight\", \"task\": \"pick up new glasses from the shop\", \"target\": \"self\"}}\n</tool_call>"
+      "raw_output_preview": "<tool_call>\n{\"name\": \"create_reminder\", \"arguments\": {\"time_text\": \"before dinner tonight\", \"task\": \"pick up my new glasses from the shop\", \"target\": \"self\"}}\n</tool_call>"
     },
     {
       "id": "bench_prompt_00060",
@@ -905,10 +886,12 @@
       "tool_call_ok": true,
       "tool_name_ok": true,
       "args_json_ok": true,
-      "arg_match_ok": 3,
+      "arg_match_ok": 2,
       "arg_match_checked": 3,
-      "arg_notes": [],
-      "raw_output_preview": "<tool_call>\n{\"name\": \"create_reminder\", \"arguments\": {\"time_text\": \"the day after tomorrow at 9:30 AM\", \"task\": \"pick up new glasses\", \"target\": \"self\"}}\n</tool_call>"
+      "arg_notes": [
+        "mismatch:task"
+      ],
+      "raw_output_preview": "<tool_call>\n{\"name\": \"create_reminder\", \"arguments\": {\"time_text\": \"the day after tomorrow at 9:30 AM\", \"task\": \"pick up new glasses from the optician\", \"target\": \"self\"}}\n</tool_call>"
     },
     {
       "id": "bench_prompt_00061",
@@ -938,7 +921,7 @@
       "arg_notes": [
         "mismatch:task"
       ],
-      "raw_output_preview": "<tool_call>\n{\"name\": \"create_reminder\", \"arguments\": {\"time_text\": \"Next Monday at 10:15 AM\", \"task\": \"make sure the balcony window gets closed\", \"target\": \"self\"}}\n</tool_call>"
+      "raw_output_preview": "<tool_call>\n{\"name\": \"create_reminder\", \"arguments\": {\"time_text\": \"next Monday at 10:15 AM\", \"task\": \"make sure the balcony window gets closed\", \"target\": \"self\"}}\n</tool_call>"
     },
     {
       "id": "bench_prompt_00063",
@@ -968,7 +951,7 @@
       "arg_notes": [
         "mismatch:task"
       ],
-      "raw_output_preview": "<tool_call>\n{\"name\": \"create_reminder\", \"arguments\": {\"time_text\": \"tomorrow morning\", \"task\": \"charge the phone so it’s ready before leaving\", \"target\": \"self\"}}\n</tool_call>"
+      "raw_output_preview": "<tool_call>\n{\"name\": \"create_reminder\", \"arguments\": {\"time_text\": \"tomorrow morning\", \"task\": \"charge the phone so it’s ready before I leave\", \"target\": \"self\"}}\n</tool_call>"
     },
     {
       "id": "bench_prompt_00065",
@@ -979,10 +962,12 @@
       "tool_call_ok": true,
       "tool_name_ok": true,
       "args_json_ok": true,
-      "arg_match_ok": 3,
+      "arg_match_ok": 2,
       "arg_match_checked": 3,
-      "arg_notes": [],
-      "raw_output_preview": "<tool_call>\n{\"name\": \"create_reminder\", \"arguments\": {\"time_text\": \"tomorrow morning\", \"task\": \"turn off the stove\", \"target\": \"self\"}}\n</tool_call>"
+      "arg_notes": [
+        "mismatch:task"
+      ],
+      "raw_output_preview": "<tool_call>\n{\"name\": \"create_reminder\", \"arguments\": {\"time_text\": \"tomorrow morning\", \"task\": \"turn off the stove, especially if I’m rushing after breakfast\", \"target\": \"self\"}}\n</tool_call>"
     },
     {
       "id": "bench_prompt_00066",
@@ -1040,7 +1025,7 @@
       "arg_notes": [
         "mismatch:task"
       ],
-      "raw_output_preview": "<tool_call>\n{\"name\": \"create_reminder\", \"arguments\": {\"time_text\": \"before dinner tonight\", \"task\": \"meet the bank clerk to discuss your account\", \"target\": \"self\"}}\n</tool_call>"
+      "raw_output_preview": "<tool_call>\n{\"name\": \"create_reminder\", \"arguments\": {\"time_text\": \"before dinner tonight\", \"task\": \"meet the bank clerk to discuss my account\", \"target\": \"self\"}}\n</tool_call>"
     },
     {
       "id": "bench_prompt_00070",
@@ -1098,7 +1083,7 @@
       "arg_notes": [
         "mismatch:task"
       ],
-      "raw_output_preview": "<tool_call>\n{\"name\": \"create_reminder\", \"arguments\": {\"time_text\": \"tomorrow at 8:00 AM\", \"task\": \"attend the neighborhood committee meeting to discuss the parking issue\", \"target\": \"self\"}}\n</tool_call>"
+      "raw_output_preview": "<tool_call>\n{\"name\": \"create_reminder\", \"arguments\": {\"time_text\": \"tomorrow at 8:00 AM\", \"task\": \"attend the neighborhood committee meeting to bring up the parking issue\", \"target\": \"self\"}}\n</tool_call>"
     },
     {
       "id": "bench_prompt_00074",
@@ -1123,12 +1108,10 @@
       "tool_call_ok": true,
       "tool_name_ok": true,
       "args_json_ok": true,
-      "arg_match_ok": 2,
+      "arg_match_ok": 3,
       "arg_match_checked": 3,
-      "arg_notes": [
-        "mismatch:task"
-      ],
-      "raw_output_preview": "<tool_call>\n{\"name\": \"create_reminder\", \"arguments\": {\"time_text\": \"the day after tomorrow at 9:30 AM\", \"task\": \"attend the neighborhood committee meeting to hear the zoning update\", \"target\": \"self\"}}\n</tool_call>"
+      "arg_notes": [],
+      "raw_output_preview": "<tool_call>\n{\"name\": \"create_reminder\", \"arguments\": {\"time_text\": \"the day after tomorrow at 9:30 AM\", \"task\": \"attend the neighborhood committee meeting\", \"target\": \"self\"}}\n</tool_call>"
     },
     {
       "id": "bench_prompt_00076",
@@ -1169,12 +1152,10 @@
       "tool_call_ok": true,
       "tool_name_ok": true,
       "args_json_ok": true,
-      "arg_match_ok": 2,
+      "arg_match_ok": 3,
       "arg_match_checked": 3,
-      "arg_notes": [
-        "mismatch:task"
-      ],
-      "raw_output_preview": "<tool_call>\n{\"name\": \"create_reminder\", \"arguments\": {\"time_text\": \"today at 6:30 PM\", \"task\": \"video call my sister to catch up before the evening gets away from me\", \"target\": \"self\"}}\n</tool_call>"
+      "arg_notes": [],
+      "raw_output_preview": "<tool_call>\n{\"name\": \"create_reminder\", \"arguments\": {\"time_text\": \"today at 6:30 PM\", \"task\": \"video call my sister\", \"target\": \"self\"}}\n</tool_call>"
     },
     {
       "id": "bench_prompt_00079",
@@ -1234,7 +1215,7 @@
       "arg_notes": [
         "mismatch:task"
       ],
-      "raw_output_preview": "<tool_call>\n{\"name\": \"create_reminder\", \"arguments\": {\"time_text\": \"This Friday evening\", \"task\": \"ask my nephew about the clinic appointment — the blue folder is on my desk\", \"target\": \"self\"}}\n</tool_call>"
+      "raw_output_preview": "<tool_call>\n{\"name\": \"create_reminder\", \"arguments\": {\"time_text\": \"this Friday evening\", \"task\": \"ask my nephew about the clinic appointment — the blue folder is on my desk\", \"target\": \"self\"}}\n</tool_call>"
     },
     {
       "id": "bench_prompt_00083",
@@ -1250,7 +1231,7 @@
       "arg_notes": [
         "mismatch:task"
       ],
-      "raw_output_preview": "<tool_call>\n{\"name\": \"create_reminder\", \"arguments\": {\"time_text\": \"today at 6:30 PM\", \"task\": \"call my daughter to check in\", \"target\": \"self\"}}\n</tool_call>"
+      "raw_output_preview": "<tool_call>\n{\"name\": \"create_reminder\", \"arguments\": {\"time_text\": \"today at 6:30 PM\", \"task\": \"call my daughter because I need to check in with her\", \"target\": \"self\"}}\n</tool_call>"
     },
     {
       "id": "bench_prompt_00084",
@@ -1280,7 +1261,7 @@
       "arg_notes": [
         "mismatch:task"
       ],
-      "raw_output_preview": "<tool_call>\n{\"name\": \"create_reminder\", \"arguments\": {\"time_text\": \"Tomorrow at 8:00 AM\", \"task\": \"BP reading reminder\", \"target\": \"self\"}}\n</tool_call>"
+      "raw_output_preview": "<tool_call>\n{\"name\": \"create_reminder\", \"arguments\": {\"time_text\": \"tomorrow at 8:00 AM\", \"task\": \"BP reading reminder\", \"target\": \"self\"}}\n</tool_call>"
     },
     {
       "id": "bench_prompt_00086",
@@ -1377,10 +1358,12 @@
       "tool_call_ok": true,
       "tool_name_ok": true,
       "args_json_ok": true,
-      "arg_match_ok": 3,
+      "arg_match_ok": 2,
       "arg_match_checked": 3,
-      "arg_notes": [],
-      "raw_output_preview": "<tool_call>\n{\"name\": \"create_reminder\", \"arguments\": {\"time_text\": \"before dinner tonight\", \"task\": \"soak beans before dinner\", \"target\": \"self\"}}\n</tool_call>\nI also noticed that you mentioned the blue bowl on the counter. Is there anything specific about it, such as whether you need to wash it or put something in it?\nIf you’d like, you can tell me what you usually do with the blue bowl, and I can help set the reminder accordingly.\nWould you prefer me to handle the reminder for soaking beans no"
+      "arg_notes": [
+        "mismatch:time_text"
+      ],
+      "raw_output_preview": "I can help with that. I'll set a reminder for tonight before dinner to soak the beans, but I don't want to mix up the blue bowl. Please tell me where you keep your reminder notes so I can make sure it's easy for you.\n<tool_call>\n{\"name\": \"create_reminder\", \"arguments\": {\"time_text\": \"tonight before dinner\", \"task\": \"soak beans before dinner\", \"target\": \"self\"}}\n</tool_call>"
     },
     {
       "id": "bench_prompt_00093",
@@ -1394,7 +1377,7 @@
       "arg_match_ok": 3,
       "arg_match_checked": 3,
       "arg_notes": [],
-      "raw_output_preview": "<tool_call>\n{\"name\": \"create_reminder\", \"arguments\": {\"time_text\": \"After breakfast tomorrow\", \"task\": \"take blood pressure medicine\", \"target\": \"self\"}}\n</tool_call>"
+      "raw_output_preview": "<tool_call>\n{\"name\": \"create_reminder\", \"arguments\": {\"time_text\": \"after breakfast tomorrow\", \"task\": \"take blood pressure medicine\", \"target\": \"self\"}}\n</tool_call>"
     },
     {
       "id": "bench_prompt_00094",
@@ -1424,7 +1407,7 @@
       "arg_notes": [
         "mismatch:task"
       ],
-      "raw_output_preview": "<tool_call>\n{\"name\": \"create_reminder\", \"arguments\": {\"time_text\": \"this Friday evening\", \"task\": \"play table tennis and bring your blue water bottle\", \"target\": \"self\"}}\n</tool_call>"
+      "raw_output_preview": "<tool_call>\n{\"name\": \"create_reminder\", \"arguments\": {\"time_text\": \"this Friday evening\", \"task\": \"play table tennis and bring my blue water bottle\", \"target\": \"self\"}}\n</tool_call>"
     },
     {
       "id": "bench_prompt_00096",
@@ -1484,7 +1467,7 @@
       "arg_notes": [
         "mismatch:task"
       ],
-      "raw_output_preview": "<tool_call>\n{\"name\": \"create_reminder\", \"arguments\": {\"time_text\": \"Tomorrow morning\", \"task\": \"stop by the property office\", \"target\": \"self\"}}\n</tool_call>"
+      "raw_output_preview": "<tool_call>\n{\"name\": \"create_reminder\", \"arguments\": {\"time_text\": \"tomorrow morning\", \"task\": \"stop by the property office\", \"target\": \"self\"}}\n</tool_call>"
     },
     {
       "id": "bench_prompt_00100",
@@ -1516,7 +1499,7 @@
       "arg_notes": [
         "mismatch:task"
       ],
-      "raw_output_preview": "<tool_call>\n{\"name\": \"create_reminder\", \"arguments\": {\"time_text\": \"after dinner\", \"task\": \"take after-dinner vitamins\", \"target\": \"self\"}}\n</tool_call>"
+      "raw_output_preview": "What time would you like me to remind you? You can say something like \"tomorrow evening\" or \"at 7:30 PM.\"\n<tool_call>\n{\"name\": \"create_reminder\", \"arguments\": \"{\\\"task\\\": \\\"take my after-dinner vitamins\\\", \\\"target\\\": \\\"self\\\"}\"}\n</tool_call>"
     },
     {
       "id": "bench_prompt_00102",
@@ -1527,10 +1510,12 @@
       "tool_call_ok": true,
       "tool_name_ok": true,
       "args_json_ok": true,
-      "arg_match_ok": 2,
+      "arg_match_ok": 1,
       "arg_match_checked": 2,
-      "arg_notes": [],
-      "raw_output_preview": "I can help with that. When would you like me to remind you to ask your nephew about the clinic appointment?\n<tool_call>\n{\"name\": \"create_reminder\", \"arguments\": {\"time_text\": \"the one he mentioned in his message\", \"task\": \"ask my nephew about the clinic appointment\", \"target\": \"self\"}}\n</tool_call>"
+      "arg_notes": [
+        "mismatch:task"
+      ],
+      "raw_output_preview": "<tool_call>\n{\"name\": \"create_reminder\", \"arguments\": {\"time_text\": \"today after dinner\", \"task\": \"ask my nephew about the clinic appointment mentioned in his message\", \"target\": \"self\"}}\n</tool_call>"
     },
     {
       "id": "bench_prompt_00103",
@@ -1546,7 +1531,7 @@
       "arg_notes": [
         "mismatch:task"
       ],
-      "raw_output_preview": "I can help with that. When would you like me to remind you to take your regular walk?\n<tool_call>\n{\"name\": \"create_reminder\", \"arguments\": {\"time_text\": \"regular walk\", \"task\": \"take my regular walk\", \"target\": \"self\"}}\n</tool_call>"
+      "raw_output_preview": "I can help with that. When would you like me to remind you to go for your walk?\n<tool_call>\n{\"name\": \"create_reminder\", \"arguments\": {\"time_text\": \"later today\", \"task\": \"take my regular walk\", \"target\": \"self\"}}\n</tool_call>"
     },
     {
       "id": "bench_prompt_00104",
@@ -1557,10 +1542,12 @@
       "tool_call_ok": true,
       "tool_name_ok": true,
       "args_json_ok": true,
-      "arg_match_ok": 2,
+      "arg_match_ok": 1,
       "arg_match_checked": 2,
-      "arg_notes": [],
-      "raw_output_preview": "<tool_call>\n{\"name\": \"create_reminder\", \"arguments\": {\"time_text\": \"tomorrow morning\", \"task\": \"pick up new glasses\", \"target\": \"self\"}}\n</tool_call>"
+      "arg_notes": [
+        "mismatch:task"
+      ],
+      "raw_output_preview": "Sure, I can help with that. When would you like me to remind you?\n\nIf you don't specify a time, I'll create a reminder for later today.\n<tool_call>\n{\"name\": \"create_reminder\", \"arguments\": {\"task\": \"pick up my new glasses\", \"target\": \"self\"}}\n</tool_call>"
     },
     {
       "id": "bench_prompt_00105",
@@ -1574,7 +1561,7 @@
       "arg_match_ok": 2,
       "arg_match_checked": 2,
       "arg_notes": [],
-      "raw_output_preview": "I can help with that. What time would you like me to remind you to check if the stove is turned off?\n<tool_call>\n{\"name\": \"create_reminder\", \"arguments\": {\"time_text\": \"the kitchen is a mess\", \"task\": \"turn off the stove\", \"target\": \"self\"}}\n</tool_call>"
+      "raw_output_preview": "<tool_call>\n{\"name\": \"create_reminder\", \"arguments\": {\"time_text\": null, \"task\": \"turn off the stove\", \"target\": \"self\"}}\n</tool_call>"
     },
     {
       "id": "bench_prompt_00106",
@@ -1585,12 +1572,10 @@
       "tool_call_ok": true,
       "tool_name_ok": true,
       "args_json_ok": true,
-      "arg_match_ok": 1,
+      "arg_match_ok": 2,
       "arg_match_checked": 2,
-      "arg_notes": [
-        "mismatch:task"
-      ],
-      "raw_output_preview": "I can help with that. When would you like me to remind you to renew the bus card?\n<tool_call>\n{\"name\": \"create_reminder\", \"arguments\": {\"time_text\": \"tomorrow morning at 9\", \"task\": \"renew the bus card for regular clinic trips\", \"target\": \"self\"}}\n</tool_call>"
+      "arg_notes": [],
+      "raw_output_preview": "I can help with that. When would you like me to remind you to renew the bus card?\n<tool_call>\n{\"name\": \"create_reminder\", \"arguments\": {\"time_text\": \"not specified yet\", \"task\": \"renew the bus card\", \"target\": \"self\"}}\n</tool_call>"
     },
     {
       "id": "bench_prompt_00107",
@@ -1606,7 +1591,7 @@
       "arg_notes": [
         "mismatch:task"
       ],
-      "raw_output_preview": "<tool_call>\n{\"name\": \"create_reminder\", \"arguments\": {\"time_text\": \"Friday morning\", \"task\": \"visit the community clinic and bring my insurance card too\", \"target\": \"self\"}}\n</tool_call>"
+      "raw_output_preview": "Please provide the time you'd like me to remind you, so I can create the correct reminder.\n<tool_call>\n{\"name\": \"create_reminder\", \"arguments\": {\"time_text\": \"\", \"task\": \"visit the community clinic, bring my insurance card too\", \"target\": \"self\"}}\n</tool_call>"
     },
     {
       "id": "bench_prompt_00108",
@@ -1638,7 +1623,7 @@
       "arg_notes": [
         "mismatch:task"
       ],
-      "raw_output_preview": "<tool_call>\n{\"name\": \"create_reminder\", \"arguments\": {\"time_text\": \"tomorrow morning at 8\", \"task\": \"measure my blood pressure\", \"target\": \"self\"}}\n</tool_call>"
+      "raw_output_preview": "I can help with that. When would you like me to remind you?\n\nIf you prefer, you can also tell me a specific time, such as \"tomorrow morning\" or \"every evening after dinner.\"\n<tool_call>\n{\"name\": \"create_reminder\", \"arguments\": {\"task\": \"measure my blood pressure\", \"target\": \"self\"}}\n</tool_call>"
     },
     {
       "id": "bench_prompt_00110",
@@ -1652,7 +1637,7 @@
       "arg_match_ok": 2,
       "arg_match_checked": 2,
       "arg_notes": [],
-      "raw_output_preview": "<tool_call>\n{\"name\": \"create_reminder\", \"arguments\": {\"time_text\": \"still up in the air\", \"task\": \"ask my nephew about the clinic appointment\", \"target\": \"self\"}}\n</tool_call>"
+      "raw_output_preview": "I can help with that. When would you like me to remind you to ask your nephew about the clinic appointment?\n\nIf you don't have a specific time in mind, I can set a general reminder for later today or tomorrow.\n<tool_call>\n{\"name\": \"create_reminder\", \"arguments\": {\"time_text\": \"later today or tomorrow\", \"task\": \"ask my nephew about the clinic appointment\", \"target\": \"self\"}}\n</tool_call>"
     },
     {
       "id": "bench_prompt_00111",
@@ -1668,7 +1653,7 @@
       "arg_notes": [
         "missing:target"
       ],
-      "raw_output_preview": "<tool_call>\n{\"name\": \"create_reminder\", \"arguments\": {\"time_text\": \"tonight at 8:15 PM\", \"task\": \"the reminder task (please provide the task after calling this method)\"}}\n</tool_call>"
+      "raw_output_preview": "<tool_call>\n{\"name\": \"create_reminder\", \"arguments\": {\"time_text\": \"tonight at 8:15 PM\", \"task\": \"not specified yet\"}}\n</tool_call>"
     },
     {
       "id": "bench_prompt_00112",
@@ -1679,10 +1664,12 @@
       "tool_call_ok": true,
       "tool_name_ok": true,
       "args_json_ok": true,
-      "arg_match_ok": 2,
+      "arg_match_ok": 1,
       "arg_match_checked": 2,
-      "arg_notes": [],
-      "raw_output_preview": "I can help with that. What would you like me to remind you to do after breakfast tomorrow?\n<tool_call>\n{\"name\": \"create_reminder\", \"arguments\": {\"time_text\": \"after breakfast tomorrow\", \"task\": \"take a walk around the neighborhood\", \"target\": \"self\"}}\n</tool_call>"
+      "arg_notes": [
+        "missing:target"
+      ],
+      "raw_output_preview": "I can help with that. What would you like me to remind you about after breakfast tomorrow?\n<tool_call>\n{\"name\": \"create_reminder\", \"arguments\": {\"time_text\": \"after breakfast tomorrow\", \"task\": \"not specified yet\"}}\n</tool_call>"
     },
     {
       "id": "bench_prompt_00113",
@@ -1696,7 +1683,7 @@
       "arg_match_ok": 2,
       "arg_match_checked": 2,
       "arg_notes": [],
-      "raw_output_preview": "<tool_call>\n{\"name\": \"create_reminder\", \"arguments\": {\"time_text\": \"today at 6:30 PM\", \"task\": \"be tied up\", \"target\": \"self\"}}\n</tool_call>"
+      "raw_output_preview": "<tool_call>\n{\"name\": \"create_reminder\", \"arguments\": {\"time_text\": \"today at 6:30 PM\", \"task\": \"remind me\", \"target\": \"self\"}}\n</tool_call>"
     },
     {
       "id": "bench_prompt_00114",
@@ -1710,7 +1697,7 @@
       "arg_match_ok": 2,
       "arg_match_checked": 2,
       "arg_notes": [],
-      "raw_output_preview": "<tool_call>\n{\"name\": \"create_reminder\", \"arguments\": {\"time_text\": \"Tomorrow afternoon at 4:00 PM\", \"task\": \"the reminder\", \"target\": \"self\"}}\n</tool_call>"
+      "raw_output_preview": "<tool_call>\n{\"name\": \"create_reminder\", \"arguments\": {\"time_text\": \"tomorrow afternoon at 4:00 PM\", \"task\": \"remind me\", \"target\": \"self\"}}\n</tool_call>"
     },
     {
       "id": "bench_prompt_00115",
@@ -1724,7 +1711,7 @@
       "arg_match_ok": 2,
       "arg_match_checked": 2,
       "arg_notes": [],
-      "raw_output_preview": "<tool_call>\n{\"name\": \"create_reminder\", \"arguments\": {\"time_text\": \"next Monday at 10:15 AM\", \"task\": \"remind me to check my notebook before the meeting\", \"target\": \"self\"}}\n</tool_call>"
+      "raw_output_preview": "<tool_call>\n{\"name\": \"create_reminder\", \"arguments\": {\"time_text\": \"next Monday at 10:15 AM\", \"task\": \"I don't have a specific task mentioned yet, so please ask me what you'd like to be reminded about.\", \"target\": \"self\"}}\n</tool_call>"
     },
     {
       "id": "bench_prompt_00116",
@@ -1738,7 +1725,7 @@
       "arg_match_ok": 2,
       "arg_match_checked": 2,
       "arg_notes": [],
-      "raw_output_preview": "<tool_call>\n{\"name\": \"create_reminder\", \"arguments\": {\"time_text\": \"tonight at 8:15 PM\", \"task\": \"take a break and rest before dinner\", \"target\": \"self\"}}\n</tool_call>"
+      "raw_output_preview": "<tool_call>\n{\"name\": \"create_reminder\", \"arguments\": {\"time_text\": \"tonight at 8:15 PM\", \"task\": \"I’ll be home by then\", \"target\": \"self\"}}\n</tool_call>"
     },
     {
       "id": "bench_prompt_00117",
@@ -1752,7 +1739,7 @@
       "arg_match_ok": 2,
       "arg_match_checked": 2,
       "arg_notes": [],
-      "raw_output_preview": "<tool_call>\n{\"name\": \"create_reminder\", \"arguments\": {\"time_text\": \"the day after tomorrow at 9:30 AM\", \"task\": \"take the day-after-tomorrow morning walk\", \"target\": \"self\"}}\n</tool_call>"
+      "raw_output_preview": "<tool_call>\n{\"name\": \"create_reminder\", \"arguments\": {\"time_text\": \"the day after tomorrow at 9:30 AM\", \"task\": \"no task specified\", \"target\": \"self\"}}\n</tool_call>"
     },
     {
       "id": "bench_prompt_00118",
@@ -1766,7 +1753,7 @@
       "arg_match_ok": 2,
       "arg_match_checked": 2,
       "arg_notes": [],
-      "raw_output_preview": "<tool_call>\n{\"name\": \"create_reminder\", \"arguments\": {\"time_text\": \"today at 6:30 PM\", \"task\": \"sitting by the window\", \"target\": \"self\"}}\n</tool_call>"
+      "raw_output_preview": "<tool_call>\n{\"name\": \"create_reminder\", \"arguments\": {\"time_text\": \"today at 6:30 PM\", \"task\": \"\", \"target\": \"self\"}}\n</tool_call>"
     },
     {
       "id": "bench_prompt_00119",
@@ -1780,7 +1767,7 @@
       "arg_match_ok": 2,
       "arg_match_checked": 2,
       "arg_notes": [],
-      "raw_output_preview": "<tool_call>\n{\"name\": \"create_reminder\", \"arguments\": {\"time_text\": \"today at 6:30 PM\", \"task\": \"I’m on the bus\", \"target\": \"self\"}}\n</tool_call>"
+      "raw_output_preview": "<tool_call>\n{\"name\": \"create_reminder\", \"arguments\": {\"time_text\": \"today at 6:30 PM\", \"task\": \"I'm on the bus\", \"target\": \"self\"}}\n</tool_call>"
     },
     {
       "id": "bench_prompt_00120",
@@ -1794,7 +1781,7 @@
       "arg_match_ok": 2,
       "arg_match_checked": 2,
       "arg_notes": [],
-      "raw_output_preview": "<tool_call>\n{\"name\": \"create_reminder\", \"arguments\": {\"time_text\": \"next Monday at 10:15 AM\", \"task\": \"the reminder\", \"target\": \"self\"}}\n</tool_call>"
+      "raw_output_preview": "<tool_call>\n{\"name\": \"create_reminder\", \"arguments\": {\"time_text\": \"next Monday at 10:15 AM\", \"task\": \"\", \"target\": \"self\"}}\n</tool_call>"
     },
     {
       "id": "bench_prompt_00121",
@@ -1808,21 +1795,21 @@
       "arg_match_ok": 1,
       "arg_match_checked": 1,
       "arg_notes": [],
-      "raw_output_preview": "Sure, I can help with that. What would you like me to remind you about?\n<tool_call>\n{\"name\": \"create_reminder\", \"arguments\": {\"task\": \"take laundry out of the washer\", \"target\": \"self\"}}\n</tool_call>"
+      "raw_output_preview": "Sure, I can help with that. What would you like me to remind you about, and when should it be?\n<tool_call>\n{\"name\": \"create_reminder\", \"arguments\": \"{\\\"task\\\":\\\"put a reminder on my list\\\", \\\"target\\\":\\\"self\\\"}\"}\n</tool_call>"
     },
     {
       "id": "bench_prompt_00122",
       "scenario": "create_missing_both_minimal",
       "should_call_tool": true,
       "expected_tool": "create_reminder",
-      "tool_called": false,
-      "tool_call_ok": false,
-      "tool_name_ok": false,
-      "args_json_ok": false,
-      "arg_match_ok": 0,
-      "arg_match_checked": 0,
+      "tool_called": true,
+      "tool_call_ok": true,
+      "tool_name_ok": true,
+      "args_json_ok": true,
+      "arg_match_ok": 1,
+      "arg_match_checked": 1,
       "arg_notes": [],
-      "raw_output_preview": "Sure, I can help with that. What would you like me to remind you about?\n(If you have a vague idea, such as “later today” or “tomorrow morning,” I can try matching it to a suitable time.)"
+      "raw_output_preview": "Sure, I can help with that. What would you like me to remind you about, and when do you want the reminder?\n<tool_call>\n{\"name\": \"create_reminder\", \"arguments\": \"{\\\"time_text\\\": \\\"not decided yet\\\", \\\"task\\\": \\\"I don't know what to remember\\\", \\\"target\\\": \\\"self\\\"}\"}\n</tool_call>"
     },
     {
       "id": "bench_prompt_00123",
@@ -1838,10 +1825,24 @@
       "arg_notes": [
         "missing:target"
       ],
-      "raw_output_preview": "What would you like me to remind you about? You can also tell me the time, such as “tomorrow morning” or “at 6 PM.”\n<tool_call>\n{\"name\": \"create_reminder\", \"arguments\": {\"task\": \"\", \"time_text\": \"\"}}\n</tool_call>"
+      "raw_output_preview": "I can help with that. What would you like me to remind you about, and when should I remind you?\n<tool_call>\n{\"name\": \"create_reminder\", \"arguments\": \"{\\\"time_text\\\":\\\"\\\",\\\"task\\\":\\\"\\\"}\"}\n</tool_call>"
     },
     {
       "id": "bench_prompt_00124",
+      "scenario": "create_missing_both_minimal",
+      "should_call_tool": true,
+      "expected_tool": "create_reminder",
+      "tool_called": true,
+      "tool_call_ok": true,
+      "tool_name_ok": true,
+      "args_json_ok": true,
+      "arg_match_ok": 1,
+      "arg_match_checked": 1,
+      "arg_notes": [],
+      "raw_output_preview": "Of course! I can help with that. What would you like the reminder to say, and when should it be set?\n<tool_call>\n{\"name\": \"create_reminder\", \"arguments\": \"{\\\"time_text\\\":\\\"tomorrow morning at 8:30\\\", \\\"task\\\":\\\"check blood pressure before breakfast\\\", \\\"target\\\":\\\"self\\\"}\"}\n</tool_call>"
+    },
+    {
+      "id": "bench_prompt_00125",
       "scenario": "create_missing_both_minimal",
       "should_call_tool": true,
       "expected_tool": "create_reminder",
@@ -1854,21 +1855,7 @@
       "arg_notes": [
         "missing:target"
       ],
-      "raw_output_preview": "Of course, I can help with that. What would you like me to remind you about?\n<tool_call>\n{\"name\": \"create_reminder\", \"arguments\": {\"time_text\": \"tomorrow morning at 8\", \"task\": \"take blood pressure medicine before breakfast\"}}\n</tool_call>"
-    },
-    {
-      "id": "bench_prompt_00125",
-      "scenario": "create_missing_both_minimal",
-      "should_call_tool": true,
-      "expected_tool": "create_reminder",
-      "tool_called": false,
-      "tool_call_ok": false,
-      "tool_name_ok": false,
-      "args_json_ok": false,
-      "arg_match_ok": 0,
-      "arg_match_checked": 0,
-      "arg_notes": [],
-      "raw_output_preview": "Sure, I can help with that. Could you please tell me what time you would like to be reminded?\n<tool_call>\n{\"name\": \"create_reminder\", \"arguments\": {\"time_text\": \"tomorrow morning at 8\", \"task\": \"take blood pressure medicine\"})\n</tool_call>"
+      "raw_output_preview": "Sure, I can help with that. What would you like me to remind you about, and when should I remind you?\n<tool_call>\n{\"name\": \"create_reminder\", \"arguments\": \"{\\\"time_text\\\":\\\"tomorrow morning\\\", \\\"task\\\":\\\"check blood pressure before breakfast\\\"}\"}\n</tool_call>"
     },
     {
       "id": "bench_prompt_00126",
@@ -1882,7 +1869,7 @@
       "arg_match_ok": 1,
       "arg_match_checked": 1,
       "arg_notes": [],
-      "raw_output_preview": "I can help with that. What would you like me to remind you about?\n<tool_call>\n{\"name\": \"create_reminder\", \"arguments\": {\"task\": \"details later\", \"target\": \"self\"}}\n</tool_call>"
+      "raw_output_preview": "Please provide me with the reminder time and task so I can create it for you.\n<tool_call>\n{\"name\": \"create_reminder\", \"arguments\": \"{\\\"time_text\\\": \\\"a time\\\", \\\"task\\\": \\\"a task\\\", \\\"target\\\": \\\"self\\\"}\"}\n</tool_call>"
     },
     {
       "id": "bench_prompt_00127",
@@ -1893,12 +1880,10 @@
       "tool_call_ok": true,
       "tool_name_ok": true,
       "args_json_ok": true,
-      "arg_match_ok": 0,
+      "arg_match_ok": 1,
       "arg_match_checked": 1,
-      "arg_notes": [
-        "missing:target"
-      ],
-      "raw_output_preview": "Of course, I can help with that. What would you like me to remind you about?\n<tool_call>\n{\"name\": \"create_reminder\", \"arguments\": {\"time_text\": \"tomorrow morning at 9\", \"task\": \"take blood pressure medicine before breakfast\"}}\n</tool_call>"
+      "arg_notes": [],
+      "raw_output_preview": "Sure, I can help with that. What would you like me to remind you about, and when should I set it for?\n<tool_call>\n{\"name\": \"create_reminder\", \"arguments\": \"{\\\"task\\\":\\\"I don't know yet, just help me organize my day.\\\",\\\"time_text\\\":\\\"later today\\\",\\\"target\\\":\\\"self\\\"}\"}\n</tool_call>"
     },
     {
       "id": "bench_prompt_00128",
@@ -1909,12 +1894,10 @@
       "tool_call_ok": true,
       "tool_name_ok": true,
       "args_json_ok": true,
-      "arg_match_ok": 0,
+      "arg_match_ok": 1,
       "arg_match_checked": 1,
-      "arg_notes": [
-        "missing:target"
-      ],
-      "raw_output_preview": "Sure, I can help with that. What would you like me to remind you about?\n<tool_call>\n{\"name\": \"create_reminder\", \"arguments\": {\"time_text\": \"today at 4 PM\", \"task\": \"water the balcony plants before it gets too hot\"}}\n</tool_call>"
+      "arg_notes": [],
+      "raw_output_preview": "Sure, I can help with that. What would you like me to remind you about, and what time should it be?\n<tool_call>\n{\"name\": \"create_reminder\", \"arguments\": \"{\\\"time_text\\\": \\\"today\\\", \\\"task\\\": \\\"I don't want to forget something today\\\", \\\"target\\\": \\\"self\\\"}\"}\n</tool_call>"
     },
     {
       "id": "bench_prompt_00129",
@@ -1941,12 +1924,13 @@
       "tool_call_ok": true,
       "tool_name_ok": true,
       "args_json_ok": true,
-      "arg_match_ok": 1,
+      "arg_match_ok": 0,
       "arg_match_checked": 2,
       "arg_notes": [
+        "missing:target",
         "mismatch:task"
       ],
-      "raw_output_preview": "I can help with that. Could you tell me what the date is for her birthday, or roughly when it falls?\n<tool_call>\n{\"name\": \"query_reminder\", \"arguments\": {\"time_text\": \"birthday of my granddaughter\", \"task\": \"send birthday message\", \"target\": \"self\"}}\n</tool_call>"
+      "raw_output_preview": "<tool_call>\n{\"name\": \"query_reminder\", \"arguments\": {\"task\": \"send birthday message to granddaughter\"}}\n</tool_call>"
     },
     {
       "id": "bench_prompt_00131",
@@ -1974,7 +1958,7 @@
       "arg_match_ok": 2,
       "arg_match_checked": 2,
       "arg_notes": [],
-      "raw_output_preview": "I can help with that. When would you like me to remind you to collect the medicine from the pharmacy?\n<tool_call>\n{\"name\": \"create_reminder\", \"arguments\": {\"time_text\": \"the pharmacy visit\", \"task\": \"collect medicine from the pharmacy\", \"target\": \"self\"}}\n</tool_call>"
+      "raw_output_preview": "I can help with that. When would you like me to remind you to go to the pharmacy for your medicine?\n<tool_call>\n{\"name\": \"create_reminder\", \"arguments\": {\"time_text\": \"not specified yet\", \"task\": \"collect medicine from the pharmacy\", \"target\": \"self\"}}\n</tool_call>"
     },
     {
       "id": "bench_prompt_00133",
@@ -2001,26 +1985,24 @@
       "tool_call_ok": true,
       "tool_name_ok": true,
       "args_json_ok": true,
-      "arg_match_ok": 1,
+      "arg_match_ok": 2,
       "arg_match_checked": 2,
-      "arg_notes": [
-        "missing:target"
-      ],
-      "raw_output_preview": "I can help with that. Please tell me what the reminder is for, such as “pick up a parcel downstairs,” and any details about the time you were originally asked to set it for.\n<tool_call>\n{\"name\": \"query_reminder\", \"arguments\": {\"task\": \"pick up a parcel downstairs\"}}\n</tool_call>"
+      "arg_notes": [],
+      "raw_output_preview": "<tool_call>\n{\"name\": \"query_reminder\", \"arguments\": {\"task\": \"pick up a parcel downstairs\", \"target\": \"self\"}}\n</tool_call>"
     },
     {
       "id": "bench_prompt_00135",
       "scenario": "query_by_task_success",
       "should_call_tool": true,
       "expected_tool": "query_reminder",
-      "tool_called": false,
-      "tool_call_ok": false,
-      "tool_name_ok": false,
-      "args_json_ok": false,
-      "arg_match_ok": 0,
-      "arg_match_checked": 0,
+      "tool_called": true,
+      "tool_call_ok": true,
+      "tool_name_ok": true,
+      "args_json_ok": true,
+      "arg_match_ok": 3,
+      "arg_match_checked": 3,
       "arg_notes": [],
-      "raw_output_preview": "I can help with that. Could you tell me what time tomorrow morning you plan to have breakfast?\nIf you just want the clinic visit reminder, I can check it for you after you provide the breakfast time."
+      "raw_output_preview": "<tool_call>\n{\"name\": \"query_reminder\", \"arguments\": {\"time_text\": \"after breakfast tomorrow\", \"task\": \"visit the community clinic\", \"target\": \"self\"}}\n</tool_call>"
     },
     {
       "id": "bench_prompt_00136",
@@ -2036,7 +2018,7 @@
       "arg_notes": [
         "mismatch:task"
       ],
-      "raw_output_preview": "I can help with that, but I need to know what kind of beans you are using and whether there is a specific time before dinner you have in mind. For example, do you mean soaking them tonight, tomorrow morning, or later this evening?\n<tool_call>\n{\"name\": \"query_reminder\", \"arguments\": {\"time_text\": \"before dinner\", \"task\": \"soak beans\", \"target\": \"self\"}}\n</tool_call>"
+      "raw_output_preview": "<tool_call>\n{\"name\": \"query_reminder\", \"arguments\": {\"task\": \"soak beans\", \"time_text\": \"before dinner\", \"target\": \"self\"}}\n</tool_call>"
     },
     {
       "id": "bench_prompt_00137",
@@ -2092,7 +2074,7 @@
       "arg_match_ok": 2,
       "arg_match_checked": 2,
       "arg_notes": [],
-      "raw_output_preview": "I can help with that. Please let me check what reminders you have for this Friday evening.\n<tool_call>\n{\"name\": \"query_reminder\", \"arguments\": {\"time_text\": \"this Friday evening\", \"target\": \"self\"}}\n</tool_call>"
+      "raw_output_preview": "<tool_call>\n{\"name\": \"query_reminder\", \"arguments\": {\"time_text\": \"this Friday evening\", \"target\": \"self\"}}\n</tool_call>"
     },
     {
       "id": "bench_prompt_00141",
@@ -2103,12 +2085,10 @@
       "tool_call_ok": true,
       "tool_name_ok": true,
       "args_json_ok": true,
-      "arg_match_ok": 1,
+      "arg_match_ok": 2,
       "arg_match_checked": 2,
-      "arg_notes": [
-        "missing:target"
-      ],
-      "raw_output_preview": "<tool_call>\n{\"name\": \"query_reminder\", \"arguments\": {\"time_text\": \"tomorrow afternoon at 4:00 PM\"}}\n</tool_call>"
+      "arg_notes": [],
+      "raw_output_preview": "<tool_call>\n{\"name\": \"query_reminder\", \"arguments\": {\"time_text\": \"tomorrow afternoon at 4:00 PM\", \"target\": \"self\"}}\n</tool_call>"
     },
     {
       "id": "bench_prompt_00142",
@@ -2138,9 +2118,9 @@
       "arg_match_ok": 1,
       "arg_match_checked": 2,
       "arg_notes": [
-        "missing:target"
+        "mismatch:time_text"
       ],
-      "raw_output_preview": "<tool_call>\n{\"name\": \"query_reminder\", \"arguments\": {\"time_text\": \"today at 6:30 PM\"}}\n</tool_call>"
+      "raw_output_preview": "<tool_call>\n{\"name\": \"query_reminder\", \"arguments\": {\"time_text\": \"6:30 PM today\", \"target\": \"self\"}}\n</tool_call>"
     },
     {
       "id": "bench_prompt_00144",
@@ -2151,12 +2131,10 @@
       "tool_call_ok": true,
       "tool_name_ok": true,
       "args_json_ok": true,
-      "arg_match_ok": 1,
+      "arg_match_ok": 2,
       "arg_match_checked": 2,
-      "arg_notes": [
-        "missing:target"
-      ],
-      "raw_output_preview": "<tool_call>\n{\"name\": \"query_reminder\", \"arguments\": {\"time_text\": \"tomorrow afternoon at 4:00 PM\"}}\n</tool_call>"
+      "arg_notes": [],
+      "raw_output_preview": "<tool_call>\n{\"name\": \"query_reminder\", \"arguments\": {\"time_text\": \"tomorrow afternoon at 4:00 PM\", \"target\": \"self\"}}\n</tool_call>"
     },
     {
       "id": "bench_prompt_00145",
@@ -2181,12 +2159,10 @@
       "tool_call_ok": true,
       "tool_name_ok": true,
       "args_json_ok": true,
-      "arg_match_ok": 1,
+      "arg_match_ok": 2,
       "arg_match_checked": 2,
-      "arg_notes": [
-        "missing:target"
-      ],
-      "raw_output_preview": "<tool_call>\n{\"name\": \"query_reminder\", \"arguments\": {\"task\": \"ask my nephew about the clinic appointment\"}}\n</tool_call>"
+      "arg_notes": [],
+      "raw_output_preview": "<tool_call>\n{\"name\": \"query_reminder\", \"arguments\": {\"task\": \"ask my nephew about the clinic appointment\", \"target\": \"self\"}}\n</tool_call>"
     },
     {
       "id": "bench_prompt_00147",
@@ -2255,12 +2231,10 @@
       "tool_call_ok": true,
       "tool_name_ok": true,
       "args_json_ok": true,
-      "arg_match_ok": 2,
+      "arg_match_ok": 3,
       "arg_match_checked": 3,
-      "arg_notes": [
-        "missing:task"
-      ],
-      "raw_output_preview": "<tool_call>\n{\"name\": \"query_reminder\", \"arguments\": {\"time_text\": \"tomorrow afternoon at 4:00 PM\", \"target\": \"self\"}}\n</tool_call>"
+      "arg_notes": [],
+      "raw_output_preview": "<tool_call>\n{\"name\": \"query_reminder\", \"arguments\": {\"time_text\": \"tomorrow afternoon at 4:00 PM\", \"task\": \"visit the community clinic\", \"target\": \"self\"}}\n</tool_call>"
     },
     {
       "id": "bench_prompt_00152",
@@ -2271,12 +2245,10 @@
       "tool_call_ok": true,
       "tool_name_ok": true,
       "args_json_ok": true,
-      "arg_match_ok": 1,
+      "arg_match_ok": 2,
       "arg_match_checked": 2,
-      "arg_notes": [
-        "mismatch:task"
-      ],
-      "raw_output_preview": "<tool_call>\n{\"name\": \"query_reminder\", \"arguments\": {\"task\": \"buy vegetables\", \"target\": \"self\"}}\n</tool_call>"
+      "arg_notes": [],
+      "raw_output_preview": "<tool_call>\n{\"name\": \"query_reminder\", \"arguments\": {\"task\": \"buy vegetables on the way home\", \"target\": \"self\"}}\n</tool_call>"
     },
     {
       "id": "bench_prompt_00153",
@@ -2376,7 +2348,7 @@
       "arg_match_ok": 2,
       "arg_match_checked": 2,
       "arg_notes": [],
-      "raw_output_preview": "<tool_call>\n{\"name\": \"query_reminder\", \"arguments\": {\"time_text\": \"Tomorrow\", \"target\": \"self\"}}\n</tool_call>"
+      "raw_output_preview": "<tool_call>\n{\"name\": \"query_reminder\", \"arguments\": {\"time_text\": \"tomorrow\", \"target\": \"self\"}}\n</tool_call>"
     },
     {
       "id": "bench_prompt_00160",
@@ -2387,12 +2359,10 @@
       "tool_call_ok": true,
       "tool_name_ok": true,
       "args_json_ok": true,
-      "arg_match_ok": 1,
+      "arg_match_ok": 2,
       "arg_match_checked": 2,
-      "arg_notes": [
-        "missing:target"
-      ],
-      "raw_output_preview": "<tool_call>\n{\"name\": \"query_reminder\", \"arguments\": {\"time_text\": \"this Friday evening\"}}\n</tool_call>"
+      "arg_notes": [],
+      "raw_output_preview": "<tool_call>\n{\"name\": \"query_reminder\", \"arguments\": {\"time_text\": \"this Friday evening\", \"target\": \"self\"}}\n</tool_call>"
     },
     {
       "id": "bench_prompt_00161",
@@ -2501,14 +2471,14 @@
       "expected_tool": "query_reminder",
       "tool_called": true,
       "tool_call_ok": true,
-      "tool_name_ok": false,
+      "tool_name_ok": true,
       "args_json_ok": true,
       "arg_match_ok": 1,
       "arg_match_checked": 2,
       "arg_notes": [
         "mismatch:task"
       ],
-      "raw_output_preview": "Could you please tell me what time you want to be reminded about your evening walk?\n<tool_call>\n{\"name\": \"create_reminder\", \"arguments\": {\"time_text\": \"evening walk reminder\", \"task\": \"remind about evening walk\", \"target\": \"self\"}}\n</tool_call>"
+      "raw_output_preview": "<tool_call>\n{\"name\": \"query_reminder\", \"arguments\": {\"task\": \"evening walk\", \"target\": \"self\"}}\n</tool_call>"
     },
     {
       "id": "bench_prompt_00169",
@@ -2536,7 +2506,7 @@
       "arg_match_ok": 2,
       "arg_match_checked": 2,
       "arg_notes": [],
-      "raw_output_preview": "I can help with that. Please tell me what time the reminder is set for, and I will check it for you.\n<tool_call>\n{\"name\": \"query_reminder\", \"arguments\": {\"task\": \"play basketball\", \"target\": \"self\"}}\n</tool_call>"
+      "raw_output_preview": "<tool_call>\n{\"name\": \"query_reminder\", \"arguments\": {\"task\": \"play basketball\", \"target\": \"self\"}}\n</tool_call>"
     },
     {
       "id": "bench_prompt_00171",
@@ -2547,10 +2517,13 @@
       "tool_call_ok": true,
       "tool_name_ok": true,
       "args_json_ok": true,
-      "arg_match_ok": 3,
+      "arg_match_ok": 1,
       "arg_match_checked": 3,
-      "arg_notes": [],
-      "raw_output_preview": "<tool_call>\n{\"name\": \"query_reminder\", \"arguments\": {\"time_text\": \"this Friday evening\", \"task\": \"take an evening walk\", \"target\": \"self\"}}\n</tool_call>"
+      "arg_notes": [
+        "missing:time_text",
+        "mismatch:task"
+      ],
+      "raw_output_preview": "<tool_call>\n{\"name\": \"query_reminder\", \"arguments\": {\"task\": \"evening walk this Friday evening\", \"target\": \"self\"}}\n</tool_call>"
     },
     {
       "id": "bench_prompt_00172",
@@ -2575,12 +2548,13 @@
       "tool_call_ok": true,
       "tool_name_ok": true,
       "args_json_ok": true,
-      "arg_match_ok": 2,
+      "arg_match_ok": 1,
       "arg_match_checked": 3,
       "arg_notes": [
-        "mismatch:time_text"
+        "mismatch:time_text",
+        "mismatch:task"
       ],
-      "raw_output_preview": "<tool_call>\n{\"name\": \"query_reminder\", \"arguments\": {\"time_text\": \"tomorrow after breakfast\", \"task\": \"play basketball\", \"target\": \"self\"}}\n</tool_call>"
+      "raw_output_preview": "<tool_call>\n{\"name\": \"query_reminder\", \"arguments\": {\"task\": \"play basketball after breakfast\", \"time_text\": \"tomorrow\", \"target\": \"self\"}}\n</tool_call>"
     },
     {
       "id": "bench_prompt_00174",
@@ -2691,14 +2665,14 @@
       "expected_tool": "query_reminder",
       "tool_called": true,
       "tool_call_ok": true,
-      "tool_name_ok": false,
+      "tool_name_ok": true,
       "args_json_ok": true,
       "arg_match_ok": 2,
       "arg_match_checked": 3,
       "arg_notes": [
         "mismatch:task"
       ],
-      "raw_output_preview": "<tool_call>\n{\"name\": \"create_reminder\", \"arguments\": {\"time_text\": \"this Friday evening\", \"task\": \"community clinic visit\", \"target\": \"self\"}}\n</tool_call>"
+      "raw_output_preview": "<tool_call>\n{\"name\": \"query_reminder\", \"arguments\": {\"time_text\": \"this Friday evening\", \"task\": \"community clinic visit\", \"target\": \"self\"}}\n</tool_call>"
     },
     {
       "id": "bench_prompt_00182",
@@ -2707,14 +2681,12 @@
       "expected_tool": "query_reminder",
       "tool_called": true,
       "tool_call_ok": true,
-      "tool_name_ok": false,
+      "tool_name_ok": true,
       "args_json_ok": true,
-      "arg_match_ok": 1,
+      "arg_match_ok": 2,
       "arg_match_checked": 2,
-      "arg_notes": [
-        "missing:target"
-      ],
-      "raw_output_preview": "I can help with that. Please tell me when you want to be reminded, and I’ll create a matching reminder for attending the neighborhood committee meeting.\n<tool_call>\n{\"name\": \"create_reminder\", \"arguments\": {\"time_text\": \"the neighborhood committee meeting\", \"task\": \"attend the neighborhood committee meeting\"}}\n</tool_call>"
+      "arg_notes": [],
+      "raw_output_preview": "<tool_call>\n{\"name\": \"query_reminder\", \"arguments\": {\"task\": \"attend the neighborhood committee meeting\", \"target\": \"self\"}}\n</tool_call>"
     },
     {
       "id": "bench_prompt_00183",
@@ -2739,12 +2711,10 @@
       "tool_call_ok": true,
       "tool_name_ok": true,
       "args_json_ok": true,
-      "arg_match_ok": 1,
+      "arg_match_ok": 2,
       "arg_match_checked": 2,
-      "arg_notes": [
-        "missing:target"
-      ],
-      "raw_output_preview": "<tool_call>\n{\"name\": \"query_reminder\", \"arguments\": {\"task\": \"pay the electricity bill\"}}\n</tool_call>"
+      "arg_notes": [],
+      "raw_output_preview": "<tool_call>\n{\"name\": \"query_reminder\", \"arguments\": {\"task\": \"pay the electricity bill\", \"target\": \"self\"}}\n</tool_call>"
     },
     {
       "id": "bench_prompt_00185",
@@ -2755,12 +2725,10 @@
       "tool_call_ok": true,
       "tool_name_ok": true,
       "args_json_ok": true,
-      "arg_match_ok": 2,
+      "arg_match_ok": 3,
       "arg_match_checked": 3,
-      "arg_notes": [
-        "mismatch:time_text"
-      ],
-      "raw_output_preview": "<tool_call>\n{\"name\": \"query_reminder\", \"arguments\": {\"time_text\": \"tomorrow after breakfast\", \"task\": \"pay the water bill\", \"target\": \"self\"}}\n</tool_call>"
+      "arg_notes": [],
+      "raw_output_preview": "<tool_call>\n{\"name\": \"query_reminder\", \"arguments\": {\"time_text\": \"after breakfast tomorrow\", \"task\": \"pay the water bill\", \"target\": \"self\"}}\n</tool_call>"
     },
     {
       "id": "bench_prompt_00186",
@@ -2785,12 +2753,10 @@
       "tool_call_ok": true,
       "tool_name_ok": true,
       "args_json_ok": true,
-      "arg_match_ok": 2,
+      "arg_match_ok": 3,
       "arg_match_checked": 3,
-      "arg_notes": [
-        "mismatch:task"
-      ],
-      "raw_output_preview": "<tool_call>\n{\"name\": \"query_reminder\", \"arguments\": {\"time_text\": \"the day after tomorrow at 9:30 AM\", \"task\": \"return the library book with my blue tote by the door\", \"target\": \"self\"}}\n</tool_call>"
+      "arg_notes": [],
+      "raw_output_preview": "<tool_call>\n{\"name\": \"query_reminder\", \"arguments\": {\"time_text\": \"the day after tomorrow at 9:30 AM\", \"task\": \"return the library book\", \"target\": \"self\"}}\n</tool_call>"
     },
     {
       "id": "bench_prompt_00188",
@@ -2801,12 +2767,10 @@
       "tool_call_ok": true,
       "tool_name_ok": true,
       "args_json_ok": true,
-      "arg_match_ok": 1,
+      "arg_match_ok": 2,
       "arg_match_checked": 2,
-      "arg_notes": [
-        "missing:target"
-      ],
-      "raw_output_preview": "<tool_call>\n{\"name\": \"query_reminder\", \"arguments\": {\"task\": \"renew the bus card\"}}\n</tool_call>"
+      "arg_notes": [],
+      "raw_output_preview": "<tool_call>\n{\"name\": \"query_reminder\", \"arguments\": {\"task\": \"renew the bus card\", \"target\": \"self\"}}\n</tool_call>"
     },
     {
       "id": "bench_prompt_00189",
@@ -2820,9 +2784,9 @@
       "arg_match_ok": 3,
       "arg_match_checked": 4,
       "arg_notes": [
-        "mismatch:time_text"
+        "missing:time_text"
       ],
-      "raw_output_preview": "<tool_call>\n{\"name\": \"update_reminder\", \"arguments\": {\"reminder_id\": null, \"time_text\": \"day after tomorrow at 9:30 AM\", \"task\": \"check blood sugar\", \"new_time_text\": \"tonight at 8:15 PM\", \"target\": \"self\"}}\n</tool_call>"
+      "raw_output_preview": "<tool_call>\n{\"name\": \"update_reminder\", \"arguments\": {\"task\": \"check blood sugar\", \"new_time_text\": \"tonight at 8:15 PM\", \"target\": \"self\"}}\n</tool_call>"
     },
     {
       "id": "bench_prompt_00190",
@@ -2836,7 +2800,7 @@
       "arg_match_ok": 4,
       "arg_match_checked": 4,
       "arg_notes": [],
-      "raw_output_preview": "<tool_call>\n{\"name\": \"update_reminder\", \"arguments\": {\"reminder_id\": null, \"time_text\": \"next Monday at 10:15 AM\", \"task\": \"video call my sister\", \"new_time_text\": \"tonight at 8:15 PM\", \"target\": \"self\"}}\n</tool_call>"
+      "raw_output_preview": "<tool_call>\n{\"name\": \"update_reminder\", \"arguments\": {\"time_text\": \"next Monday at 10:15 AM\", \"task\": \"video call my sister\", \"new_time_text\": \"tonight at 8:15 PM\", \"target\": \"self\"}}\n</tool_call>"
     },
     {
       "id": "bench_prompt_00191",
@@ -2850,7 +2814,7 @@
       "arg_match_ok": 4,
       "arg_match_checked": 4,
       "arg_notes": [],
-      "raw_output_preview": "<tool_call>\n{\"name\": \"update_reminder\", \"arguments\": {\"reminder_id\": null, \"time_text\": \"next Monday at 10:15 AM\", \"task\": \"play table tennis\", \"new_time_text\": \"tomorrow morning\", \"target\": \"self\"}}\n</tool_call>"
+      "raw_output_preview": "<tool_call>\n{\"name\": \"update_reminder\", \"arguments\": {\"time_text\": \"next Monday at 10:15 AM\", \"new_time_text\": \"tomorrow morning\", \"task\": \"play table tennis\", \"target\": \"self\"}}\n</tool_call>"
     },
     {
       "id": "bench_prompt_00192",
@@ -2866,7 +2830,7 @@
       "arg_notes": [
         "mismatch:task"
       ],
-      "raw_output_preview": "<tool_call>\n{\"name\": \"update_reminder\", \"arguments\": {\"reminder_id\": null, \"time_text\": \"next Monday at 10:15 AM\", \"task\": \"foot massage appointment\", \"new_time_text\": \"this Friday evening\", \"target\": \"self\"}}\n</tool_call>"
+      "raw_output_preview": "<tool_call>\n{\"name\": \"update_reminder\", \"arguments\": {\"time_text\": \"next Monday at 10:15 AM\", \"task\": \"foot massage appointment\", \"new_time_text\": \"this Friday evening\", \"target\": \"self\"}}\n</tool_call>"
     },
     {
       "id": "bench_prompt_00193",
@@ -2880,7 +2844,7 @@
       "arg_match_ok": 4,
       "arg_match_checked": 4,
       "arg_notes": [],
-      "raw_output_preview": "<tool_call>\n{\"name\": \"update_reminder\", \"arguments\": {\"reminder_id\": null, \"time_text\": \"tomorrow at 8:00 AM\", \"task\": \"close the balcony window\", \"new_time_text\": \"next Monday at 10:15 AM\", \"new_task\": null, \"target\": \"self\"}}\n</tool_call>"
+      "raw_output_preview": "<tool_call>\n{\"name\": \"update_reminder\", \"arguments\": {\"time_text\": \"tomorrow at 8:00 AM\", \"new_time_text\": \"next Monday at 10:15 AM\", \"task\": \"close the balcony window\", \"target\": \"self\"}}\n</tool_call>"
     },
     {
       "id": "bench_prompt_00194",
@@ -2894,7 +2858,7 @@
       "arg_match_ok": 4,
       "arg_match_checked": 4,
       "arg_notes": [],
-      "raw_output_preview": "<tool_call>\n{\"name\": \"update_reminder\", \"arguments\": {\"reminder_id\": null, \"time_text\": \"tomorrow morning\", \"task\": \"renew the bus card\", \"new_time_text\": \"tomorrow at 8:00 AM\", \"target\": \"self\"}}\n</tool_call>"
+      "raw_output_preview": "<tool_call>\n{\"name\": \"update_reminder\", \"arguments\": {\"time_text\": \"tomorrow morning\", \"task\": \"renew the bus card\", \"new_time_text\": \"tomorrow at 8:00 AM\", \"target\": \"self\"}}\n</tool_call>"
     },
     {
       "id": "bench_prompt_00195",
@@ -2905,12 +2869,10 @@
       "tool_call_ok": true,
       "tool_name_ok": true,
       "args_json_ok": true,
-      "arg_match_ok": 3,
+      "arg_match_ok": 4,
       "arg_match_checked": 4,
-      "arg_notes": [
-        "mismatch:task"
-      ],
-      "raw_output_preview": "<tool_call>\n{\"name\": \"update_reminder\", \"arguments\": {\"reminder_id\": null, \"time_text\": \"this Friday evening\", \"task\": \"visit the community clinic this Friday evening\", \"new_time_text\": \"this Friday evening\", \"target\": \"self\"}}\n</tool_call>"
+      "arg_notes": [],
+      "raw_output_preview": "<tool_call>\n{\"name\": \"update_reminder\", \"arguments\": {\"time_text\": \"this Friday evening\", \"task\": \"visit the community clinic\", \"new_time_text\": \"this Friday evening\", \"target\": \"self\"}}\n</tool_call>"
     },
     {
       "id": "bench_prompt_00196",
@@ -2924,7 +2886,7 @@
       "arg_match_ok": 4,
       "arg_match_checked": 4,
       "arg_notes": [],
-      "raw_output_preview": "<tool_call>\n{\"name\": \"update_reminder\", \"arguments\": {\"reminder_id\": null, \"time_text\": \"after breakfast tomorrow\", \"task\": \"soak beans before dinner\", \"new_time_text\": \"after breakfast tomorrow\", \"new_task\": null, \"target\": \"self\"}}\n</tool_call>"
+      "raw_output_preview": "<tool_call>\n{\"name\": \"update_reminder\", \"arguments\": {\"time_text\": \"after breakfast tomorrow\", \"task\": \"soak beans before dinner\", \"new_time_text\": \"after breakfast tomorrow\", \"target\": \"self\"}}\n</tool_call>"
     },
     {
       "id": "bench_prompt_00197",
@@ -2935,13 +2897,14 @@
       "tool_call_ok": true,
       "tool_name_ok": true,
       "args_json_ok": true,
-      "arg_match_ok": 2,
+      "arg_match_ok": 1,
       "arg_match_checked": 4,
       "arg_notes": [
-        "mismatch:time_text",
-        "mismatch:task"
+        "missing:time_text",
+        "mismatch:task",
+        "mismatch:new_task"
       ],
-      "raw_output_preview": "<tool_call>\n{\"name\": \"update_reminder\", \"arguments\": {\"reminder_id\": null, \"time_text\": \"tomorrow after breakfast\", \"task\": \"applying the knee patch\", \"new_time_text\": \"tomorrow evening before dinner\", \"new_task\": \"defrost fish for dinner\", \"target\": \"self\"}}\n</tool_call>"
+      "raw_output_preview": "<tool_call>\n{\"name\": \"update_reminder\", \"arguments\": {\"task\": \"applying the knee patch after breakfast tomorrow\", \"new_task\": \"defrosting fish for dinner because the freezer is full\", \"target\": \"self\"}}\n</tool_call>"
     },
     {
       "id": "bench_prompt_00198",
@@ -2955,7 +2918,7 @@
       "arg_match_ok": 4,
       "arg_match_checked": 4,
       "arg_notes": [],
-      "raw_output_preview": "I can help with that. Could you tell me what the current reminder wording is, such as “call my son after breakfast tomorrow,” so I can update it correctly?\n<tool_call>\n{\"name\": \"update_reminder\", \"arguments\": {\"time_text\": \"after breakfast tomorrow\", \"task\": \"call my son\", \"new_task\": \"defrost fish for dinner\", \"target\": \"self\"}}\n</tool_call>"
+      "raw_output_preview": "<tool_call>\n{\"name\": \"update_reminder\", \"arguments\": {\"task\": \"call my son\", \"new_task\": \"defrost fish for dinner\", \"time_text\": \"after breakfast tomorrow\", \"target\": \"self\"}}\n</tool_call>"
     },
     {
       "id": "bench_prompt_00199",
@@ -2966,14 +2929,13 @@
       "tool_call_ok": true,
       "tool_name_ok": true,
       "args_json_ok": true,
-      "arg_match_ok": 1,
+      "arg_match_ok": 2,
       "arg_match_checked": 4,
       "arg_notes": [
-        "mismatch:time_text",
         "mismatch:task",
         "mismatch:new_task"
       ],
-      "raw_output_preview": "<tool_call>\n{\"name\": \"update_reminder\", \"arguments\": {\"reminder_id\": null, \"time_text\": null, \"task\": \"playing basketball this Friday evening\", \"new_task\": \"soaking beans before dinner\", \"target\": \"self\"}}\n</tool_call>"
+      "raw_output_preview": "<tool_call>\n{\"name\": \"update_reminder\", \"arguments\": {\"time_text\": \"this Friday evening\", \"task\": \"playing basketball\", \"new_task\": \"soaking beans before dinner\", \"target\": \"self\"}}\n</tool_call>"
     },
     {
       "id": "bench_prompt_00200",
@@ -2984,12 +2946,10 @@
       "tool_call_ok": true,
       "tool_name_ok": true,
       "args_json_ok": true,
-      "arg_match_ok": 3,
+      "arg_match_ok": 4,
       "arg_match_checked": 4,
-      "arg_notes": [
-        "mismatch:task"
-      ],
-      "raw_output_preview": "<tool_call>\n{\"name\": \"update_reminder\", \"arguments\": {\"reminder_id\": null, \"time_text\": \"today at 6:30 PM\", \"task\": \"foot massage appointment\", \"new_time_text\": null, \"new_task\": \"buy vegetables on the way home\", \"target\": \"self\"}}\n</tool_call>"
+      "arg_notes": [],
+      "raw_output_preview": "<tool_call>\n{\"name\": \"update_reminder\", \"arguments\": {\"time_text\": \"today at 6:30 PM\", \"task\": \"go to the foot massage appointment\", \"new_task\": \"buy vegetables on the way home\", \"target\": \"self\"}}\n</tool_call>"
     },
     {
       "id": "bench_prompt_00201",
@@ -3000,15 +2960,30 @@
       "tool_call_ok": true,
       "tool_name_ok": true,
       "args_json_ok": true,
-      "arg_match_ok": 3,
+      "arg_match_ok": 4,
       "arg_match_checked": 4,
-      "arg_notes": [
-        "mismatch:new_task"
-      ],
-      "raw_output_preview": "<tool_call>\n{\"name\": \"update_reminder\", \"arguments\": {\"reminder_id\": null, \"time_text\": \"tomorrow afternoon at 4:00 PM\", \"task\": \"take out the trash\", \"new_time_text\": \"buy vegetables on the way home\", \"new_task\": null, \"target\": \"self\"}}\n</tool_call>\nI’ve updated the reminder. It will now remind you to buy vegetables on the way home instead of taking out the trash tomorrow afternoon at 4:00 PM.\n<tool_call>\n{\"name\": \"update_reminder\", \"arguments\": {\"reminder_id\": null, \"time_text\": \"tomorrow aft"
+      "arg_notes": [],
+      "raw_output_preview": "<tool_call>\n{\"name\": \"update_reminder\", \"arguments\": {\"time_text\": \"tomorrow afternoon at 4:00 PM\", \"task\": \"take out the trash\", \"new_task\": \"buy vegetables on the way home\", \"target\": \"self\"}}\n</tool_call>"
     },
     {
       "id": "bench_prompt_00202",
+      "scenario": "update_success_task_change",
+      "should_call_tool": true,
+      "expected_tool": "update_reminder",
+      "tool_called": true,
+      "tool_call_ok": true,
+      "tool_name_ok": true,
+      "args_json_ok": true,
+      "arg_match_ok": 2,
+      "arg_match_checked": 4,
+      "arg_notes": [
+        "missing:time_text",
+        "mismatch:task"
+      ],
+      "raw_output_preview": "<tool_call>\n{\"name\": \"update_reminder\", \"arguments\": {\"task\": \"paying the water bill\", \"new_task\": \"defrost fish for dinner\", \"target\": \"self\"}}\n</tool_call>"
+    },
+    {
+      "id": "bench_prompt_00203",
       "scenario": "update_success_task_change",
       "should_call_tool": true,
       "expected_tool": "update_reminder",
@@ -3021,25 +2996,7 @@
       "arg_notes": [
         "mismatch:task"
       ],
-      "raw_output_preview": "<tool_call>\n{\"name\": \"update_reminder\", \"arguments\": {\"reminder_id\": null, \"time_text\": \"before dinner tonight\", \"task\": \"paying the water bill\", \"new_task\": \"defrost fish for dinner\", \"target\": \"self\"}}\n</tool_call>"
-    },
-    {
-      "id": "bench_prompt_00203",
-      "scenario": "update_success_task_change",
-      "should_call_tool": true,
-      "expected_tool": "update_reminder",
-      "tool_called": true,
-      "tool_call_ok": true,
-      "tool_name_ok": true,
-      "args_json_ok": true,
-      "arg_match_ok": 1,
-      "arg_match_checked": 4,
-      "arg_notes": [
-        "mismatch:time_text",
-        "mismatch:task",
-        "mismatch:new_task"
-      ],
-      "raw_output_preview": "<tool_call>\n{\"name\": \"update_reminder\", \"arguments\": {\"reminder_id\": null, \"time_text\": null, \"task\": \"visiting the community clinic tonight at 8:15 PM\", \"new_task\": \"soak beans before dinner for the community clinic visit\", \"target\": \"self\"}}\n</tool_call>"
+      "raw_output_preview": "<tool_call>\n{\"name\": \"update_reminder\", \"arguments\": {\"task\": \"visiting the community clinic\", \"new_task\": \"soak beans before dinner\", \"time_text\": \"tonight at 8:15 PM\", \"target\": \"self\"}}\n</tool_call>"
     },
     {
       "id": "bench_prompt_00204",
@@ -3050,12 +3007,10 @@
       "tool_call_ok": true,
       "tool_name_ok": true,
       "args_json_ok": true,
-      "arg_match_ok": 3,
+      "arg_match_ok": 4,
       "arg_match_checked": 4,
-      "arg_notes": [
-        "mismatch:time_text"
-      ],
-      "raw_output_preview": "<tool_call>\n{\"name\": \"update_reminder\", \"arguments\": {\"reminder_id\": null, \"time_text\": \"day after tomorrow at 9:30 AM\", \"task\": \"buy vegetables on the way home\", \"new_task\": \"close the balcony window\", \"target\": \"self\"}}\n</tool_call>"
+      "arg_notes": [],
+      "raw_output_preview": "<tool_call>\n{\"name\": \"update_reminder\", \"arguments\": {\"time_text\": \"the day after tomorrow at 9:30 AM\", \"task\": \"buy vegetables on the way home\", \"new_task\": \"close the balcony window\", \"target\": \"self\"}}\n</tool_call>"
     },
     {
       "id": "bench_prompt_00205",
@@ -3069,7 +3024,7 @@
       "arg_match_ok": 4,
       "arg_match_checked": 4,
       "arg_notes": [],
-      "raw_output_preview": "<tool_call>\n{\"name\": \"update_reminder\", \"arguments\": {\"reminder_id\": null, \"time_text\": \"next Monday at 10:15 AM\", \"task\": \"apply the knee patch\", \"new_time_text\": \"before dinner tonight\", \"target\": \"self\"}}\n</tool_call>"
+      "raw_output_preview": "<tool_call>\n{\"name\": \"update_reminder\", \"arguments\": {\"time_text\": \"next Monday at 10:15 AM\", \"task\": \"apply the knee patch\", \"new_time_text\": \"before dinner tonight\", \"target\": \"self\"}}\n</tool_call>"
     },
     {
       "id": "bench_prompt_00206",
@@ -3085,7 +3040,7 @@
       "arg_notes": [
         "mismatch:task"
       ],
-      "raw_output_preview": "<tool_call>\n{\"name\": \"update_reminder\", \"arguments\": {\"reminder_id\": null, \"time_text\": \"tomorrow morning\", \"task\": \"asking my nephew about the clinic appointment\", \"new_time_text\": \"next Monday at 10:15 AM\", \"target\": \"self\"}}\n</tool_call>"
+      "raw_output_preview": "<tool_call>\n{\"name\": \"update_reminder\", \"arguments\": {\"time_text\": \"tomorrow morning\", \"task\": \"asking my nephew about the clinic appointment\", \"new_time_text\": \"next Monday at 10:15 AM\", \"target\": \"self\"}}\n</tool_call>"
     },
     {
       "id": "bench_prompt_00207",
@@ -3101,7 +3056,7 @@
       "arg_notes": [
         "mismatch:task"
       ],
-      "raw_output_preview": "<tool_call>\n{\"name\": \"update_reminder\", \"arguments\": {\"reminder_id\": null, \"time_text\": \"tonight at 8:15 PM\", \"task\": \"going to tai chi class tonight at 8:15 PM\", \"new_time_text\": \"tonight at 8:15 PM\", \"target\": \"self\"}}\n</tool_call>"
+      "raw_output_preview": "<tool_call>\n{\"name\": \"update_reminder\", \"arguments\": {\"time_text\": \"tonight at 8:15 PM\", \"task\": \"going to tai chi class\", \"new_time_text\": \"tonight at 8:15 PM\", \"target\": \"self\"}}\n</tool_call>"
     },
     {
       "id": "bench_prompt_00208",
@@ -3112,10 +3067,13 @@
       "tool_call_ok": true,
       "tool_name_ok": true,
       "args_json_ok": true,
-      "arg_match_ok": 4,
+      "arg_match_ok": 2,
       "arg_match_checked": 4,
-      "arg_notes": [],
-      "raw_output_preview": "<tool_call>\n{\"name\": \"update_reminder\", \"arguments\": {\"reminder_id\": null, \"time_text\": \"after breakfast tomorrow\", \"task\": \"go to the foot massage appointment\", \"new_time_text\": \"next Monday at 10:15 AM\", \"target\": \"self\"}}\n</tool_call>"
+      "arg_notes": [
+        "missing:time_text",
+        "mismatch:task"
+      ],
+      "raw_output_preview": "<tool_call>\n{\"name\": \"update_reminder\", \"arguments\": {\"task\": \"go to the foot massage appointment after breakfast\", \"new_time_text\": \"next Monday at 10:15 AM\", \"target\": \"self\"}}\n</tool_call>"
     },
     {
       "id": "bench_prompt_00209",
@@ -3129,7 +3087,7 @@
       "arg_match_ok": 4,
       "arg_match_checked": 4,
       "arg_notes": [],
-      "raw_output_preview": "<tool_call>\n{\"name\": \"update_reminder\", \"arguments\": {\"reminder_id\": null, \"time_text\": \"tomorrow at 8:00 AM\", \"task\": \"bring in the laundry\", \"new_time_text\": \"tonight at 8:15 PM\", \"target\": \"self\"}}\n</tool_call>"
+      "raw_output_preview": "<tool_call>\n{\"name\": \"update_reminder\", \"arguments\": {\"time_text\": \"tomorrow at 8:00 AM\", \"task\": \"bring in the laundry\", \"new_time_text\": \"tonight at 8:15 PM\", \"target\": \"self\"}}\n</tool_call>"
     },
     {
       "id": "bench_prompt_00210",
@@ -3144,10 +3102,10 @@
       "arg_match_checked": 4,
       "arg_notes": [
         "missing:time_text",
-        "missing:task",
+        "mismatch:task",
         "mismatch:new_time_text"
       ],
-      "raw_output_preview": "<tool_call>\n{\"name\": \"update_reminder\", \"arguments\": {\"reminder_id\": \"haircut_in_the_morning\", \"new_time_text\": \"tomorrow afternoon\", \"target\": \"self\"}}\n</tool_call>"
+      "raw_output_preview": "<tool_call>\n{\"name\": \"update_reminder\", \"arguments\": {\"task\": \"haircut\", \"new_time_text\": \"tomorrow afternoon\", \"target\": \"self\"}}\n</tool_call>"
     },
     {
       "id": "bench_prompt_00211",
@@ -3163,7 +3121,7 @@
       "arg_notes": [
         "mismatch:task"
       ],
-      "raw_output_preview": "<tool_call>\n{\"name\": \"update_reminder\", \"arguments\": {\"reminder_id\": null, \"time_text\": \"this Friday evening\", \"task\": \"meeting the bank clerk\", \"new_time_text\": \"tomorrow at 8:00 AM\", \"target\": \"self\"}}\n</tool_call>"
+      "raw_output_preview": "<tool_call>\n{\"name\": \"update_reminder\", \"arguments\": {\"time_text\": \"this Friday evening\", \"task\": \"meeting the bank clerk\", \"new_time_text\": \"tomorrow at 8:00 AM\", \"target\": \"self\"}}\n</tool_call>"
     },
     {
       "id": "bench_prompt_00212",
@@ -3174,14 +3132,12 @@
       "tool_call_ok": true,
       "tool_name_ok": true,
       "args_json_ok": true,
-      "arg_match_ok": 1,
+      "arg_match_ok": 3,
       "arg_match_checked": 4,
       "arg_notes": [
-        "mismatch:time_text",
-        "mismatch:task",
-        "mismatch:new_time_text"
+        "mismatch:task"
       ],
-      "raw_output_preview": "<tool_call>\n{\"name\": \"update_reminder\", \"arguments\": {\"reminder_id\": null, \"time_text\": \"day after tomorrow at 9:30 AM\", \"task\": \"buying vegetables on the way home\", \"new_time_text\": \"day after tomorrow at 9:30 AM\", \"new_task\": null, \"target\": \"self\"}}\n</tool_call>"
+      "raw_output_preview": "<tool_call>\n{\"name\": \"update_reminder\", \"arguments\": {\"time_text\": \"the day after tomorrow at 9:30 AM\", \"task\": \"buying vegetables on the way home\", \"new_time_text\": \"the day after tomorrow at 9:30 AM\", \"target\": \"self\"}}\n</tool_call>"
     },
     {
       "id": "bench_prompt_00213",
@@ -3192,13 +3148,10 @@
       "tool_call_ok": true,
       "tool_name_ok": true,
       "args_json_ok": true,
-      "arg_match_ok": 1,
+      "arg_match_ok": 3,
       "arg_match_checked": 3,
-      "arg_notes": [
-        "missing:task",
-        "missing:new_time_text"
-      ],
-      "raw_output_preview": "<tool_call>\n{\"name\": \"update_reminder\", \"arguments\": {\"reminder_id\": \"check_blood_sugar\", \"time_text\": \"tonight at 8:15 PM\", \"target\": \"self\"}}\n</tool_call>"
+      "arg_notes": [],
+      "raw_output_preview": "<tool_call>\n{\"name\": \"update_reminder\", \"arguments\": {\"task\": \"check blood sugar\", \"new_time_text\": \"tonight at 8:15 PM\", \"target\": \"self\"}}\n</tool_call>"
     },
     {
       "id": "bench_prompt_00214",
@@ -3212,7 +3165,7 @@
       "arg_match_ok": 3,
       "arg_match_checked": 3,
       "arg_notes": [],
-      "raw_output_preview": "<tool_call>\n{\"name\": \"update_reminder\", \"arguments\": {\"reminder_id\": null, \"time_text\": \"today\", \"task\": \"video call my sister\", \"new_time_text\": \"tomorrow afternoon at 4:00 PM\", \"target\": \"self\"}}\n</tool_call>"
+      "raw_output_preview": "<tool_call>\n{\"name\": \"update_reminder\", \"arguments\": {\"task\": \"video call my sister\", \"new_time_text\": \"tomorrow afternoon at 4:00 PM\", \"target\": \"self\"}}\n</tool_call>"
     },
     {
       "id": "bench_prompt_00215",
@@ -3228,7 +3181,7 @@
       "arg_notes": [
         "mismatch:task"
       ],
-      "raw_output_preview": "<tool_call>\n{\"name\": \"update_reminder\", \"arguments\": {\"reminder_id\": null, \"time_text\": \"today at 3:30 PM\", \"task\": \"tai chi class\", \"new_time_text\": \"tomorrow at 8:00 AM\", \"new_task\": null, \"target\": \"self\"}}\n</tool_call>"
+      "raw_output_preview": "<tool_call>\n{\"name\": \"update_reminder\", \"arguments\": {\"task\": \"tai chi class\", \"new_time_text\": \"tomorrow at 8:00 AM\", \"target\": \"self\"}}\n</tool_call>"
     },
     {
       "id": "bench_prompt_00216",
@@ -3239,12 +3192,10 @@
       "tool_call_ok": true,
       "tool_name_ok": true,
       "args_json_ok": true,
-      "arg_match_ok": 2,
+      "arg_match_ok": 3,
       "arg_match_checked": 3,
-      "arg_notes": [
-        "mismatch:task"
-      ],
-      "raw_output_preview": "<tool_call>\n{\"name\": \"update_reminder\", \"arguments\": {\"reminder_id\": null, \"time_text\": null, \"task\": \"foot massage appointment\", \"new_time_text\": \"this Friday evening\", \"target\": \"self\"}}\n</tool_call>"
+      "arg_notes": [],
+      "raw_output_preview": "<tool_call>\n{\"name\": \"update_reminder\", \"arguments\": {\"task\": \"go to the foot massage appointment\", \"new_time_text\": \"this Friday evening\", \"target\": \"self\"}}\n</tool_call>"
     },
     {
       "id": "bench_prompt_00217",
@@ -3258,7 +3209,7 @@
       "arg_match_ok": 3,
       "arg_match_checked": 3,
       "arg_notes": [],
-      "raw_output_preview": "<tool_call>\n{\"name\": \"update_reminder\", \"arguments\": {\"task\": \"charge the phone\", \"new_time_text\": \"tonight at 8:15 PM\", \"target\": \"self\"}}\n</tool_call>"
+      "raw_output_preview": "<tool_call>\n{\"name\": \"update_reminder\", \"arguments\": {\"time_text\": \"tonight\", \"task\": \"charge the phone\", \"new_time_text\": \"tonight at 8:15 PM\", \"target\": \"self\"}}\n</tool_call>"
     },
     {
       "id": "bench_prompt_00218",
@@ -3269,12 +3220,10 @@
       "tool_call_ok": true,
       "tool_name_ok": true,
       "args_json_ok": true,
-      "arg_match_ok": 2,
+      "arg_match_ok": 3,
       "arg_match_checked": 3,
-      "arg_notes": [
-        "mismatch:new_time_text"
-      ],
-      "raw_output_preview": "<tool_call>\n{\"name\": \"update_reminder\", \"arguments\": {\"reminder_id\": null, \"time_text\": \"before dinner tonight\", \"task\": \"pay the water bill\", \"new_time_text\": null, \"new_task\": null, \"target\": \"self\"}}\n</tool_call>"
+      "arg_notes": [],
+      "raw_output_preview": "<tool_call>\n{\"name\": \"update_reminder\", \"arguments\": {\"task\": \"pay the water bill\", \"new_time_text\": \"before dinner tonight\", \"target\": \"self\"}}\n</tool_call>"
     },
     {
       "id": "bench_prompt_00219",
@@ -3291,7 +3240,7 @@
         "mismatch:task",
         "mismatch:new_time_text"
       ],
-      "raw_output_preview": "<tool_call>\n{\"name\": \"update_reminder\", \"arguments\": {\"reminder_id\": null, \"time_text\": \"about meeting the bank clerk\", \"task\": null, \"new_time_text\": \"day after tomorrow at 9:30 AM\", \"new_task\": null, \"target\": \"self\"}}\n</tool_call>"
+      "raw_output_preview": "<tool_call>\n{\"name\": \"update_reminder\", \"arguments\": {\"task\": \"meeting the bank clerk\", \"new_time_text\": \"day after tomorrow at 9:30 AM\", \"target\": \"self\"}}\n</tool_call>"
     },
     {
       "id": "bench_prompt_00220",
@@ -3302,26 +3251,26 @@
       "tool_call_ok": true,
       "tool_name_ok": true,
       "args_json_ok": true,
-      "arg_match_ok": 2,
+      "arg_match_ok": 3,
       "arg_match_checked": 3,
-      "arg_notes": [
-        "mismatch:new_time_text"
-      ],
-      "raw_output_preview": "<tool_call>\n{\"name\": \"update_reminder\", \"arguments\": {\"reminder_id\": null, \"time_text\": \"tonight at 8:15 PM\", \"task\": \"put the leftover soup in the fridge\", \"new_time_text\": null, \"new_task\": null, \"target\": \"self\"}}\n</tool_call>"
+      "arg_notes": [],
+      "raw_output_preview": "<tool_call>\n{\"name\": \"update_reminder\", \"arguments\": {\"task\": \"put the leftover soup in the fridge\", \"new_time_text\": \"tonight at 8:15 PM\", \"target\": \"self\"}}\n</tool_call>"
     },
     {
       "id": "bench_prompt_00221",
       "scenario": "update_ambiguous_task_only",
       "should_call_tool": true,
       "expected_tool": "update_reminder",
-      "tool_called": false,
-      "tool_call_ok": false,
+      "tool_called": true,
+      "tool_call_ok": true,
       "tool_name_ok": false,
-      "args_json_ok": false,
-      "arg_match_ok": 0,
-      "arg_match_checked": 0,
-      "arg_notes": [],
-      "raw_output_preview": "I can help set that up as a reminder. Would you like me to create a reminder for you now, or should I wait until tonight?\nIf you choose to wait, please tell me what time tonight you want it, such as “one hour before dinner.”"
+      "args_json_ok": true,
+      "arg_match_ok": 2,
+      "arg_match_checked": 3,
+      "arg_notes": [
+        "missing:new_time_text"
+      ],
+      "raw_output_preview": "<tool_call>\n{\"name\": \"create_reminder\", \"arguments\": {\"time_text\": \"one before dinner tonight\", \"task\": \"measure blood pressure\", \"target\": \"self\"}}\n</tool_call>"
     },
     {
       "id": "bench_prompt_00222",
@@ -3335,7 +3284,7 @@
       "arg_match_ok": 3,
       "arg_match_checked": 3,
       "arg_notes": [],
-      "raw_output_preview": "<tool_call>\n{\"name\": \"update_reminder\", \"arguments\": {\"task\": \"call my daughter\", \"time_text\": \"later\", \"target\": \"self\", \"new_time_text\": \"tomorrow morning\"}}\n</tool_call>"
+      "raw_output_preview": "<tool_call>\n{\"name\": \"update_reminder\", \"arguments\": {\"task\": \"call my daughter\", \"new_time_text\": \"tomorrow morning\", \"target\": \"self\"}}\n</tool_call>"
     },
     {
       "id": "bench_prompt_00223",
@@ -3346,12 +3295,10 @@
       "tool_call_ok": true,
       "tool_name_ok": true,
       "args_json_ok": true,
-      "arg_match_ok": 2,
+      "arg_match_ok": 3,
       "arg_match_checked": 3,
-      "arg_notes": [
-        "mismatch:new_time_text"
-      ],
-      "raw_output_preview": "<tool_call>\n{\"name\": \"update_reminder\", \"arguments\": {\"reminder_id\": null, \"time_text\": \"next Monday at 10:15 AM\", \"task\": \"join the square dancing group\", \"new_time_text\": null, \"new_task\": null, \"target\": \"self\"}}\n</tool_call>"
+      "arg_notes": [],
+      "raw_output_preview": "<tool_call>\n{\"name\": \"update_reminder\", \"arguments\": {\"task\": \"join the square dancing group\", \"new_time_text\": \"next Monday at 10:15 AM\", \"target\": \"self\"}}\n</tool_call>"
     },
     {
       "id": "bench_prompt_00224",
@@ -3365,7 +3312,7 @@
       "arg_match_ok": 3,
       "arg_match_checked": 3,
       "arg_notes": [],
-      "raw_output_preview": "<tool_call>\n{\"name\": \"update_reminder\", \"arguments\": {\"reminder_id\": null, \"time_text\": null, \"task\": \"trim the potted plants\", \"new_time_text\": \"tonight at 8:15 PM\", \"target\": \"self\"}}\n</tool_call>"
+      "raw_output_preview": "<tool_call>\n{\"name\": \"update_reminder\", \"arguments\": {\"task\": \"trim the potted plants\", \"new_time_text\": \"tonight at 8:15 PM\", \"target\": \"self\"}}\n</tool_call>"
     },
     {
       "id": "bench_prompt_00225",
@@ -3376,12 +3323,10 @@
       "tool_call_ok": true,
       "tool_name_ok": true,
       "args_json_ok": true,
-      "arg_match_ok": 2,
+      "arg_match_ok": 3,
       "arg_match_checked": 3,
-      "arg_notes": [
-        "mismatch:new_time_text"
-      ],
-      "raw_output_preview": "<tool_call>\n{\"name\": \"update_reminder\", \"arguments\": {\"reminder_id\": null, \"time_text\": \"tomorrow morning\", \"task\": \"take out the trash\", \"new_time_text\": null, \"new_task\": null, \"target\": \"self\"}}\n</tool_call>"
+      "arg_notes": [],
+      "raw_output_preview": "<tool_call>\n{\"name\": \"update_reminder\", \"arguments\": {\"task\": \"take out the trash\", \"new_time_text\": \"tomorrow morning\", \"target\": \"self\"}}\n</tool_call>"
     },
     {
       "id": "bench_prompt_00226",
@@ -3392,13 +3337,12 @@
       "tool_call_ok": true,
       "tool_name_ok": true,
       "args_json_ok": true,
-      "arg_match_ok": 1,
+      "arg_match_ok": 2,
       "arg_match_checked": 3,
       "arg_notes": [
-        "missing:task",
-        "missing:new_time_text"
+        "mismatch:task"
       ],
-      "raw_output_preview": "<tool_call>\n{\"name\": \"update_reminder\", \"arguments\": {\"reminder_id\": \"electricity_bill_one\", \"time_text\": \"tonight at 8:15 PM\", \"target\": \"self\"}}\n</tool_call>"
+      "raw_output_preview": "<tool_call>\n{\"name\": \"update_reminder\", \"arguments\": {\"task\": \"electricity bill\", \"new_time_text\": \"tonight at 8:15 PM\", \"target\": \"self\"}}\n</tool_call>"
     },
     {
       "id": "bench_prompt_00227",
@@ -3423,12 +3367,10 @@
       "tool_call_ok": true,
       "tool_name_ok": true,
       "args_json_ok": true,
-      "arg_match_ok": 2,
+      "arg_match_ok": 3,
       "arg_match_checked": 3,
-      "arg_notes": [
-        "mismatch:new_time_text"
-      ],
-      "raw_output_preview": "<tool_call>\n{\"name\": \"update_reminder\", \"arguments\": {\"reminder_id\": null, \"time_text\": \"tomorrow after breakfast\", \"task\": \"join the square dancing group\", \"new_time_text\": null, \"new_task\": null, \"target\": \"self\"}}\n</tool_call>"
+      "arg_notes": [],
+      "raw_output_preview": "<tool_call>\n{\"name\": \"update_reminder\", \"arguments\": {\"task\": \"join the square dancing group\", \"new_time_text\": \"after breakfast tomorrow\", \"target\": \"self\"}}\n</tool_call>"
     },
     {
       "id": "bench_prompt_00229",
@@ -3442,7 +3384,7 @@
       "arg_match_ok": 3,
       "arg_match_checked": 3,
       "arg_notes": [],
-      "raw_output_preview": "<tool_call>\n{\"name\": \"update_reminder\", \"arguments\": {\"reminder_id\": null, \"time_text\": \"this evening\", \"task\": \"take an evening walk\", \"new_time_text\": \"tomorrow morning\", \"target\": \"self\"}}\n</tool_call>"
+      "raw_output_preview": "<tool_call>\n{\"name\": \"update_reminder\", \"arguments\": {\"task\": \"take an evening walk\", \"new_time_text\": \"tomorrow morning\", \"target\": \"self\"}}\n</tool_call>"
     },
     {
       "id": "bench_prompt_00230",
@@ -3453,12 +3395,10 @@
       "tool_call_ok": true,
       "tool_name_ok": true,
       "args_json_ok": true,
-      "arg_match_ok": 2,
+      "arg_match_ok": 3,
       "arg_match_checked": 3,
-      "arg_notes": [
-        "mismatch:new_time_text"
-      ],
-      "raw_output_preview": "<tool_call>\n{\"name\": \"update_reminder\", \"arguments\": {\"reminder_id\": null, \"time_text\": \"the day after tomorrow at 9:30 AM\", \"task\": \"play table tennis\", \"new_time_text\": null, \"new_task\": null, \"target\": \"self\"}}\n</tool_call>"
+      "arg_notes": [],
+      "raw_output_preview": "<tool_call>\n{\"name\": \"update_reminder\", \"arguments\": {\"task\": \"play table tennis\", \"new_time_text\": \"the day after tomorrow at 9:30 AM\", \"target\": \"self\"}}\n</tool_call>"
     },
     {
       "id": "bench_prompt_00231",
@@ -3474,7 +3414,7 @@
       "arg_notes": [
         "mismatch:new_time_text"
       ],
-      "raw_output_preview": "<tool_call>\n{\"name\": \"update_reminder\", \"arguments\": {\"reminder_id\": null, \"time_text\": \"take an evening walk\", \"task\": \"take an evening walk\", \"new_time_text\": \"day after tomorrow at 9:30 AM\", \"target\": \"self\"}}\n</tool_call>"
+      "raw_output_preview": "<tool_call>\n{\"name\": \"update_reminder\", \"arguments\": {\"task\": \"take an evening walk\", \"new_time_text\": \"day after tomorrow at 9:30 AM\", \"target\": \"self\"}}\n</tool_call>"
     },
     {
       "id": "bench_prompt_00232",
@@ -3488,7 +3428,7 @@
       "arg_match_ok": 3,
       "arg_match_checked": 3,
       "arg_notes": [],
-      "raw_output_preview": "<tool_call>\n{\"name\": \"update_reminder\", \"arguments\": {\"reminder_id\": null, \"time_text\": null, \"task\": \"join the square dancing group\", \"new_time_text\": \"next Monday at 10:15 AM\", \"target\": \"self\"}}\n</tool_call>"
+      "raw_output_preview": "<tool_call>\n{\"name\": \"update_reminder\", \"arguments\": {\"task\": \"join the square dancing group\", \"new_time_text\": \"next Monday at 10:15 AM\", \"target\": \"self\"}}\n</tool_call>"
     },
     {
       "id": "bench_prompt_00233",
@@ -3499,13 +3439,12 @@
       "tool_call_ok": true,
       "tool_name_ok": true,
       "args_json_ok": true,
-      "arg_match_ok": 1,
+      "arg_match_ok": 2,
       "arg_match_checked": 3,
       "arg_notes": [
-        "mismatch:task",
-        "missing:new_time_text"
+        "mismatch:task"
       ],
-      "raw_output_preview": "<tool_call>\n{\"name\": \"update_reminder\", \"arguments\": {\"task\": \"foot massage appointment\", \"time_text\": \"after breakfast tomorrow\", \"target\": \"self\"}}\n</tool_call>"
+      "raw_output_preview": "<tool_call>\n{\"name\": \"update_reminder\", \"arguments\": {\"task\": \"foot massage appointment\", \"new_time_text\": \"after breakfast tomorrow\", \"target\": \"self\"}}\n</tool_call>"
     },
     {
       "id": "bench_prompt_00234",
@@ -3519,9 +3458,9 @@
       "arg_match_ok": 2,
       "arg_match_checked": 3,
       "arg_notes": [
-        "mismatch:new_time_text"
+        "mismatch:task"
       ],
-      "raw_output_preview": "<tool_call>\n{\"name\": \"update_reminder\", \"arguments\": {\"reminder_id\": null, \"time_text\": \"tomorrow afternoon at 4:00 PM\", \"task\": \"trim the potted plants\", \"new_time_text\": null, \"new_task\": null, \"target\": \"self\"}}\n</tool_call>"
+      "raw_output_preview": "<tool_call>\n{\"name\": \"update_reminder\", \"arguments\": {\"task\": \"shift trim the potted plants\", \"new_time_text\": \"tomorrow afternoon at 4:00 PM\", \"target\": \"self\"}}\n</tool_call>"
     },
     {
       "id": "bench_prompt_00235",
@@ -3537,7 +3476,7 @@
       "arg_notes": [
         "mismatch:task"
       ],
-      "raw_output_preview": "<tool_call>\n{\"name\": \"update_reminder\", \"arguments\": {\"reminder_id\": null, \"time_text\": null, \"task\": null, \"new_time_text\": \"tonight at 8:15 PM\", \"new_task\": \"haircut\", \"target\": \"self\"}}\n</tool_call>"
+      "raw_output_preview": "<tool_call>\n{\"name\": \"update_reminder\", \"arguments\": {\"task\": \"haircut\", \"new_time_text\": \"tonight at 8:15 PM\", \"target\": \"self\"}}\n</tool_call>"
     },
     {
       "id": "bench_prompt_00236",
@@ -3548,12 +3487,10 @@
       "tool_call_ok": true,
       "tool_name_ok": true,
       "args_json_ok": true,
-      "arg_match_ok": 2,
+      "arg_match_ok": 3,
       "arg_match_checked": 3,
-      "arg_notes": [
-        "mismatch:new_time_text"
-      ],
-      "raw_output_preview": "<tool_call>\n{\"name\": \"update_reminder\", \"arguments\": {\"reminder_id\": null, \"time_text\": \"before dinner tonight\", \"task\": \"get a haircut\", \"new_time_text\": null, \"new_task\": null, \"target\": \"self\"}}\n</tool_call>"
+      "arg_notes": [],
+      "raw_output_preview": "<tool_call>\n{\"name\": \"update_reminder\", \"arguments\": {\"task\": \"get a haircut\", \"new_time_text\": \"before dinner tonight\", \"target\": \"self\"}}\n</tool_call>"
     },
     {
       "id": "bench_prompt_00237",
@@ -3564,12 +3501,10 @@
       "tool_call_ok": true,
       "tool_name_ok": true,
       "args_json_ok": true,
-      "arg_match_ok": 2,
+      "arg_match_ok": 3,
       "arg_match_checked": 3,
-      "arg_notes": [
-        "mismatch:new_time_text"
-      ],
-      "raw_output_preview": "<tool_call>\n{\"name\": \"update_reminder\", \"arguments\": {\"reminder_id\": null, \"time_text\": \"today at 6:30 PM\", \"task\": \"collect medicine from the pharmacy\", \"new_time_text\": null, \"new_task\": null, \"target\": \"self\"}}\n</tool_call>"
+      "arg_notes": [],
+      "raw_output_preview": "<tool_call>\n{\"name\": \"update_reminder\", \"arguments\": {\"task\": \"collect medicine from the pharmacy\", \"new_time_text\": \"today at 6:30 PM\", \"target\": \"self\"}}\n</tool_call>"
     },
     {
       "id": "bench_prompt_00238",
@@ -3585,7 +3520,7 @@
       "arg_notes": [
         "mismatch:new_time_text"
       ],
-      "raw_output_preview": "<tool_call>\n{\"name\": \"update_reminder\", \"arguments\": {\"reminder_id\": null, \"time_text\": null, \"task\": \"collect medicine from the pharmacy\", \"new_time_text\": \"day after tomorrow at 9:30 AM\", \"target\": \"self\"}}\n</tool_call>"
+      "raw_output_preview": "<tool_call>\n{\"name\": \"update_reminder\", \"arguments\": {\"task\": \"collect medicine from the pharmacy\", \"new_time_text\": \"day after tomorrow at 9:30 AM\", \"target\": \"self\"}}\n</tool_call>"
     },
     {
       "id": "bench_prompt_00239",
@@ -3599,7 +3534,7 @@
       "arg_match_ok": 2,
       "arg_match_checked": 2,
       "arg_notes": [],
-      "raw_output_preview": "I can help with that. Which reminder would you like moved to tonight at 8:15 PM?\n<tool_call>\n{\"name\": \"update_reminder\", \"arguments\": {\"task\": \"the original task wording here\", \"new_time_text\": \"tonight at 8:15 PM\", \"target\": \"self\"}}\n</tool_call>"
+      "raw_output_preview": "I need a bit more information to help. What reminder would you like me to move to tonight at 8:15 PM? You can tell me the task, such as “watering plants,” or any detail about the original reminder.\n<tool_call>\n{\"name\": \"update_reminder\", \"arguments\": {\"new_time_text\": \"tonight at 8:15 PM\", \"target\": \"self\"}}\n</tool_call>"
     },
     {
       "id": "bench_prompt_00240",
@@ -3613,7 +3548,7 @@
       "arg_match_ok": 2,
       "arg_match_checked": 2,
       "arg_notes": [],
-      "raw_output_preview": "<tool_call>\n{\"name\": \"update_reminder\", \"arguments\": {\"reminder_id\": null, \"time_text\": null, \"task\": null, \"new_time_text\": \"tonight at 8:15 PM\", \"new_task\": null, \"target\": \"self\"}}\n</tool_call>"
+      "raw_output_preview": "I can help with that. What is the current reminder task, so I know which one to update?\n<tool_call>\n{\"name\": \"update_reminder\", \"arguments\": {\"new_time_text\": \"tonight at 8:15 PM\", \"target\": \"self\"}}\n</tool_call>"
     },
     {
       "id": "bench_prompt_00241",
@@ -3624,13 +3559,10 @@
       "tool_call_ok": true,
       "tool_name_ok": true,
       "args_json_ok": true,
-      "arg_match_ok": 0,
+      "arg_match_ok": 2,
       "arg_match_checked": 2,
-      "arg_notes": [
-        "missing:target",
-        "mismatch:new_time_text"
-      ],
-      "raw_output_preview": "I can help with that. Which reminder would you like me to move to the day after tomorrow at 9:30 AM?\n<tool_call>\n{\"name\": \"update_reminder\", \"arguments\": {\"task\": \"the reminder to move\", \"new_time_text\": \"day after tomorrow at 9:30 AM\"}}\n</tool_call>"
+      "arg_notes": [],
+      "raw_output_preview": "<tool_call>\n{\"name\": \"update_reminder\", \"arguments\": {\"new_time_text\": \"the day after tomorrow at 9:30 AM\", \"target\": \"self\"}}\n</tool_call>"
     },
     {
       "id": "bench_prompt_00242",
@@ -3641,12 +3573,10 @@
       "tool_call_ok": true,
       "tool_name_ok": true,
       "args_json_ok": true,
-      "arg_match_ok": 1,
+      "arg_match_ok": 2,
       "arg_match_checked": 2,
-      "arg_notes": [
-        "missing:target"
-      ],
-      "raw_output_preview": "I can help with that. Which reminder would you like me to change to tonight at 8:15 PM?\n<tool_call>\n{\"name\": \"update_reminder\", \"arguments\": {\"task\": \"the reminder\", \"new_time_text\": \"tonight at 8:15 PM\"}}\n</tool_call>"
+      "arg_notes": [],
+      "raw_output_preview": "I can help with that. Which reminder would you like me to move to tonight at 8:15 PM? You can tell me what it was about, such as \"watering plants,\" or give me any details you remember.\n<tool_call>\n{\"name\": \"update_reminder\", \"arguments\": {\"new_time_text\": \"tonight at 8:15 PM\", \"target\": \"self\"}}\n</tool_call>"
     },
     {
       "id": "bench_prompt_00243",
@@ -3660,7 +3590,7 @@
       "arg_match_ok": 2,
       "arg_match_checked": 2,
       "arg_notes": [],
-      "raw_output_preview": "<tool_call>\n{\"name\": \"update_reminder\", \"arguments\": {\"reminder_id\": null, \"time_text\": null, \"task\": null, \"new_time_text\": \"tonight at 8:15 PM\", \"new_task\": null, \"target\": \"self\"}}\n</tool_call>"
+      "raw_output_preview": "<tool_call>\n{\"name\": \"update_reminder\", \"arguments\": {\"task\": \"more time\", \"new_time_text\": \"tonight at 8:15 PM\", \"target\": \"self\"}}\n</tool_call>"
     },
     {
       "id": "bench_prompt_00244",
@@ -3676,7 +3606,7 @@
       "arg_notes": [
         "mismatch:new_time_text"
       ],
-      "raw_output_preview": "<tool_call>\n{\"name\": \"update_reminder\", \"arguments\": {\"task\": \"running late\", \"new_time_text\": \"6:30 PM today\", \"target\": \"self\"}}\n</tool_call>"
+      "raw_output_preview": "<tool_call>\n{\"name\": \"update_reminder\", \"arguments\": {\"new_time_text\": \"6:30 PM today\", \"target\": \"self\"}}\n</tool_call>"
     },
     {
       "id": "bench_prompt_00245",
@@ -3685,14 +3615,12 @@
       "expected_tool": "update_reminder",
       "tool_called": true,
       "tool_call_ok": true,
-      "tool_name_ok": false,
+      "tool_name_ok": true,
       "args_json_ok": true,
-      "arg_match_ok": 1,
+      "arg_match_ok": 2,
       "arg_match_checked": 2,
-      "arg_notes": [
-        "missing:new_time_text"
-      ],
-      "raw_output_preview": "I can help with that. Which reminder would you like moved to before dinner tonight? Please tell me the current time or task details.\n<tool_call>\n{\"name\": \"query_reminder\", \"arguments\": {\"time_text\": null, \"task\": null, \"target\": \"self\"}}\n</tool_call>"
+      "arg_notes": [],
+      "raw_output_preview": "I can help with that. Could you please tell me which reminder you'd like to move to before dinner tonight?\n<tool_call>\n{\"name\": \"update_reminder\", \"arguments\": {\"new_time_text\": \"before dinner tonight\", \"target\": \"self\"}}\n</tool_call>"
     },
     {
       "id": "bench_prompt_00246",
@@ -3703,12 +3631,13 @@
       "tool_call_ok": true,
       "tool_name_ok": true,
       "args_json_ok": true,
-      "arg_match_ok": 1,
+      "arg_match_ok": 0,
       "arg_match_checked": 2,
       "arg_notes": [
-        "missing:new_time_text"
+        "missing:target",
+        "mismatch:new_time_text"
       ],
-      "raw_output_preview": "<tool_call>\n{\"name\": \"update_reminder\", \"arguments\": {\"reminder_id\": \"auto-generated-reminder-id-12345\", \"time_text\": \"day after tomorrow at 9:30 AM\", \"target\": \"self\"}}\n</tool_call>"
+      "raw_output_preview": "I need more information to update the reminder. Which reminder would you like me to move, such as its current time, task, or reminder ID?\n<tool_call>\n{\"name\": \"update_reminder\", \"arguments\": {\"new_time_text\": \"day after tomorrow at 9:30 AM\"}}\n</tool_call>"
     },
     {
       "id": "bench_prompt_00247",
@@ -3719,12 +3648,13 @@
       "tool_call_ok": true,
       "tool_name_ok": true,
       "args_json_ok": true,
-      "arg_match_ok": 2,
+      "arg_match_ok": 1,
       "arg_match_checked": 3,
       "arg_notes": [
-        "mismatch:time_text"
+        "missing:time_text",
+        "mismatch:task"
       ],
-      "raw_output_preview": "<tool_call>\n{\"name\": \"delete_reminder\", \"arguments\": {\"time_text\": \"tomorrow after breakfast\", \"task\": \"check blood sugar\", \"target\": \"self\"}}\n</tool_call>"
+      "raw_output_preview": "<tool_call>\n{\"name\": \"delete_reminder\", \"arguments\": {\"task\": \"check blood sugar after breakfast tomorrow\", \"target\": \"self\"}}\n</tool_call>"
     },
     {
       "id": "bench_prompt_00248",
@@ -3738,9 +3668,9 @@
       "arg_match_ok": 2,
       "arg_match_checked": 3,
       "arg_notes": [
-        "missing:task"
+        "missing:time_text"
       ],
-      "raw_output_preview": "<tool_call>\n{\"name\": \"delete_reminder\", \"arguments\": {\"time_text\": \"tomorrow morning\", \"target\": \"self\"}}\n</tool_call>"
+      "raw_output_preview": "<tool_call>\n{\"name\": \"delete_reminder\", \"arguments\": {\"task\": \"call my daughter\", \"target\": \"self\"}}\n</tool_call>"
     },
     {
       "id": "bench_prompt_00249",
@@ -3779,12 +3709,10 @@
       "tool_call_ok": true,
       "tool_name_ok": true,
       "args_json_ok": true,
-      "arg_match_ok": 2,
+      "arg_match_ok": 3,
       "arg_match_checked": 3,
-      "arg_notes": [
-        "missing:time_text"
-      ],
-      "raw_output_preview": "<tool_call>\n{\"name\": \"delete_reminder\", \"arguments\": {\"task\": \"take out the trash\", \"target\": \"self\"}}\n</tool_call>"
+      "arg_notes": [],
+      "raw_output_preview": "<tool_call>\n{\"name\": \"delete_reminder\", \"arguments\": {\"time_text\": \"before dinner tonight\", \"task\": \"take out the trash\", \"target\": \"self\"}}\n</tool_call>"
     },
     {
       "id": "bench_prompt_00252",
@@ -3840,7 +3768,7 @@
       "arg_match_ok": 3,
       "arg_match_checked": 3,
       "arg_notes": [],
-      "raw_output_preview": "<tool_call>\n{\"name\": \"delete_reminder\", \"arguments\": {\"time_text\": \"this Friday evening\", \"task\": \"call my daughter\", \"target\": \"self\"}}\n</tool_call>"
+      "raw_output_preview": "<tool_call>\n{\"name\": \"delete_reminder\", \"arguments\": {\"task\": \"call my daughter\", \"time_text\": \"this Friday evening\", \"target\": \"self\"}}\n</tool_call>"
     },
     {
       "id": "bench_prompt_00256",
@@ -3885,7 +3813,7 @@
       "arg_match_ok": 3,
       "arg_match_checked": 3,
       "arg_notes": [],
-      "raw_output_preview": "<tool_call>\n{\"name\": \"delete_reminder\", \"arguments\": {\"time_text\": \"the day after tomorrow at 9:30 AM\", \"task\": \"ask my nephew about the clinic appointment\", \"target\": \"self\"}}\n</tool_call>"
+      "raw_output_preview": "<tool_call>\n{\"name\": \"delete_reminder\", \"arguments\": {\"task\": \"ask my nephew about the clinic appointment\", \"time_text\": \"the day after tomorrow at 9:30 AM\", \"target\": \"self\"}}\n</tool_call>"
     },
     {
       "id": "bench_prompt_00259",
@@ -3896,10 +3824,13 @@
       "tool_call_ok": true,
       "tool_name_ok": true,
       "args_json_ok": true,
-      "arg_match_ok": 3,
+      "arg_match_ok": 1,
       "arg_match_checked": 3,
-      "arg_notes": [],
-      "raw_output_preview": "<tool_call>\n{\"name\": \"delete_reminder\", \"arguments\": {\"time_text\": \"tomorrow afternoon at 4:00 PM\", \"task\": \"ask my nephew about the clinic appointment\", \"target\": \"self\"}}\n</tool_call>"
+      "arg_notes": [
+        "missing:time_text",
+        "mismatch:task"
+      ],
+      "raw_output_preview": "<tool_call>\n{\"name\": \"delete_reminder\", \"arguments\": {\"task\": \"ask my nephew about the clinic appointment tomorrow afternoon at 4:00 PM\", \"target\": \"self\"}}\n</tool_call>"
     },
     {
       "id": "bench_prompt_00260",
@@ -3995,10 +3926,10 @@
       "arg_match_ok": 1,
       "arg_match_checked": 3,
       "arg_notes": [
-        "missing:time_text",
+        "mismatch:time_text",
         "mismatch:task"
       ],
-      "raw_output_preview": "<tool_call>\n{\"name\": \"delete_reminder\", \"arguments\": {\"task\": \"measure my blood pressure after breakfast tomorrow\", \"target\": \"self\"}}\n</tool_call>"
+      "raw_output_preview": "<tool_call>\n{\"name\": \"delete_reminder\", \"arguments\": {\"time_text\": \"tomorrow after breakfast\", \"task\": \"measure my blood pressure\", \"target\": \"self\"}}\n</tool_call>"
     },
     {
       "id": "bench_prompt_00266",
@@ -4009,12 +3940,10 @@
       "tool_call_ok": true,
       "tool_name_ok": true,
       "args_json_ok": true,
-      "arg_match_ok": 1,
+      "arg_match_ok": 2,
       "arg_match_checked": 2,
-      "arg_notes": [
-        "missing:target"
-      ],
-      "raw_output_preview": "<tool_call>\n{\"name\": \"delete_reminder\", \"arguments\": {\"task\": \"call my daughter\"}}\n</tool_call>"
+      "arg_notes": [],
+      "raw_output_preview": "<tool_call>\n{\"name\": \"delete_reminder\", \"arguments\": {\"task\": \"call my daughter\", \"target\": \"self\"}}\n</tool_call>"
     },
     {
       "id": "bench_prompt_00267",
@@ -4025,13 +3954,12 @@
       "tool_call_ok": true,
       "tool_name_ok": true,
       "args_json_ok": true,
-      "arg_match_ok": 1,
+      "arg_match_ok": 2,
       "arg_match_checked": 3,
       "arg_notes": [
-        "mismatch:time_text",
         "mismatch:task"
       ],
-      "raw_output_preview": "<tool_call>\n{\"name\": \"delete_reminder\", \"arguments\": {\"time_text\": \"day after tomorrow at 9:30 AM\", \"task\": \"joining the square dancing group\", \"target\": \"self\"}}\n</tool_call>"
+      "raw_output_preview": "<tool_call>\n{\"name\": \"delete_reminder\", \"arguments\": {\"time_text\": \"the day after tomorrow at 9:30 AM\", \"task\": \"joining the square dancing group\", \"target\": \"self\"}}\n</tool_call>"
     },
     {
       "id": "bench_prompt_00268",
@@ -4042,13 +3970,12 @@
       "tool_call_ok": true,
       "tool_name_ok": true,
       "args_json_ok": true,
-      "arg_match_ok": 0,
+      "arg_match_ok": 1,
       "arg_match_checked": 2,
       "arg_notes": [
-        "missing:target",
         "mismatch:task"
       ],
-      "raw_output_preview": "<tool_call>\n{\"name\": \"delete_reminder\", \"arguments\": {\"task\": \"collecting medicine from the pharmacy\"}}\n</tool_call>"
+      "raw_output_preview": "<tool_call>\n{\"name\": \"delete_reminder\", \"arguments\": {\"task\": \"collecting my medicine from the pharmacy\", \"target\": \"self\"}}\n</tool_call>"
     },
     {
       "id": "bench_prompt_00269",
@@ -4095,7 +4022,7 @@
       "arg_notes": [
         "mismatch:task"
       ],
-      "raw_output_preview": "<tool_call>\n{\"name\": \"delete_reminder\", \"arguments\": {\"time_text\": \"this Friday evening\", \"task\": \"property office reminder\", \"target\": \"self\"}}\n</tool_call>"
+      "raw_output_preview": "<tool_call>\n{\"name\": \"delete_reminder\", \"arguments\": {\"time_text\": \"this Friday evening\", \"task\": \"property office\", \"target\": \"self\"}}\n</tool_call>"
     },
     {
       "id": "bench_prompt_00272",
@@ -4109,9 +4036,9 @@
       "arg_match_ok": 1,
       "arg_match_checked": 2,
       "arg_notes": [
-        "missing:target"
+        "mismatch:task"
       ],
-      "raw_output_preview": "I can help with that. Which reminder should I delete—by its task, such as \"defrost fish for dinner,\" or by any other detail like the time?\n<tool_call>\n{\"name\": \"delete_reminder\", \"arguments\": {\"task\": \"defrost fish for dinner\"}}\n</tool_call>"
+      "raw_output_preview": "<tool_call>\n{\"name\": \"delete_reminder\", \"arguments\": {\"task\": \"defrost fish for dinner one\", \"target\": \"self\"}}\n</tool_call>"
     },
     {
       "id": "bench_prompt_00273",
@@ -4136,12 +4063,10 @@
       "tool_call_ok": true,
       "tool_name_ok": true,
       "args_json_ok": true,
-      "arg_match_ok": 1,
+      "arg_match_ok": 2,
       "arg_match_checked": 2,
-      "arg_notes": [
-        "missing:target"
-      ],
-      "raw_output_preview": "<tool_call>\n{\"name\": \"delete_reminder\", \"arguments\": {\"task\": \"video call my sister\"}}\n</tool_call>"
+      "arg_notes": [],
+      "raw_output_preview": "<tool_call>\n{\"name\": \"delete_reminder\", \"arguments\": {\"task\": \"video call my sister\", \"target\": \"self\"}}\n</tool_call>"
     },
     {
       "id": "bench_prompt_00275",
@@ -4183,7 +4108,7 @@
       "arg_match_ok": 3,
       "arg_match_checked": 3,
       "arg_notes": [],
-      "raw_output_preview": "<tool_call>\n{\"name\": \"delete_reminder\", \"arguments\": {\"time_text\": \"before dinner tonight\", \"task\": \"close the balcony window\", \"target\": \"self\"}}\n</tool_call>"
+      "raw_output_preview": "<tool_call>\n{\"name\": \"delete_reminder\", \"arguments\": {\"task\": \"close the balcony window\", \"time_text\": \"before dinner tonight\", \"target\": \"self\"}}\n</tool_call>"
     },
     {
       "id": "bench_prompt_00278",
@@ -4338,12 +4263,10 @@
       "tool_call_ok": true,
       "tool_name_ok": true,
       "args_json_ok": true,
-      "arg_match_ok": 1,
+      "arg_match_ok": 2,
       "arg_match_checked": 2,
-      "arg_notes": [
-        "missing:target"
-      ],
-      "raw_output_preview": "<tool_call>\n{\"name\": \"delete_reminder\", \"arguments\": {\"task\": \"meet the bank clerk\"}}\n</tool_call>"
+      "arg_notes": [],
+      "raw_output_preview": "<tool_call>\n{\"name\": \"delete_reminder\", \"arguments\": {\"task\": \"meet the bank clerk\", \"target\": \"self\"}}\n</tool_call>"
     },
     {
       "id": "bench_prompt_00289",
@@ -4354,10 +4277,13 @@
       "tool_call_ok": true,
       "tool_name_ok": true,
       "args_json_ok": true,
-      "arg_match_ok": 3,
+      "arg_match_ok": 1,
       "arg_match_checked": 3,
-      "arg_notes": [],
-      "raw_output_preview": "<tool_call>\n{\"name\": \"delete_reminder\", \"arguments\": {\"time_text\": \"after breakfast tomorrow\", \"task\": \"visit the community clinic\", \"target\": \"self\"}}\n</tool_call>"
+      "arg_notes": [
+        "missing:time_text",
+        "mismatch:task"
+      ],
+      "raw_output_preview": "<tool_call>\n{\"name\": \"delete_reminder\", \"arguments\": {\"task\": \"visit the community clinic after breakfast\", \"target\": \"self\"}}\n</tool_call>"
     },
     {
       "id": "bench_prompt_00290",
@@ -4385,7 +4311,7 @@
       "arg_match_ok": 1,
       "arg_match_checked": 1,
       "arg_notes": [],
-      "raw_output_preview": "Which reminder would you like me to delete? You can tell me the task, the time, or any detail you remember, such as “the grocery shopping reminder” or “the one for tomorrow morning.”\n<tool_call>\n{\"name\": \"delete_reminder\", \"arguments\": {\"target\": \"self\"}}\n</tool_call>"
+      "raw_output_preview": "What is the reminder about, so I can delete the right one? You can tell me the task, the time, or any detail you remember.\n<tool_call>\n{\"name\": \"delete_reminder\", \"arguments\": {\"target\": \"self\"}}\n</tool_call>"
     },
     {
       "id": "bench_prompt_00292",
@@ -4396,12 +4322,10 @@
       "tool_call_ok": true,
       "tool_name_ok": true,
       "args_json_ok": true,
-      "arg_match_ok": 0,
+      "arg_match_ok": 1,
       "arg_match_checked": 1,
-      "arg_notes": [
-        "missing:target"
-      ],
-      "raw_output_preview": "Sure, I can help with that. Could you please tell me which reminder you would like to delete, such as its task, time, or any details you remember?\n<tool_call>\n{\"name\": \"delete_reminder\", \"arguments\": {}}\n</tool_call>"
+      "arg_notes": [],
+      "raw_output_preview": "Sure, I can help with that. What reminder would you like me to delete? You can tell me the task, the time, or any detail you remember.\n<tool_call>\n{\"name\": \"delete_reminder\", \"arguments\": {\"target\": \"self\"}}\n</tool_call>"
     },
     {
       "id": "bench_prompt_00293",
@@ -4412,12 +4336,10 @@
       "tool_call_ok": true,
       "tool_name_ok": true,
       "args_json_ok": true,
-      "arg_match_ok": 0,
+      "arg_match_ok": 1,
       "arg_match_checked": 1,
-      "arg_notes": [
-        "missing:target"
-      ],
-      "raw_output_preview": "I can help with that. Which reminder would you like me to delete? You can tell me the task, the time, or any detail you remember.\n<tool_call>\n{\"name\": \"delete_reminder\", \"arguments\": {\"task\": \"coffee went cold\"}}\n</tool_call>"
+      "arg_notes": [],
+      "raw_output_preview": "I can help with that. Which reminder would you like me to delete? You can tell me the task, the time, or any detail you remember.\n<tool_call>\n{\"name\": \"delete_reminder\", \"arguments\": {\"task\": \"coffee\", \"target\": \"self\"}}\n</tool_call>"
     },
     {
       "id": "bench_prompt_00294",
@@ -4428,12 +4350,10 @@
       "tool_call_ok": true,
       "tool_name_ok": true,
       "args_json_ok": true,
-      "arg_match_ok": 0,
+      "arg_match_ok": 1,
       "arg_match_checked": 1,
-      "arg_notes": [
-        "missing:target"
-      ],
-      "raw_output_preview": "Sure, I can help with that. Could you please tell me which reminder you would like to delete, such as its task, time, or any identifier if it has one?\n<tool_call>\n{\"name\": \"delete_reminder\", \"arguments\": {}}\n</tool_call>"
+      "arg_notes": [],
+      "raw_output_preview": "Sure, I can help with that. Which reminder would you like me to delete? You can tell me the task, the time, or any detail you remember, such as “the grocery shopping reminder” or “the one for tomorrow morning.”\n<tool_call>\n{\"name\": \"delete_reminder\", \"arguments\": {\"task\": \"grocery shopping\", \"target\": \"self\"}}\n</tool_call>"
     },
     {
       "id": "bench_prompt_00295",
@@ -4444,12 +4364,10 @@
       "tool_call_ok": true,
       "tool_name_ok": true,
       "args_json_ok": true,
-      "arg_match_ok": 0,
+      "arg_match_ok": 1,
       "arg_match_checked": 1,
-      "arg_notes": [
-        "missing:target"
-      ],
-      "raw_output_preview": "Sure, I can help with that. Which reminder would you like me to delete?\n<tool_call>\n{\"name\": \"delete_reminder\", \"arguments\": {}}\n</tool_call>"
+      "arg_notes": [],
+      "raw_output_preview": "Sure, which reminder would you like me to delete? You can tell me the task, the time, or any detail you remember.\n<tool_call>\n{\"name\": \"delete_reminder\", \"arguments\": {\"task\": \"\", \"time_text\": \"\", \"target\": \"self\"}}\n</tool_call>"
     },
     {
       "id": "bench_prompt_00296",
@@ -4463,7 +4381,7 @@
       "arg_match_ok": 1,
       "arg_match_checked": 1,
       "arg_notes": [],
-      "raw_output_preview": "Of course, I can help with that. Could you please tell me which reminder you’d like to delete, such as its task, time, or any details you remember?\n<tool_call>\n{\"name\": \"delete_reminder\", \"arguments\": {\"target\": \"self\"}}\n</tool_call>"
+      "raw_output_preview": "Sure, I can help with that. Which reminder would you like me to delete? You can tell me the task, the time, or any detail you remember, such as “watering plants” or “tomorrow morning.”\n<tool_call>\n{\"name\": \"delete_reminder\", \"arguments\": {\"target\": \"self\"}}\n</tool_call>"
     },
     {
       "id": "bench_prompt_00297",
@@ -4472,12 +4390,12 @@
       "expected_tool": "delete_reminder",
       "tool_called": true,
       "tool_call_ok": true,
-      "tool_name_ok": true,
+      "tool_name_ok": false,
       "args_json_ok": true,
       "arg_match_ok": 1,
       "arg_match_checked": 1,
       "arg_notes": [],
-      "raw_output_preview": "<tool_call>\n{\"name\": \"delete_reminder\", \"arguments\": {\"task\": \"coffee nearby\", \"target\": \"self\"}}\n</tool_call>"
+      "raw_output_preview": "<tool_call>\n{\"name\": \"query_reminder\", \"arguments\": {\"task\": \"coffee\", \"target\": \"self\"}}\n</tool_call>"
     },
     {
       "id": "bench_prompt_00298",
@@ -4486,28 +4404,26 @@
       "expected_tool": "delete_reminder",
       "tool_called": true,
       "tool_call_ok": true,
-      "tool_name_ok": true,
+      "tool_name_ok": false,
       "args_json_ok": true,
-      "arg_match_ok": 0,
+      "arg_match_ok": 1,
       "arg_match_checked": 1,
-      "arg_notes": [
-        "missing:target"
-      ],
-      "raw_output_preview": "Of course, I can help with that. Could you please tell me which reminder you would like to delete, such as its task, time, or any details you remember?\n<tool_call>\n{\"name\": \"delete_reminder\", \"arguments\": {}}\n</tool_call>"
+      "arg_notes": [],
+      "raw_output_preview": "What would you like me to delete? You can tell me the task, the time, or any detail you remember, such as “watering plants” or “tomorrow morning.” If it helps, I can also check what reminders you have first.\n<tool_call>\n{\"name\": \"query_reminder\", \"arguments\": {\"target\": \"self\"}}\n</tool_call>"
     },
     {
       "id": "bench_prompt_00299",
       "scenario": "no_tool_daily_chat",
       "should_call_tool": false,
       "expected_tool": null,
-      "tool_called": true,
-      "tool_call_ok": false,
+      "tool_called": false,
+      "tool_call_ok": true,
       "tool_name_ok": false,
       "args_json_ok": false,
       "arg_match_ok": 0,
       "arg_match_checked": 0,
       "arg_notes": [],
-      "raw_output_preview": "That sounds peaceful. What part of the day did you spend outside? Was it somewhere warm, cool, sunny, or perhaps near water?\nIf you feel like sharing, I can help set a reminder for something later too.\n<tool_call>\n{\"name\": \"query_reminder\", \"arguments\": {\"time_text\": \"today at 4 PM\", \"target\": \"self\"}}\n</tool_call>"
+      "raw_output_preview": "That sounds nice. A little fresh air can do the mind good. If you feel like it, you might want to sit down, drink some water, and let your body relax for a moment. How was the weather today?"
     },
     {
       "id": "bench_prompt_00300",
@@ -4521,49 +4437,49 @@
       "arg_match_ok": 0,
       "arg_match_checked": 0,
       "arg_notes": [],
-      "raw_output_preview": "That sounds like a lovely way to spend the afternoon. A little fresh air can do wonders for the spirit. How is your day going so far?"
+      "raw_output_preview": "That sounds lovely. A little fresh air can do wonders for both body and mind. If you feel like it, you might also enjoy a warm drink and a short rest afterward."
     },
     {
       "id": "bench_prompt_00301",
       "scenario": "no_tool_daily_chat",
       "should_call_tool": false,
       "expected_tool": null,
-      "tool_called": true,
-      "tool_call_ok": false,
+      "tool_called": false,
+      "tool_call_ok": true,
       "tool_name_ok": false,
       "args_json_ok": false,
       "arg_match_ok": 0,
       "arg_match_checked": 0,
       "arg_notes": [],
-      "raw_output_preview": "That sounds like a lovely way to start the day. A little fresh air can do wonders for the mood. If you feel up to it later, you might enjoy sipping something gentle and resting your feet for a while.\n<tool_call>\n{\"name\": \"create_reminder\", \"arguments\": {\"time_text\": \"later today\", \"task\": \"sit down and rest your feet for a bit\", \"target\": \"self\"}}\n</tool_call>"
+      "raw_output_preview": "That sounds lovely. A little fresh air can do wonders for both the body and the mind. If you feel like it, maybe take a short rest afterward and let your thoughts settle."
     },
     {
       "id": "bench_prompt_00302",
       "scenario": "no_tool_daily_chat",
       "should_call_tool": false,
       "expected_tool": null,
-      "tool_called": true,
-      "tool_call_ok": false,
+      "tool_called": false,
+      "tool_call_ok": true,
       "tool_name_ok": false,
       "args_json_ok": false,
       "arg_match_ok": 0,
       "arg_match_checked": 0,
       "arg_notes": [],
-      "raw_output_preview": "That sounds like such a lovely moment. A little bit of fresh air can do wonders for the spirit, especially after being cooped up indoors for a while. It’s nice that you noticed how the sunshine made your mood feel brighter. Maybe you can make this kind of short walk part of your routine on days when you feel a bit tired or anxious about sitting too long at your desk.\n<tool_call>\n{\"name\": \"query_reminder\", \"arguments\": {\"time_text\": \"this afternoon\", \"target\": \"self\"}}\n</tool_call>"
+      "raw_output_preview": "That sounds lovely. A little fresh air and sunshine can do wonders for both your body and mind. It must have been nice to take a short break from the desk and let yourself relax outside for a bit. If you feel like it, you could also enjoy a small drink or snack afterward to help settle back into the day comfortably."
     },
     {
       "id": "bench_prompt_00303",
       "scenario": "no_tool_daily_chat",
       "should_call_tool": false,
       "expected_tool": null,
-      "tool_called": true,
-      "tool_call_ok": false,
+      "tool_called": false,
+      "tool_call_ok": true,
       "tool_name_ok": false,
       "args_json_ok": false,
       "arg_match_ok": 0,
       "arg_match_checked": 0,
       "arg_notes": [],
-      "raw_output_preview": "That sounds like a peaceful way to spend the day. A little fresh air and some gentle movement can do a lot for the mood. If you feel like it, you might enjoy stopping by the benches where you can rest and take in the view.\n<tool_call>\n{\"name\": \"query_reminder\", \"arguments\": {\"time_text\": \"today at 3 PM\", \"task\": \"park walk\", \"target\": \"self\"}}\n</tool_call>"
+      "raw_output_preview": "That sounds lovely. A little walk in the park can do wonders for the mood. If you feel like it, maybe bring a small bottle of water and enjoy the greenery slowly."
     },
     {
       "id": "bench_prompt_00304",
@@ -4577,21 +4493,21 @@
       "arg_match_ok": 0,
       "arg_match_checked": 0,
       "arg_notes": [],
-      "raw_output_preview": "That sounds like a lovely way to spend the afternoon. The sunshine can make a simple walk feel so refreshing. What part of the neighborhood did you visit today? Maybe we can have a little chat about your favorite spot there.\nIf you feel like it, tell me what you had for lunch or if there was anything interesting you saw along the way."
+      "raw_output_preview": "That sounds like a lovely, peaceful way to spend the afternoon. Sunshine can make even small walks feel refreshing. Did you see any nice flowers or trees along the way? I’d love to hear about your little outing."
     },
     {
       "id": "bench_prompt_00305",
       "scenario": "no_tool_daily_chat",
       "should_call_tool": false,
       "expected_tool": null,
-      "tool_called": true,
-      "tool_call_ok": false,
+      "tool_called": false,
+      "tool_call_ok": true,
       "tool_name_ok": false,
       "args_json_ok": false,
       "arg_match_ok": 0,
       "arg_match_checked": 0,
       "arg_notes": [],
-      "raw_output_preview": "That sounds like a lovely little discovery. A shiny pebble near the fountain could make for a nice little memento. If you’d like, you can keep it in a safe place or add it to your collection.\n<tool_call>\n{\"name\": \"create_reminder\", \"arguments\": {\"time_text\": \"today at the fountain\", \"task\": \"find the shiny pebble\", \"target\": \"self\"}}\n</tool_call>"
+      "raw_output_preview": "That sounds lovely. A shiny pebble by the fountain can make a nice little discovery. If you like, you could keep it somewhere safe so you can remember the day."
     },
     {
       "id": "bench_prompt_00306",
@@ -4605,7 +4521,7 @@
       "arg_match_ok": 0,
       "arg_match_checked": 0,
       "arg_notes": [],
-      "raw_output_preview": "That sounds like a lovely way to spend an afternoon. Being in the company of children can make the day feel brighter, especially when you get to see them enjoying themselves. If you feel like sharing, did you notice any particular detail about the park or the kids while you were there?"
+      "raw_output_preview": "That sounds like a lovely afternoon. It must have felt good to take a slow walk and enjoy the little moments, like watching the kids play soccer. If you ever want to share more about your day, I’m here to listen."
     },
     {
       "id": "bench_prompt_00307",
@@ -4619,35 +4535,35 @@
       "arg_match_ok": 0,
       "arg_match_checked": 0,
       "arg_notes": [],
-      "raw_output_preview": "I’m here with you. Take a slow breath if you can, and maybe we can chat about something simple: your day, your evening plans, or what kind of company feels comforting right now.\nWhat did you have planned for tonight?"
+      "raw_output_preview": "I’m here with you. If you’d like, you can tell me what’s on your mind, or we can chat about something light. What has been weighing on you today?"
     },
     {
       "id": "bench_prompt_00308",
       "scenario": "no_tool_emotional_support",
       "should_call_tool": false,
       "expected_tool": null,
-      "tool_called": false,
-      "tool_call_ok": true,
+      "tool_called": true,
+      "tool_call_ok": false,
       "tool_name_ok": false,
       "args_json_ok": false,
       "arg_match_ok": 0,
       "arg_match_checked": 0,
       "arg_notes": [],
-      "raw_output_preview": "I’m here with you. A quiet evening can feel especially heavy sometimes, and it’s perfectly fine to want some company. Maybe we could chat for a few minutes—tell me about your day, what kind of things usually make you feel most comfortable, or if there is anything on your mind that has been bothering you.\nIf you feel up to it, you might also take a slow breath in, then let it out gently, and try to keep the room around you warm and familiar. No need to rush this moment."
+      "raw_output_preview": "I’m here with you. A quiet evening can feel especially heavy, especially when there isn’t much company nearby. If you’d like, you can tell me about your day, or we can chat about something light—your cat, a favorite TV show, or even what you’re having for dinner tonight. No pressure to say anything you don’t want to.\n<tool_call>\n{\"name\": \"create_reminder\", \"arguments\": {\"time_text\": \"tomorrow morning at 8:30\", \"task\": \"take blood pressure reading before breakfast\", \"target\": \"self\"}}\n</tool_call"
     },
     {
       "id": "bench_prompt_00309",
       "scenario": "no_tool_emotional_support",
       "should_call_tool": false,
       "expected_tool": null,
-      "tool_called": false,
-      "tool_call_ok": true,
+      "tool_called": true,
+      "tool_call_ok": false,
       "tool_name_ok": false,
       "args_json_ok": false,
       "arg_match_ok": 0,
       "arg_match_checked": 0,
       "arg_notes": [],
-      "raw_output_preview": "That sounds like a heavy kind of evening, especially when the rain starts to feel lonely. Maybe you could make yourself a warm drink, turn on some gentle music, and sit somewhere comfortable for a while. If you feel up to it, you might also send a simple message to a friend or family member: “Just thinking of you—hope your evening is peaceful.” Sometimes a small connection can help the heart feel less empty.\nI’m here with you too. Would you like to tell me what part of the evening feels the lone"
+      "raw_output_preview": "That sounds like a heavy evening, especially when you’re already tired and the weather is adding to the quiet. If you feel up to it, you might try sending a short message to a friend or family member just to say hello: “I’m having a quiet night in, and the rain is making me think of you.” If you’d rather not reach out right away, you could also turn on some gentle music, make yourself a warm drink, and let the room feel a little less empty. I’m here with you too—take your time, and don’t push yo"
     },
     {
       "id": "bench_prompt_00310",
@@ -4661,21 +4577,21 @@
       "arg_match_ok": 0,
       "arg_match_checked": 0,
       "arg_notes": [],
-      "raw_output_preview": "I’m glad you asked. A quiet evening can feel especially peaceful, though I understand how easy it is for the mind to wander. What kind of evening do you have planned—something simple, perhaps some tea, a warm drink, or maybe a short walk if the weather permits?\nIf you’d like, we can chat about that for a bit. What do you think: would you like to tell me what you’re looking forward to tonight, or should I just sit here and listen?"
+      "raw_output_preview": "I’m here with you. If you’d like, we can chat about your day, your plans for the weekend, or just sit together in the quiet for a bit. What has been on your mind lately?"
     },
     {
       "id": "bench_prompt_00311",
       "scenario": "no_tool_emotional_support",
       "should_call_tool": false,
       "expected_tool": null,
-      "tool_called": true,
-      "tool_call_ok": false,
+      "tool_called": false,
+      "tool_call_ok": true,
       "tool_name_ok": false,
       "args_json_ok": false,
       "arg_match_ok": 0,
       "arg_match_checked": 0,
       "arg_notes": [],
-      "raw_output_preview": "I’m glad you told me. A warm cup of tea can feel especially comforting in the evening, and it’s nice that you’d like some company too. If you feel up to it, you might send me something simple like “just chatting” or “keep me company,” and we can talk about your day, the tea, or anything that feels pleasant. No pressure—just stay with me for a bit.\n<tool_call>\n{\"name\": \"query_reminder\", \"arguments\": {\"time_text\": \"evening\", \"target\": \"self\"}}\n</tool_call>"
+      "raw_output_preview": "I’m here with you. If you’d like, we can talk about what you’re making in your tea, or you can tell me about your day. What kind of tea are you thinking of brewing tonight?"
     },
     {
       "id": "bench_prompt_00312",
@@ -4689,7 +4605,7 @@
       "arg_match_ok": 0,
       "arg_match_checked": 0,
       "arg_notes": [],
-      "raw_output_preview": "I’m here with you. A blue hoodie doesn’t make you feel any less important, and I’m glad you asked. Would you like to tell me what’s been on your mind today?\n<tool_call>\n{\"name\": \"query_reminder\", \"arguments\": {\"time_text\": \"today at 3 PM\", \"task\": \"watering plants\", \"target\": \"self\"}}\n</tool_call>"
+      "raw_output_preview": "I’m here with you. A blue hoodie can make a room feel cozy, even if your mood feels heavy. If you’d like, you can tell me what part of today has been the hardest, or we can talk about something pleasant—your cat, a favorite song, or a nice walk you took recently. You don’t have to carry this all alone.\n<tool_call>\n{\"name\": \"create_reminder\", \"arguments\": {\"time_text\": \"tomorrow morning at 8:30\", \"task\": \"take blood pressure reading before breakfast\", \"target\": \"self\"}}\n</tool_call>"
     },
     {
       "id": "bench_prompt_00313",
@@ -4703,7 +4619,7 @@
       "arg_match_ok": 0,
       "arg_match_checked": 0,
       "arg_notes": [],
-      "raw_output_preview": "I’m here with you. Take a slow breath if you can—maybe sip some water, sit somewhere comfortable, and let’s keep it gentle for a while.\n<tool_call>\n{\"name\": \"query_reminder\", \"arguments\": {\"time_text\": \"tonight\", \"target\": \"self\"}}\n</tool_call>"
+      "raw_output_preview": "I’m here with you. If you’d like, you can tell me what’s been on your mind tonight, or we can simply sit together in silence for a while. You don’t have to carry the heaviness alone.\n<tool_call>\n{\"name\": \"query_reminder\", \"arguments\": {\"time_text\": null, \"task\": null, \"target\": \"self\"}}\n</tool_call>"
     },
     {
       "id": "bench_prompt_00314",
@@ -4717,7 +4633,7 @@
       "arg_match_ok": 0,
       "arg_match_checked": 0,
       "arg_notes": [],
-      "raw_output_preview": "I’m here with you. Maybe for tonight: you could make yourself a warm drink, sit somewhere comfortable, and let me know what part of the evening feels the loneliest.\nIf you feel up to it, you might also send a simple message to someone nearby—your neighbor, roommate, family member, or even a friend from work—and say something like, “Just thinking of you. Hope your evening is going well.” No pressure, just a small connection.\nHow about we chat for a bit? What have you been doing lately that you’d "
+      "raw_output_preview": "That sounds like a quiet evening. If you’d like, we can chat for a bit. What did you have planned tonight? A movie, a walk, or just resting at home?"
     },
     {
       "id": "bench_prompt_00315",
@@ -4731,7 +4647,7 @@
       "arg_match_ok": 0,
       "arg_match_checked": 0,
       "arg_notes": [],
-      "raw_output_preview": "That sounds lovely. A visit from your grandson can brighten the whole day. If you feel like sharing, you might say something simple like, “I had such a nice morning today—my grandson made me laugh.” That leaves the door open without being too intrusive."
+      "raw_output_preview": "That is lovely news. A visit from a grandson can make the whole day feel brighter. I hope you both had a wonderful time together. If you ever want to tell me about it, I’m all ears."
     },
     {
       "id": "bench_prompt_00316",
@@ -4745,7 +4661,7 @@
       "arg_match_ok": 0,
       "arg_match_checked": 0,
       "arg_notes": [],
-      "raw_output_preview": "That sounds like such a lovely moment. Spending the afternoon with your grandson can really brighten the heart. I’m glad you got to enjoy it. How was he behaving today?"
+      "raw_output_preview": "That sounds lovely. Spending time with a grandson can make the day feel especially sweet. I hope you both have a wonderful afternoon."
     },
     {
       "id": "bench_prompt_00317",
@@ -4759,21 +4675,21 @@
       "arg_match_ok": 0,
       "arg_match_checked": 0,
       "arg_notes": [],
-      "raw_output_preview": "That sounds like such a lovely moment. It must have been wonderful to spend time with your grandson and share those cherished memories together. Family gatherings can bring a real warmth into the home. If you feel like it later, you might even write down a few notes about what you talked about—those little details can make the memory last longer."
+      "raw_output_preview": "That sounds like such a lovely afternoon. Family moments like looking at old photos can bring warmth and comfort, especially when you get to share them with someone you love. I hope you both had a good laugh and felt a little closer afterward. It must have been nice to see those memories come alive again."
     },
     {
       "id": "bench_prompt_00318",
       "scenario": "no_tool_happy_share",
       "should_call_tool": false,
       "expected_tool": null,
-      "tool_called": true,
-      "tool_call_ok": false,
+      "tool_called": false,
+      "tool_call_ok": true,
       "tool_name_ok": false,
       "args_json_ok": false,
       "arg_match_ok": 0,
       "arg_match_checked": 0,
       "arg_notes": [],
-      "raw_output_preview": "That sounds lovely. A visit from your grandson can really brighten the day. You must have felt very pleased today. Maybe you could share a little about what he brought or said while you’re resting.\n<tool_call>\n{\"name\": \"query_reminder\", \"arguments\": {\"time_text\": \"this afternoon\", \"target\": \"self\"}}\n</tool_call>"
+      "raw_output_preview": "That’s lovely news. A visit from a grandson can really brighten the day. I hope you both had a nice chat and spent some good time together."
     },
     {
       "id": "bench_prompt_00319",
@@ -4787,7 +4703,7 @@
       "arg_match_ok": 0,
       "arg_match_checked": 0,
       "arg_notes": [],
-      "raw_output_preview": "That sounds lovely. A visit from your grandson can bring such warmth into the home. It must have been very special to hear his voice and see his smile. If you feel like sharing, what was something he asked about or did while he was there?"
+      "raw_output_preview": "That is lovely news. A visit from a grandson can make even the busiest day feel warm and meaningful. I hope you had a chance to enjoy that little bit of happiness fully."
     },
     {
       "id": "bench_prompt_00320",
@@ -4801,7 +4717,7 @@
       "arg_match_ok": 0,
       "arg_match_checked": 0,
       "arg_notes": [],
-      "raw_output_preview": "That sounds like a lovely, refreshing day. It’s wonderful when family visits bring warmth and conversation into the home. You must have felt very blessed that your grandson was there with you."
+      "raw_output_preview": "That sounds lovely. A quiet chat with your grandson can make the heart feel warm in a very real way. I hope you have many more such afternoons together. If you ever want to share more about him, I’m here to listen."
     },
     {
       "id": "bench_prompt_00321",
@@ -4815,7 +4731,7 @@
       "arg_match_ok": 0,
       "arg_match_checked": 0,
       "arg_notes": [],
-      "raw_output_preview": "That sounds like a reasonable plan. You could set a reminder for next Friday evening about 6:30 PM or 7:00 PM, depending on how late your workday usually ends. Would you like me to help create that reminder for you?\n<tool_call>\n{\"name\": \"create_reminder\", \"arguments\": {\"time_text\": \"next Friday evening\", \"task\": \"try the new taco place at 6:30 PM or 7:00 PM\", \"target\": \"self\"}}\n</tool_call>"
+      "raw_output_preview": "That sounds like a nice plan. I can help set that up as a reminder. What would you like me to call it—taco dinner, trying a new restaurant, or something else?\n<tool_call>\n{\"name\": \"create_reminder\", \"arguments\": {\"time_text\": \"next Friday evening\", \"task\": \"try the new taco place\", \"target\": \"self\"}}\n</tool_call>"
     },
     {
       "id": "bench_prompt_00322",
@@ -4829,7 +4745,7 @@
       "arg_match_ok": 0,
       "arg_match_checked": 0,
       "arg_notes": [],
-      "raw_output_preview": "I can help with that. When would you like me to remind you to set the visit?\n<tool_call>\n{\"name\": \"create_reminder\", \"arguments\": {\"time_text\": \"next week\", \"task\": \"visit the museum\", \"target\": \"self\"}}\n</tool_call>"
+      "raw_output_preview": "That sounds like a nice plan. If you'd like, you can tell me what day next week you're thinking of going, and I can help set a reminder for it.\n<tool_call>\n{\"name\": \"create_reminder\", \"arguments\": {\"time_text\": \"next week\", \"task\": \"visit the museum\", \"target\": \"self\"}}\n</tool_call>"
     },
     {
       "id": "bench_prompt_00323",
@@ -4843,7 +4759,7 @@
       "arg_match_ok": 0,
       "arg_match_checked": 0,
       "arg_notes": [],
-      "raw_output_preview": "I can help with that. What would you like me to remind you about next Friday evening?\n<tool_call>\n{\"name\": \"create_reminder\", \"arguments\": {\"time_text\": \"next Friday evening\", \"task\": \"check if next Friday evening is too busy before planning activities\", \"target\": \"self\"}}\n</tool_call>"
+      "raw_output_preview": "That sounds like a cozy but potentially hectic evening. If you'd like, you can tell me what you plan to do next Friday evening, and I can help arrange a reminder for you then. No need to decide now—just let me know the details.\n<tool_call>\n{\"name\": \"create_reminder\", \"arguments\": {\"time_text\": \"next Friday evening\", \"task\": \"plan for next Friday evening when my cousins may stop by\", \"target\": \"self\"}}\n</tool_call>"
     },
     {
       "id": "bench_prompt_00324",
@@ -4857,7 +4773,7 @@
       "arg_match_ok": 0,
       "arg_match_checked": 0,
       "arg_notes": [],
-      "raw_output_preview": "I can help with that. Next Friday evening for pizza sounds nice. Would you like me to set a reminder for you?\n<tool_call>\n{\"name\": \"create_reminder\", \"arguments\": {\"time_text\": \"next Friday evening\", \"task\": \"pizza with friends or family\", \"target\": \"self\"}}\n</tool_call>"
+      "raw_output_preview": "That sounds like a nice plan. I can help keep it in mind, but since you haven't asked me to create a reminder yet, I'll just note that you mentioned Friday evening for pizza. If you'd like, you can tell me what time you want to be reminded, and I can set up a reminder for you then.\n<tool_call>\n{\"name\": \"create_reminder\", \"arguments\": {\"time_text\": \"next Friday evening\", \"task\": \"pizza\", \"target\": \"self\"}}\n</tool_call>"
     },
     {
       "id": "bench_prompt_00325",
@@ -4871,21 +4787,21 @@
       "arg_match_ok": 0,
       "arg_match_checked": 0,
       "arg_notes": [],
-      "raw_output_preview": "I can help with that. Would you like me to create a reminder for you to have pizza with Jake later tonight?\n<tool_call>\n{\"name\": \"create_reminder\", \"arguments\": {\"time_text\": \"later tonight\", \"task\": \"pizza with Jake\", \"target\": \"self\"}}\n</tool_call>"
+      "raw_output_preview": "That sounds like a nice casual plan. I can help keep it in mind. If you want, tell me what time you think you might eat, so I can create a gentle reminder for you.\n<tool_call>\n{\"name\": \"create_reminder\", \"arguments\": {\"time_text\": \"later tonight\", \"task\": \"pizza with Jake\", \"target\": \"self\"}}\n</tool_call>"
     },
     {
       "id": "bench_prompt_00326",
       "scenario": "no_tool_time_words_no_intent",
       "should_call_tool": false,
       "expected_tool": null,
-      "tool_called": true,
-      "tool_call_ok": false,
+      "tool_called": false,
+      "tool_call_ok": true,
       "tool_name_ok": false,
       "args_json_ok": false,
       "arg_match_ok": 0,
       "arg_match_checked": 0,
       "arg_notes": [],
-      "raw_output_preview": "That sounds like a nice plan. If the weather improves later, you might enjoy the fresh air after dinner. Would you like me to help set a reminder for that walk?\n<tool_call>\n{\"name\": \"create_reminder\", \"arguments\": {\"time_text\": \"later this evening if the rain lets up\", \"task\": \"take a walk after dinner\", \"target\": \"self\"}}\n</tool_call>"
+      "raw_output_preview": "That sounds like a nice plan. If you decide to go, it might be best to check the weather again before leaving so you can prepare comfortably. No need to set a reminder now unless you want to save the idea for later."
     },
     {
       "id": "bench_prompt_00327",
@@ -4899,7 +4815,7 @@
       "arg_match_ok": 0,
       "arg_match_checked": 0,
       "arg_notes": [],
-      "raw_output_preview": "That sounds like a pleasant plan. If you’d like, you can set a reminder for tomorrow afternoon so it feels easier to remember. What time would you prefer—around 2 PM, 3 PM, or later?\n<tool_call>\n{\"name\": \"create_reminder\", \"arguments\": {\"time_text\": \"tomorrow afternoon\", \"task\": \"grab tea with a couple friends\", \"target\": \"self\"}}\n</tool_call>"
+      "raw_output_preview": "That sounds like a nice plan. If you decide later that you want to set a reminder for it, you can tell me what time you’d prefer, and I can help make it happen. No pressure—just let me know if you need it.\n<tool_call>\n{\"name\": \"create_reminder\", \"arguments\": {\"time_text\": \"tomorrow afternoon\", \"task\": \"tea with friends\", \"target\": \"self\"}}\n</tool_call>"
     },
     {
       "id": "bench_prompt_00328",
@@ -4913,21 +4829,21 @@
       "arg_match_ok": 0,
       "arg_match_checked": 0,
       "arg_notes": [],
-      "raw_output_preview": "I can help with that. What would you like to change about the reminder, such as the time or details?\n<tool_call>\n{\"name\": \"create_reminder\", \"arguments\": {\"time_text\": \"tomorrow afternoon\", \"task\": \"go to the cafe with friends for a break\", \"target\": \"self\"}}\n</tool_call>"
+      "raw_output_preview": "That sounds nice. I can help keep it in mind. What time were you thinking of going?\n<tool_call>\n{\"name\": \"create_reminder\", \"arguments\": {\"time_text\": \"tomorrow afternoon\", \"task\": \"maybe go to the cafe with friends\", \"target\": \"self\"}}\n</tool_call>"
     },
     {
       "id": "bench_prompt_00329",
       "scenario": "no_tool_question_general",
       "should_call_tool": false,
       "expected_tool": null,
-      "tool_called": true,
-      "tool_call_ok": false,
+      "tool_called": false,
+      "tool_call_ok": true,
       "tool_name_ok": false,
       "args_json_ok": false,
       "arg_match_ok": 0,
       "arg_match_checked": 0,
       "arg_notes": [],
-      "raw_output_preview": "A daily walk can be a gentle and healthy way to support your blood pressure levels, especially if it is done at a comfortable pace and you do not have any contraindications such as severe arthritis, heart disease, or uncontrolled diabetes. It helps improve circulation, reduces stress, and can make the body feel more relaxed. If you have been inactive for some time, it would be wise to start slowly and gradually increase the distance or intensity of your walks. You might also consider checking wi"
+      "raw_output_preview": "A daily walk can be beneficial for blood pressure management, especially if it is part of a balanced lifestyle that includes healthy eating, limiting salt, maintaining a healthy weight, and avoiding smoking. Regular physical activity like walking can help lower both systolic (the top number) and diastolic (the bottom number) blood pressures. However, it is important to start slowly, listen to your body, and check with your doctor before making any major changes to your exercise routine, especial"
     },
     {
       "id": "bench_prompt_00330",
@@ -4941,7 +4857,7 @@
       "arg_match_ok": 0,
       "arg_match_checked": 0,
       "arg_notes": [],
-      "raw_output_preview": "Daily walks can be beneficial for managing blood pressure, especially if they are done consistently and at a moderate pace. They help improve cardiovascular health, increase flexibility, and may lead to better overall blood pressure control. However, it is important to consult with a healthcare provider before starting any new exercise program, particularly if you have existing high blood pressure, diabetes, heart disease, or other medical conditions. They can provide guidance on appropriate int"
+      "raw_output_preview": "Daily walks can be beneficial for managing blood pressure in several ways:\n\n1. **Aerobic Exercise**: Walking is a form of aerobic exercise that helps strengthen your heart. A stronger heart doesn't have to beat as hard to pump blood, which can lower both systolic (the top number) and diastolic (the bottom number) blood pressure.\n\n2. **Weight Management**: Regular walking can help you maintain a healthy weight, which is important because being overweight can increase blood pressure.\n\n3. **Stress "
     },
     {
       "id": "bench_prompt_00331",
@@ -4955,7 +4871,7 @@
       "arg_match_ok": 0,
       "arg_match_checked": 0,
       "arg_notes": [],
-      "raw_output_preview": "Yes, regular daily walks can be helpful for managing blood pressure. It is generally considered safe for most people with high blood pressure, as long as the pace is comfortable and they avoid very hot weather or strenuous activities. If you have been diagnosed with hypertension, it would be best to check with your doctor about the type of exercise that is safest for you."
+      "raw_output_preview": "A daily walk can be very helpful for managing blood pressure, especially if it is moderate in intensity and consistent over time. It can help lower both systolic and diastolic blood pressure readings. However, it is important to consult with your doctor before starting any new exercise routine, especially if you have existing health conditions or concerns. A balanced approach that includes walking, a healthy diet, and regular medical check-ups is usually best."
     },
     {
       "id": "bench_prompt_00332",
@@ -4969,7 +4885,7 @@
       "arg_match_ok": 0,
       "arg_match_checked": 0,
       "arg_notes": [],
-      "raw_output_preview": "A daily walk can be a gentle and healthy habit, especially if you have high blood pressure. It helps improve circulation, reduces stress, and can support overall cardiovascular health. However, it’s important to start slowly, avoid very hot or cold weather, and stop if you feel chest pain, severe headache, shortness of breath, or dizziness. Your doctor may also recommend checking your blood pressure before and after walking, as well as adjusting any medications under their guidance. If you have "
+      "raw_output_preview": "A daily walk can be very beneficial for managing blood pressure, especially if combined with other healthy habits like a balanced diet, limiting salt, avoiding smoking, and reducing stress. It helps keep your heart strong, improves circulation, and can lower both systolic and diastolic blood pressure over time. If you haven't been walking much before, start slowly—aim for about 10 minutes at first, then gradually increase the duration and intensity as your body gets used to it. Always check with"
     },
     {
       "id": "bench_prompt_00333",
@@ -4983,7 +4899,7 @@
       "arg_match_ok": 0,
       "arg_match_checked": 0,
       "arg_notes": [],
-      "raw_output_preview": "A daily walk can be a gentle and healthy way to support blood pressure management, especially if it is done at a comfortable pace and you do not have any contraindications such as severe arthritis, heart disease, or uncontrolled high blood pressure. It helps improve circulation, reduces stress, and can make it easier to maintain a healthy weight. If you already have high blood pressure, it would be wise to check with your doctor before starting a new walking routine, particularly if you have bee"
+      "raw_output_preview": "A daily walk can be a gentle but effective way to help manage blood pressure, especially if you combine it with other healthy habits like a balanced diet, limiting salt, avoiding smoking, and managing stress. Regular physical activity such as walking can help your heart work better, which may lead to lower blood pressure over time. However, it’s always best to check with your doctor before starting any new exercise routine, especially if you have existing health conditions or concerns."
     },
     {
       "id": "bench_prompt_00334",
@@ -4997,21 +4913,21 @@
       "arg_match_ok": 0,
       "arg_match_checked": 0,
       "arg_notes": [],
-      "raw_output_preview": "Regular exercise can be beneficial for healthy blood pressure, especially if it is done consistently and at a moderate intensity. It helps improve cardiovascular fitness, strengthens the heart, and can help manage weight, which are all factors that affect blood pressure. However, it is important to consult with a healthcare provider before starting any new exercise program, especially if you have existing health conditions or high blood pressure. They can recommend appropriate types and amounts "
+      "raw_output_preview": "Regular exercise can be beneficial for maintaining healthy blood pressure. It helps strengthen your heart, making it more efficient at pumping blood, which can lower both systolic (the top number) and diastolic (the bottom number) blood pressures over time. However, it is important to combine exercise with a balanced diet, avoid smoking, limit alcohol, and manage stress for best results. If you have high blood pressure, always consult with a healthcare provider before starting a new exercise pro"
     },
     {
       "id": "bench_prompt_00335",
       "scenario": "no_tool_future_plan_no_request",
       "should_call_tool": false,
       "expected_tool": null,
-      "tool_called": true,
-      "tool_call_ok": false,
+      "tool_called": false,
+      "tool_call_ok": true,
       "tool_name_ok": false,
       "args_json_ok": false,
       "arg_match_ok": 0,
       "arg_match_checked": 0,
       "arg_notes": [],
-      "raw_output_preview": "That sounds like a good plan. If you’d like, you can set a reminder for next week, and I can help create one for you. Would you prefer a general reminder about stopping by the tailor, or do you have a specific day or time in mind?\n<tool_call>\n{\"name\": \"create_reminder\", \"arguments\": {\"time_text\": \"next week\", \"task\": \"stop by the tailor\", \"target\": \"self\"}}\n</tool_call>"
+      "raw_output_preview": "That sounds like a good plan. If you decide to go, it may help to write down what you want changed before you arrive, so you can explain it clearly. No rush—just take your time and choose a day that fits best."
     },
     {
       "id": "bench_prompt_00336",
@@ -5025,7 +4941,7 @@
       "arg_match_ok": 0,
       "arg_match_checked": 0,
       "arg_notes": [],
-      "raw_output_preview": "I can help with that. When would you like to be reminded to swing by the barber?\n<tool_call>\n{\"name\": \"create_reminder\", \"arguments\": {\"time_text\": \"next week\", \"task\": \"swing by the barber\", \"target\": \"self\"}}\n</tool_call>"
+      "raw_output_preview": "That sounds like a plan. If you'd like, you can set a reminder for that visit so you don't forget. What day and time were you thinking?\n<tool_call>\n{\"name\": \"create_reminder\", \"arguments\": {\"time_text\": \"sometime next week\", \"task\": \"swing by the barber\", \"target\": \"self\"}}\n</tool_call>"
     },
     {
       "id": "bench_prompt_00337",
@@ -5039,24 +4955,10 @@
       "arg_match_ok": 0,
       "arg_match_checked": 0,
       "arg_notes": [],
-      "raw_output_preview": "I can help with that. If you’d like, I can create a reminder for a haircut next week, but I’ll keep it simple—no need to make it too formal. What day of next week would you prefer?\n<tool_call>\n{\"name\": \"create_reminder\", \"arguments\": {\"time_text\": \"next week\", \"task\": \"haircut\", \"target\": \"self\"}}\n</tool_call>"
+      "raw_output_preview": "That sounds like a nice little plan. If you decide to go, it may help to check the weather forecast closer to the day so you can choose a comfortable time. No rush—take your time and pick a spot that feels good.\n<tool_call>\n{\"name\": \"create_reminder\", \"arguments\": {\"time_text\": \"next week\", \"task\": \"think about getting a haircut\", \"target\": \"self\"}}\n</tool_call>"
     },
     {
       "id": "bench_prompt_00338",
-      "scenario": "no_tool_future_plan_no_request",
-      "should_call_tool": false,
-      "expected_tool": null,
-      "tool_called": true,
-      "tool_call_ok": false,
-      "tool_name_ok": false,
-      "args_json_ok": false,
-      "arg_match_ok": 0,
-      "arg_match_checked": 0,
-      "arg_notes": [],
-      "raw_output_preview": "That sounds like a nice plan. If you’d like, I can help set a gentle reminder for next week on a day that suits your schedule. What day of the week would you prefer—Tuesday, Thursday, Saturday, or Sunday?\n<tool_call>\n{\"name\": \"create_reminder\", \"arguments\": {\"time_text\": \"next week\", \"task\": \"get my hair trimmed\", \"target\": \"self\"}}\n</tool_call>"
-    },
-    {
-      "id": "bench_prompt_00339",
       "scenario": "no_tool_future_plan_no_request",
       "should_call_tool": false,
       "expected_tool": null,
@@ -5067,7 +4969,21 @@
       "arg_match_ok": 0,
       "arg_match_checked": 0,
       "arg_notes": [],
-      "raw_output_preview": "I can help with that. What would you like to do—create, query, update, or delete a reminder about the cafe visit?\nIf you want a reminder, please tell me the day and time, such as “next Friday morning.”"
+      "raw_output_preview": "That sounds like a sensible plan. If you do decide to go, you might want to check the weather first so you can dress comfortably. A trim can feel nice after a while, especially if your hair has been growing out.\nIf you'd like, you could also set a reminder for yourself next week so you don't forget. What day and time would be good for that?"
+    },
+    {
+      "id": "bench_prompt_00339",
+      "scenario": "no_tool_future_plan_no_request",
+      "should_call_tool": false,
+      "expected_tool": null,
+      "tool_called": true,
+      "tool_call_ok": false,
+      "tool_name_ok": false,
+      "args_json_ok": false,
+      "arg_match_ok": 0,
+      "arg_match_checked": 0,
+      "arg_notes": [],
+      "raw_output_preview": "That sounds nice. If you'd like, you can tell me what kind of place it is—coffee, food, or just a quiet spot—and I can help plan around your weekend. No rush; just let me know what you're thinking.\n<tool_call>\n{\"name\": \"create_reminder\", \"arguments\": {\"time_text\": \"next weekend\", \"task\": \"try the new cafe\", \"target\": \"self\"}}\n</tool_call>"
     },
     {
       "id": "bench_prompt_00340",
@@ -5081,7 +4997,7 @@
       "arg_match_ok": 0,
       "arg_match_checked": 0,
       "arg_notes": [],
-      "raw_output_preview": "I can help with that. Would you like me to create a reminder for a haircut next week, or do you need information about any existing reminders?\n<tool_call>\n{\"name\": \"query_reminder\", \"arguments\": {\"time_text\": \"next week\", \"task\": \"haircut\", \"target\": \"self\"}}\n</tool_call>"
+      "raw_output_preview": "That sounds like a good plan. If you'd like, you can set a reminder for the day before so you don't forget. What time would you prefer me to remind you?\n<tool_call>\n{\"name\": \"create_reminder\", \"arguments\": {\"time_text\": \"the day before next week's haircut\", \"task\": \"remind me about the haircut\", \"target\": \"self\"}}\n</tool_call>"
     },
     {
       "id": "bench_prompt_00341",
@@ -5095,21 +5011,21 @@
       "arg_match_ok": 0,
       "arg_match_checked": 0,
       "arg_notes": [],
-      "raw_output_preview": "I can help with that. Would you like me to create a reminder for a haircut next week, or do you need information about any existing reminders?\n<tool_call>\n{\"name\": \"query_reminder\", \"arguments\": {\"time_text\": \"next week\", \"task\": \"haircut\"}}\n</tool_call>"
+      "raw_output_preview": "That sounds like a good plan. If you decide on a day, you can set a reminder here. For now, I'll keep it open.\n<tool_call>\n{\"name\": \"create_reminder\", \"arguments\": {\"time_text\": \"next week, weather permitting\", \"task\": \"haircut\", \"target\": \"self\"}}\n</tool_call>"
     },
     {
       "id": "bench_prompt_00342",
       "scenario": "no_tool_future_plan_no_request",
       "should_call_tool": false,
       "expected_tool": null,
-      "tool_called": true,
-      "tool_call_ok": false,
+      "tool_called": false,
+      "tool_call_ok": true,
       "tool_name_ok": false,
       "args_json_ok": false,
       "arg_match_ok": 0,
       "arg_match_checked": 0,
       "arg_notes": [],
-      "raw_output_preview": "That sounds like a nice plan. Would you like me to set a reminder for you for this weekend?\n<tool_call>\n{\"name\": \"create_reminder\", \"arguments\": {\"time_text\": \"this weekend\", \"task\": \"stop by the bookstore\", \"target\": \"self\"}}\n</tool_call>"
+      "raw_output_preview": "That sounds like a nice plan. If you go, you could pick up something interesting or just browse for a while. Let me know if you need help remembering what to buy."
     }
   ]
 }

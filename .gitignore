@@ -19,7 +19,9 @@ Thumbs.db
 # Secrets / env
 .env
 .env.*
+*.env
 !.env.example
+!*.env.example
 
 # Model / training outputs
 outputs/
@@ -41,3 +43,5 @@ data/tmp/
 *.log
 logs/
 
+# Local environment
+configs/data/api_generation.env

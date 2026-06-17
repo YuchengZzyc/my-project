@@ -236,6 +236,42 @@
       "status": "done",
       "passes": true,
       "verification": "python -m py_compile app/benchmark_eval.py scripts/generate_benchmark_prompts.py scripts/run_benchmark_eval.py && pytest -q tests/test_benchmark_eval.py"
+    },
+    {
+      "id": "F018",
+      "name": "Add device intent and slot extraction data exporter",
+      "description": "Export device-control intent/slot samples without reminder tools or assistant.tool_calls.",
+      "priority": "P1",
+      "status": "done",
+      "passes": true,
+      "verification": "pytest -q tests/test_device_intent.py tests/test_export_device_intent_data.py && python scripts/export_device_intent_data.py --output data/device_intent_data.jsonl"
+    },
+    {
+      "id": "F019",
+      "name": "Add diverse device intent dataset generator",
+      "description": "Generate rich device-control intent/slot training data with API-backed utterance generation and non-intent negative examples.",
+      "priority": "P1",
+      "status": "done",
+      "passes": true,
+      "verification": "pytest -q tests/test_generate_device_intent_dataset.py && python scripts/generate_device_intent_dataset.py --offline --no-append --output data/device_intent_dataset.jsonl --report data/device_intent_dataset.stats.json"
+    },
+    {
+      "id": "F020",
+      "name": "Add device intent web demo with simulated postprocess",
+      "description": "Run a standalone web demo that checks whether a fine-tuned model recognizes device-control intents and updates a simulated GUI state for the 13 supported capabilities.",
+      "priority": "P1",
+      "status": "done",
+      "passes": true,
+      "verification": "pytest -q tests/test_device_intent_web_demo.py && python -m py_compile scripts/device_intent_web_demo.py"
+    },
+    {
+      "id": "F021",
+      "name": "Add device intent dataset statistics script",
+      "description": "Summarize an existing device intent JSONL dataset with scenario, capability, intent, negative ratio, missing slot, source, error, and duplicate utterance distributions.",
+      "priority": "P2",
+      "status": "done",
+      "passes": true,
+      "verification": "pytest -q tests/test_stat_device_intent_dataset.py && python -m py_compile scripts/stat_device_intent_dataset.py"
     }
   ],
   "milestones": [

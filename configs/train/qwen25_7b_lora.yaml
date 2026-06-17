@@ -1,5 +1,5 @@
 model:
-  name_or_path: "E:/LLM/Qwen/Qwen2.5-3B-Instruct"
+  name_or_path: "E:/LLM/Qwen/Qwen2.5-7B-Instruct"
 
 data:
   train_file: "data/training_data2.train.jsonl"
@@ -7,10 +7,10 @@ data:
   system_key: "messages"
 
 output:
-  dir: "outputs/qwen25_3b_dora"
+  dir: "outputs/qwen25_7b_lora"
 
 train:
-  max_length: 850
+  max_length: 900
   learning_rate: 1.0e-4
   num_train_epochs: 20
   per_device_train_batch_size: 1
@@ -27,11 +27,13 @@ train:
   seed: 42
 
 peft:
-  finetune_type: "dora"
+  finetune_type: "lora"
   lora_r: 16
   lora_alpha: 32
   lora_dropout: 0.05
+#  target_modules: [ "q_proj", "v_proj" ]
+
   target_modules: ["q_proj", "k_proj", "v_proj", "o_proj", "gate_proj", "up_proj", "down_proj"]
-  use_dora: true
+  use_dora: false
   use_4bit: false
 

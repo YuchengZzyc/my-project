@@ -5,6 +5,46 @@
 - Cleaned dataset: `data/training_data_llm.cleaned.jsonl`
 - Cleaner script: `scripts/clean_training_data_llm.py`
 
+Device intent + slot extraction data, without reminder tools or `tool_calls`:
+
+```bash
+python scripts/export_device_intent_data.py --output data/device_intent_data.jsonl
+pytest -q tests/test_device_intent.py tests/test_export_device_intent_data.py
+```
+
+Generate a richer device intent dataset with the same pattern as the benchmark prompt generator:
+
+```bash
+python scripts/generate_device_intent_dataset.py --api-env configs/data/api_generation.env --output data/device_intent_dataset.jsonl --report data/device_intent_dataset.stats.json --samples 1000 --user-language mixed --dedupe-retries 2
+```
+
+`--samples` is the number of rows added by this run. The generator appends to `--output` by default; use `--no-append` to overwrite and rebuild the file. `--dedupe-retries 2` may make extra API calls when a generated utterance is duplicated. If one API item times out, that row falls back to a local template, records `generation_error`, and the rest of the dataset continues. Use `--user-language english`, `--user-language chinese`, or `--user-language mixed`; assistant JSON string values are always normalized English.
+
+The generator keeps non-intent negative examples near one fifth of the dataset. The default offline distribution is `238` matched device-control rows and `60` negative rows (`20.1%` negative). With `--samples 1000`, the expected distribution is `799` matched rows and `201` negative rows.
+
+For local verification without an API:
+
+```bash
+python scripts/generate_device_intent_dataset.py --offline --no-append --output data/device_intent_dataset.jsonl --report data/device_intent_dataset.stats.json
+pytest -q tests/test_generate_device_intent_dataset.py
+```
+
+Summarize an existing device intent dataset:
+
+```bash
+python scripts/stat_device_intent_dataset.py --input data/device_intent_dataset.jsonl --format text
+python scripts/stat_device_intent_dataset.py --input data/device_intent_dataset.jsonl --format text --examples-per-scene 3
+python scripts/stat_device_intent_dataset.py --input data/device_intent_dataset.jsonl --report data/device_intent_dataset.stats.json
+```
+
+The report includes concrete scene distributions such as `08 调节音量`, `06 更换壁纸`, `04 开锁`, and negative scene groups, plus example utterances per scene.
+
+The assistant label is JSON with:
+
+```json
+{"matched":true,"capability_id":8,"capability":"Adjust volume","intent":"set_volume","slots":{"adjustment":"up"},"missing_slots":[],"confidence":0.9}
+```
+
 
 python generate_benchmark_prompts_structured.py --seed-md benchmark/seed.md --output benchmark/prompts_structured.jsonl
 python build_tool_eval_cases_from_structured_prompts.py --prompts-jsonl benchmark/prompts_structured.jsonl --output benchmark/tool_eval_cases_structured.jsonl
@@ -67,6 +107,14 @@ The API endpoint should be OpenAI-compatible and provide `/chat/completions`. Th
 python scripts/chat_web_demo.py --model-path "E:/LLM/Qwen/Qwen2.5-1.5B-Instruct" --adapter-path "outputs/qwen25_15b_dora/checkpoint-580" 
 python scripts/chat_web_demo.py --model-path "E:/LLM/Qwen/Qwen2.5-1.5B-Instruct" --adapter-path "outputs/qwen25_15b_dora/checkpoint-800" --stateless 
 
+Device intent recognition web demo with a simulated GUI and print trace:
+
+```bash
+python scripts/device_intent_web_demo.py --model-path "E:/LLM/Qwen/Qwen2.5-3B-Instruct" --adapter-path "outputs/qwen25_3b_lora/checkpoint-6260"
+```
+
+The demo uses the same `<SYSTEM>/<USER>/<ASSISTANT>` serialization format as `scripts/train_adapter.py`. If the model output parses to `matched=true` and has no missing slots, the backend prints a postprocess event to the terminal and updates the simulated device panel for the 13 supported capabilities. If the output is `matched=false`, no postprocess is executed. If JSON parsing fails, the raw model output is shown as the normal response.
+
 
 ```
 
@@ -89,3 +137,17 @@ Run continuously (default every 5 seconds):
 ```bash
 python scripts/run_reminder_notifier.py --poll-interval 5
 ```
+
+
+
+意图识别
+python scripts/generate_device_intent_dataset.py --api-env configs/data/api_generation.env --output data/device_intent_dataset.jsonl --report data/device_intent_dataset.stats.json --samples 4000  --user-language english --dedupe-retries 2
+
+python scripts/split_jsonl_dataset.py --input data/device_intent_dataset.jsonl --train-output data/device_intent_dataset.train.jsonl --val-output data/device_intent_dataset.val.jsonl --val-ratio 0.1 --seed 42 --no-stratify-by-scenario
+
+python scripts/stat_device_intent_dataset.py --input data/device_intent_dataset.jsonl --format text
+
+
+python scripts/train_adapter.py --config configs/train/qwen25_15b_lora_intent.yaml   
+
+python scripts/device_intent_web_demo.py --model-path "E:/LLM/Qwen/Qwen2.5-1.5B-Instruct" --adapter-path ".\outputs\qwen25_15b_device_intent_lora\checkpoint-1000\"

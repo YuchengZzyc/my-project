@@ -461,3 +461,169 @@ Test-Path data\training_data2.val.jsonl
 ```
 
 Result: YAML parsed, model path exists, and train/val files exist. A direct `scripts.train_adapter` import check exceeded 60 seconds in the local Windows environment, so full training was not started.
+
+## Update (device intent + slot extraction data)
+
+Added a separate device-control intent/slot dataset path so training can target the 13 numbered device capabilities: call manager, call contact, answer call, unlock, reject/hang up, wallpaper, DND, volume, brightness, security mode, alarms, monitor control, and notifications/messages.
+
+New files:
+
+- `scripts/export_device_intent_data.py`
+- `tests/test_device_intent.py`
+- `tests/test_export_device_intent_data.py`
+- `data/device_intent_data.jsonl`
+
+Behavior:
+
+- Exports chat-style samples for `device_intent_slot_extraction`.
+- Assistant output is plain JSON with `capability_id`, `capability`, `intent`, `slots`, `missing_slots`, and `confidence`.
+- No `tools`, no `assistant.tool_calls`, and no reminder tool schema are included.
+- Improved `app/device_intent.py` so phrases like `提高音量`, `屏幕调亮一点`, `通话中帮我开锁`, and `查看卧室场景` map to the expected capability and slots.
+
+Validation:
+
+```bash
+pytest -q tests/test_device_intent.py tests/test_export_device_intent_data.py
+python scripts/export_device_intent_data.py --output data/device_intent_data.jsonl
+```
+
+Result: tests passed (`5 passed`), exported `49` samples.
+
+## Update (diverse device intent dataset generator)
+
+Added an API-backed generator for richer device intent + slot extraction training data, modeled after `generate_benchmark_prompts_diverse.py`.
+
+New files:
+
+- `scripts/generate_device_intent_dataset.py`
+- `tests/test_generate_device_intent_dataset.py`
+- `data/device_intent_dataset.jsonl`
+
+Behavior:
+
+- Defines scenario rows for all 13 device capabilities.
+- Includes slot variants for contact type, wallpaper type, volume/brightness adjustment, alarm time range, monitor action/scene/channel, and message type.
+- Includes missing-slot cases such as `call_contact_missing`, `wallpaper_missing_type`, and `monitor_missing_action`.
+- Includes non-intent negative examples, including normal chat and utterances that mention device words without requesting control.
+- Writes chat-style training rows where assistant content is JSON with `matched`, `capability_id`, `capability`, `intent`, `slots`, `missing_slots`, and `confidence`.
+- Uses a short training system prompt: `Extract device-control intent and slots. Return JSON only.`
+- Supports multilingual user utterances with `--user-language english|chinese|mixed`; assistant JSON string values are always normalized English.
+- Supports API generation for diverse natural utterances and `--offline` deterministic generation for local tests.
+- Uses per-sample diversity profiles for API generation: style, surface form, context, and avoid constraints.
+- Writes a stats report with matched/negative ratio, capability distribution, scenario distribution, missing-slot distribution, and exact duplicate counts.
+- Supports `--samples N` to scale the total dataset size while preserving the scenario distribution.
+- API mode defaults to `--workers 8` and retries exact duplicate utterances with `--dedupe-retries`.
+- Prints progress for every completed row and writes each completed row to JSONL immediately.
+- Appends to the output JSONL by default; use `--no-append` to overwrite and rebuild a dataset file.
+- If a single API row times out or fails after retries, that row falls back to a local template, records `generation_error`, and generation continues.
+
+Validation:
+
+```bash
+pytest -q tests/test_generate_device_intent_dataset.py tests/test_device_intent.py tests/test_export_device_intent_data.py
+python scripts/generate_device_intent_dataset.py --offline --no-append --output data/device_intent_dataset.jsonl --report data/device_intent_dataset.stats.json
+```
+
+Result: tests passed (`9 passed`), exported `298` samples with mixed Chinese/English user utterances. The generated dataset contains `238` matched device-control samples, `60` non-intent samples (`20.1%` negative ratio), and covers capability IDs `1..13`. Assistant JSON contains no Chinese characters.
+
+Negative example ratio was reduced to roughly one fifth of the dataset. With `--samples 1000`, the scaled distribution is expected to contain `799` matched rows and `201` negative rows.
+
+## Update (device intent web demo + simulated postprocess)
+
+Added a standalone web demo for device-control intent recognition and GUI state simulation.
+
+New files:
+
+- `scripts/device_intent_web_demo.py`
+- `tests/test_device_intent_web_demo.py`
+
+Behavior:
+
+- Loads a base model plus optional LoRA adapter.
+- Uses the same `<TOOLS>/<SYSTEM>/<USER>/<ASSISTANT>` serialized prompt format as `scripts/train_adapter.py`.
+- Parses model output as the device intent JSON schema with `matched`, `capability_id`, `capability`, `intent`, `slots`, `missing_slots`, and `confidence`.
+- For `matched=true` with no missing slots, prints a postprocess event, updates a simulated device state, and returns the trace in the UI.
+- Shows a small control-panel GUI for volume, brightness, DND, security, door lock, call state, wallpaper, monitor, alarm records, messages, and last action.
+- For `matched=false`, skips postprocess.
+- If parsing fails, shows the raw model output as normal output.
+
+Validation:
+
+```bash
+pytest -q tests/test_device_intent_web_demo.py
+python -m py_compile scripts/device_intent_web_demo.py
+```
+
+Run:
+
+```bash
+python scripts/device_intent_web_demo.py --model-path "E:/LLM/Qwen/Qwen2.5-3B-Instruct" --adapter-path "outputs/qwen25_3b_lora/checkpoint-6260"
+```
+
+## Update (device intent dataset statistics script)
+
+Added a standalone statistics script for existing device intent JSONL datasets.
+
+New files:
+
+- `scripts/stat_device_intent_dataset.py`
+- `tests/test_stat_device_intent_dataset.py`
+
+Behavior:
+
+- Reads an existing JSONL dataset without generating new samples.
+- Reports total rows, matched true/false counts, negative ratio, concrete scene distribution such as `08 调节音量` and `06 更换壁纸`, detailed sub-scene distribution, example utterances per scene, raw scenario distribution, capability distribution, intent distribution, missing slot distribution, generation source distribution, generation error count, and exact duplicate user utterance count.
+- Supports JSON output by default, text table output with `--format text`, and optional report writing with `--report`.
+
+Validation:
+
+```bash
+pytest -q tests/test_stat_device_intent_dataset.py
+python -m py_compile scripts/stat_device_intent_dataset.py
+```
+
+Run:
+
+```bash
+python scripts/stat_device_intent_dataset.py --input data/device_intent_dataset.jsonl --format text
+```
+
+## Update (Qwen2.5 7B LoRA training config)
+
+Added a training config for the local Qwen2.5 7B Instruct model based on the existing Qwen2.5 3B LoRA config.
+
+New files:
+
+- `configs/train/qwen25_7b_lora.yaml`
+
+Behavior:
+
+- Uses `E:/LLM/Qwen/Qwen2.5-7B-Instruct` as the base model path.
+- Writes adapter outputs to `outputs/qwen25_7b_lora`.
+- Keeps the existing dataset files, LoRA target modules, batch size, gradient accumulation, checkpointing, bf16, and training schedule from `qwen25_3b_lora.yaml`.
+
+Validation:
+
+```bash
+python -c "import yaml; yaml.safe_load(open('configs/train/qwen25_7b_lora.yaml', encoding='utf-8'))"
+```
+
+## Update (project architecture overview)
+
+Reviewed the current reminder tool-use harness and the newer device intent + slot extraction path.
+
+New files:
+
+- `architecture.md`
+
+Notes:
+
+- Captures the project as a structured-output training and execution harness rather than only a reminder backend.
+- Summarizes the two current product lines: reminder tool calling and device-control intent/slot extraction.
+- Identifies the next most valuable deep-dive topic as the intent/slot schema and evaluation loop.
+
+Validation:
+
+```bash
+Documentation-only change; no tests required.
+```

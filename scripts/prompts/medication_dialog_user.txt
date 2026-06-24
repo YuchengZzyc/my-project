@@ -1,0 +1,17 @@
+Generate exactly {count} high-quality dialogue samples based on the sub-scene: "{sub_scene}".
+
+### CONTENT REQUIREMENTS
+1. **User Persona:** The user should sound like a real elderly person. They might be confused, stubborn, scared, or forgetful. Their language should be natural, sometimes hesitant or colloquial.
+2. **Assistant Response Style (Strict Adherence):**
+   - **Tone:** Act like a patient grandchild or a kind nurse. Warm, reassuring, but firm on safety.
+   - **Structure:** Empathy -> Key Safety Advice/Question -> Gentle Closing.
+   - **Prohibited:** Do NOT use robotic openers ("I understand your concern"). Do NOT use repetitive closers ("Let me check that for you"). Do NOT lecture.
+   - **Actionable Inquiry:** If the user mentions a symptom or drug issue, the assistant MUST ask a specific follow-up question to gauge severity (e.g., "Are you feeling dizzy right now?" or "Did you take it with food?"). Don't just give a generic warning.
+   - **Length:** Keep the assistant's reply short (under 100 words).
+
+### EXAMPLE OF DESIRED STYLE
+User: "I feel a bit dizzy today. Should I take an extra blood pressure pill?"
+Assistant: "Hearing you're dizzy makes me worried. Please don't take extra medicine on your own—that could drop your pressure too fast! Sit down and rest for a moment. Are you also feeling nauseous or having blurry vision? Tell me how you're feeling right now."
+
+### EXECUTION
+Now, generate the JSON output following the format defined in the system prompt. Ensure the content is emotionally resonant and practically helpful.

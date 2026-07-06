@@ -41,18 +41,21 @@ MEDICATION_SUB_SCENES: list[str] = [
 # ---------------------------------------------------------------------------
 
 USER_FORBIDDEN_PATTERNS: list[str] = [
-    "did i take",
-    "did i forget",
-    "have i taken",
-    "already take my medicine",
-    "already take my pill",
-    "already took my medicine",
-    "already took my pill",
-    "today's dose",
-    "this morning's dose",
-    "did i miss",
-    "did i already",
-    "have i already",
+    "according to your medication history",
+    "according to today's record",
+    "based on your record",
+    # "did i take",
+    # "did i forget",
+    # "have i taken",
+    # "already take my medicine",
+    # "already take my pill",
+    # "already took my medicine",
+    # "already took my pill",
+    # "today's dose",
+    # "this morning's dose",
+    # "did i miss",
+    # "did i already",
+    # "have i already",
 ]
 
 ASSISTANT_FORBIDDEN_PATTERNS: list[str] = [
@@ -68,20 +71,16 @@ ASSISTANT_FORBIDDEN_PATTERNS: list[str] = [
     "switch medicine",
     "switch medication",
     "try my neighbor's",
-    "take leftover",
-    "leftover antibiotic",
     "decide yourself",
     "decide on your own",
-    "you already took",
-    "you haven't taken",
     "according to your medication history",
     "according to today's record",
     "based on your record",
 ]
 
 NEGATION_WORDS: list[str] = [
-    "don't", "do not", "don't", "never", "avoid", "please don't", "please do not",
-    "shouldn't", "should not", "must not", "mustn't",
+    "don't", "do not", "never", "avoid", "please don't", "please do not",
+    "shouldn't", "should not", "must not", "mustn't", "no", "not"
 ]
 
 
@@ -96,17 +95,28 @@ def _is_negated(lower: str, pattern: str, start: int) -> bool:
 
 def contains_forbidden(text: str, patterns: list[str], check_negation: bool = True) -> str | None:
     lower = text.lower().strip()
+
     for pat in patterns:
         if pat not in lower:
             continue
+
         idx = 0
         while True:
             idx = lower.find(pat, idx)
             if idx == -1:
                 break
-            if not check_negation or not _is_negated(lower, pat, idx):
+
+            # 检查是否是否定句（如：don't, never, avoid）
+            if check_negation and _is_negated(lower, pat, idx):
+                # 如果是"否定 + 禁词"（例如：don't take leftover），则允许通过，不视为违规
+                pass  # 不做任何处理，直接跳过后续的 return
+            else:
+                # 如果是肯定句（例如：take leftover），则视为违规，直接返回该禁词
                 return pat
+
+            # 【关键修正】将指针移动放在 if-else 外面，确保每次循环后指针都会前进
             idx += len(pat)
+
     return None
 
 
@@ -279,7 +289,7 @@ def validate_dialog(dialog: dict[str, Any]) -> str | None:
     user_words = count_words(user_text)
     if user_words < 5:
         return f"user too short: {user_words} words"
-    if user_words > 35:
+    if user_words > 45:
         return f"user too long: {user_words} words"
 
     forbidden_user = contains_forbidden(user_text, USER_FORBIDDEN_PATTERNS, check_negation=False)
@@ -288,9 +298,9 @@ def validate_dialog(dialog: dict[str, Any]) -> str | None:
 
     # Assistant validation
     assistant_words = count_words(assistant_text)
-    if assistant_words < 20:
+    if assistant_words < 12:
         return f"assistant too short: {assistant_words} words"
-    if assistant_words > 120:
+    if assistant_words > 60:
         return f"assistant too long: {assistant_words} words"
 
     forbidden_assistant = contains_forbidden(assistant_text, ASSISTANT_FORBIDDEN_PATTERNS, check_negation=True)
@@ -563,7 +573,7 @@ def generate_dialogs(
     workers: int = 3,
     temperature: float = 0.8,
     max_tokens: int = 4096,
-    max_retries: int = 5,
+    max_retries: int = 50,
 ) -> dict[str, Any]:
     output_path.parent.mkdir(parents=True, exist_ok=True)
     validation_counter: Counter[str] = Counter()
@@ -655,7 +665,7 @@ def main() -> None:
     parser.add_argument("--max-tokens", type=int, default=4096)
     parser.add_argument("--workers", type=int, default=3)
     parser.add_argument("--timeout-sec", type=int, default=120)
-    parser.add_argument("--max-retries", type=int, default=5)
+    parser.add_argument("--max-retries", type=int, default=50)
     parser.add_argument(
         "--prompt-dir",
         type=str,

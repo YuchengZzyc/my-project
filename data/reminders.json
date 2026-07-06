@@ -1,0 +1,102 @@
+[
+  {
+    "reminder_id": "rem_0001",
+    "task": "take medicine",
+    "scheduled_time": "2026-07-02T16:35:12+08:00",
+    "time_text": "tomorrow at 4pm",
+    "target": "self",
+    "status": "active",
+    "created_at": "2026-07-01T13:35:12+08:00",
+    "updated_at": "2026-07-01T13:35:12+08:00"
+  },
+  {
+    "reminder_id": "rem_0002",
+    "task": "play basketball",
+    "scheduled_time": "2026-07-02T16:47:23+08:00",
+    "time_text": "tomorrow at 4 pm",
+    "target": "self",
+    "status": "active",
+    "created_at": "2026-07-01T13:47:23+08:00",
+    "updated_at": "2026-07-01T13:47:23+08:00"
+  },
+  {
+    "reminder_id": "rem_0003",
+    "task": "take medicine",
+    "scheduled_time": "2026-07-03T16:25:38+08:00",
+    "time_text": "tomorrow at 4pm",
+    "target": "self",
+    "status": "active",
+    "created_at": "2026-07-02T10:25:38+08:00",
+    "updated_at": "2026-07-02T10:25:38+08:00"
+  },
+  {
+    "reminder_id": "rem_0004",
+    "task": "take my blood pressure pill",
+    "scheduled_time": "2026-07-03T08:06:48+08:00",
+    "time_text": "tomorrow at 8 AM",
+    "target": "self",
+    "status": "active",
+    "created_at": "2026-07-02T15:06:48+08:00",
+    "updated_at": "2026-07-02T15:06:48+08:00"
+  },
+  {
+    "reminder_id": "rem_0005",
+    "task": "call my daughter, Sarah",
+    "scheduled_time": "2026-07-02T17:09:27+08:00",
+    "time_text": "today at 5 PM",
+    "target": "self",
+    "status": "active",
+    "created_at": "2026-07-02T15:07:49+08:00",
+    "updated_at": "2026-07-02T15:09:27+08:00"
+  },
+  {
+    "reminder_id": "rem_0006",
+    "task": "take my blood pressure pill",
+    "scheduled_time": "2026-07-03T08:56:28+08:00",
+    "time_text": "tomorrow at 8 AM",
+    "target": "self",
+    "status": "active",
+    "created_at": "2026-07-02T15:56:28+08:00",
+    "updated_at": "2026-07-02T15:56:28+08:00"
+  },
+  {
+    "reminder_id": "rem_0007",
+    "task": "play basketball",
+    "scheduled_time": "2026-07-03T04:18:06+08:00",
+    "time_text": "tomorrow 4 am",
+    "target": "self",
+    "status": "active",
+    "created_at": "2026-07-02T17:18:06+08:00",
+    "updated_at": "2026-07-02T17:18:06+08:00"
+  },
+  {
+    "reminder_id": "rem_0008",
+    "task": "play the piano",
+    "scheduled_time": "2026-07-03T18:29:53+08:00",
+    "time_text": "tomorrow at 6 pm",
+    "target": "self",
+    "status": "active",
+    "created_at": "2026-07-02T17:29:53+08:00",
+    "updated_at": "2026-07-02T17:29:53+08:00"
+  },
+  {
+    "reminder_id": "rem_0009",
+    "task": "take my blood pressure pill",
+    "scheduled_time": "2026-07-04T08:43:29+08:00",
+    "time_text": "tomorrow at 8 AM",
+    "target": "self",
+    "status": "active",
+    "created_at": "2026-07-03T10:43:29+08:00",
+    "updated_at": "2026-07-03T10:43:29+08:00"
+  },
+  {
+    "reminder_id": "rem_0010",
+    "task": "call my son",
+    "scheduled_time": "2026-07-03T17:13:53+08:00",
+    "time_text": "5pm",
+    "target": "self",
+    "status": "active",
+    "created_at": "2026-07-03T11:13:53+08:00",
+    "updated_at": "2026-07-03T11:13:53+08:00"
+  }
+]

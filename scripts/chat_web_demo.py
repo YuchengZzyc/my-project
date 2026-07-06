@@ -269,7 +269,9 @@ class HFAssistant:
             out = self.model.generate(
                 **inputs,
                 max_new_tokens=self.max_new_tokens,
-                do_sample=False,
+                do_sample=False,     # 采样
+                # do_sample=True,
+                # temperature=0.7,    # 数值越高回答越有创造性,do_sample开了才有用,但回复会变长
                 pad_token_id=self.tokenizer.pad_token_id,
             )
         txt = self.tokenizer.decode(out[0][inputs["input_ids"].shape[1]:], skip_special_tokens=True).strip()

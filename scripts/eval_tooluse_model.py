@@ -81,12 +81,13 @@ def main() -> None:
     output_report = Path(cfg["output"]["report_file"])
 
     tokenizer = load_tokenizer(model_path)
-    model = AutoModelForCausalLM.from_pretrained(model_path, trust_remote_code=True)
+    model = AutoModelForCausalLM.from_pretrained(model_path, trust_remote_code=True,torch_dtype=torch.float16).to("cuda")
     if adapter_path:
         ap = Path(adapter_path)
         if not ap.exists():
             raise FileNotFoundError(f"adapter_path not found: {adapter_path}")
         model = PeftModel.from_pretrained(model, adapter_path)
+        model = model.to("cuda")
     model.eval()
 
     rows = load_jsonl(data_file)[:limit]

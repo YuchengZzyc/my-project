@@ -11,20 +11,20 @@ output:
   dir: "outputs/deepseek_r1_1_5b_dora"
 
 train:
-  max_length: 1024
+  max_length: 2048
   learning_rate: 8.0e-5
   num_train_epochs: 3 # 训练轮数
-  per_device_train_batch_size: 1
+  per_device_train_batch_size: 4
   per_device_eval_batch_size: 1
-  gradient_accumulation_steps: 8 # 梯度积累
+  gradient_accumulation_steps: 2 # 梯度积累
   logging_steps: 10
   save_steps: 400
   eval_steps: 400
   warmup_ratio: 0.03
   weight_decay: 0.0
-  bf16: false
-  fp16: true
-  # RTX3060等消费级显卡 最好改成bf16:false fp16:true 优化好
+  bf16: true
+  fp16: false
+  # RTX3090 Ampere架构原生支持bf16，比fp16数值更稳定
   gradient_checkpointing: true
   seed: 42
 

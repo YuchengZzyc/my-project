@@ -1,0 +1,36 @@
+model:
+  name_or_path: "E:/LLM/Qwen/Qwen3.5-4B"
+
+data:
+  train_file: "data/trainData_v2.0.train.jsonl"
+  eval_file: "data/trainData_v2.0.val.jsonl"
+  system_key: "messages"
+
+output:
+  dir: "outputs/qwen35_4b_lora_trainData_v2.0"
+
+train:
+  max_length: 1024
+  learning_rate: 3.0e-5
+  num_train_epochs: 2
+  per_device_train_batch_size: 8
+  per_device_eval_batch_size: 1
+  gradient_accumulation_steps: 2
+  logging_steps: 10
+  save_steps: 200
+  eval_steps: 200
+  warmup_ratio: 0.03
+  weight_decay: 0.0
+  bf16: true
+  fp16: false
+  gradient_checkpointing: true
+  seed: 42
+
+peft:
+  finetune_type: "lora"
+  lora_r: 16
+  lora_alpha: 32
+  lora_dropout: 0.05
+  target_modules: ["q_proj", "k_proj", "v_proj", "o_proj", "gate_proj", "up_proj", "down_proj"]
+  use_dora: false
+  use_4bit: false
